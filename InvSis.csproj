@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <Folder Include="Business\" />
+    <Folder Include="Business\" />
+    <Folder Include="Utilities\" />
     <Folder Include="Utilities\" />
   </ItemGroup>
 
