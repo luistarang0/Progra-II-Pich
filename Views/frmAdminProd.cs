@@ -1,7 +1,3 @@
-
-
-using System.Reflection.Metadata.Ecma335;
-
 namespace InvSis
 {
     public partial class frmAdminProd : Form
@@ -11,13 +7,15 @@ namespace InvSis
         public frmAdminProd()
         {
             InitializeComponent();
+            spcProductos.Panel2Collapsed = true;
 
         }
 
         private void btnEdittemp_Click(object sender, EventArgs e)
         {
-            frmEditarAgregarProducto editarProducto = new frmEditarAgregarProducto();
-            editarProducto.ShowDialog();
+            spcProductos.Panel2Collapsed = false;
+            //frmEditarAgregarProducto editarProducto = new frmEditarAgregarProducto();
+            //editarProducto.ShowDialog();
 
         }
 
@@ -31,11 +29,16 @@ namespace InvSis
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-            frmEditarAgregarProducto editarProducto = new frmEditarAgregarProducto();
-            //editarProducto.txtClave.ReadOnly(false);
-            editarProducto.ShowDialog();
+            spcProductos.Panel2Collapsed = true;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            spcProductos.Panel2Collapsed = true;
         }
     }
 }
