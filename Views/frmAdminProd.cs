@@ -58,5 +58,12 @@ namespace InvSis
             txtClave.ReadOnly = false;
             spcProductos.Panel1.Enabled = false;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            spcProductos.Panel2Collapsed = true;
+
+            spcProductos.Panel1.Enabled = true;
+        }
     }
 }
