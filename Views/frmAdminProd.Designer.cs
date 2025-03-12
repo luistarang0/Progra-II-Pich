@@ -45,6 +45,7 @@
             btnCarga = new Button();
             spcProductos = new SplitContainer();
             groupBox1 = new GroupBox();
+            btnAgregar = new Button();
             groupBox2 = new GroupBox();
             btnCancelar = new Button();
             btnGuardar = new Button();
@@ -64,7 +65,6 @@
             lblCosto = new Label();
             lblCat = new Label();
             lblNombre = new Label();
-            btnAgregar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)spcProductos).BeginInit();
             spcProductos.Panel1.SuspendLayout();
@@ -191,7 +191,6 @@
             spcProductos.Size = new Size(1221, 510);
             spcProductos.SplitterDistance = 877;
             spcProductos.TabIndex = 4;
-
             // 
             // groupBox1
             // 
@@ -200,11 +199,21 @@
             groupBox1.Controls.Add(btnCarga);
             groupBox1.Controls.Add(dgvProductos);
             groupBox1.Location = new Point(3, 3);
+            groupBox1.Margin = new Padding(0);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(872, 507);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            // 
+            // btnAgregar
+            // 
+            btnAgregar.Location = new Point(512, 462);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(137, 23);
+            btnAgregar.TabIndex = 3;
+            btnAgregar.Text = "Agregar Productos";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // groupBox2
             // 
@@ -231,7 +240,6 @@
             groupBox2.Size = new Size(337, 507);
             groupBox2.TabIndex = 0;
             groupBox2.TabStop = false;
-            groupBox2.Text = "groupBox2";
             // 
             // btnCancelar
             // 
@@ -288,7 +296,6 @@
             // 
             txtClave.Location = new Point(36, 301);
             txtClave.Name = "txtClave";
-            txtClave.ReadOnly = true;
             txtClave.Size = new Size(253, 23);
             txtClave.TabIndex = 29;
             // 
@@ -388,16 +395,6 @@
             lblNombre.Size = new Size(54, 15);
             lblNombre.TabIndex = 18;
             lblNombre.Text = "Nombre:";
-            // 
-            // btnAgregar
-            // 
-            btnAgregar.Location = new Point(512, 462);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(137, 23);
-            btnAgregar.TabIndex = 3;
-            btnAgregar.Text = "Agregar Productos";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
             // 
             // frmAdminProd
             // 

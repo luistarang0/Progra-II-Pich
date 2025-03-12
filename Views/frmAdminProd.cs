@@ -14,6 +14,8 @@ namespace InvSis
         private void btnEdittemp_Click(object sender, EventArgs e)
         {
             spcProductos.Panel2Collapsed = false;
+            txtClave.ReadOnly = true;
+            spcProductos.Panel1.Enabled = false;
             //frmEditarAgregarProducto editarProducto = new frmEditarAgregarProducto();
             //editarProducto.ShowDialog();
 
@@ -34,11 +36,15 @@ namespace InvSis
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             spcProductos.Panel2Collapsed = true;
+
+            spcProductos.Panel1.Enabled = true;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            spcProductos.Panel2Collapsed = true;
+            spcProductos.Panel2Collapsed = false;
+            txtClave.ReadOnly = false;
+            spcProductos.Panel1.Enabled = false;
         }
     }
 }
