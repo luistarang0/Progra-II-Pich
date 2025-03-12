@@ -194,6 +194,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.Controls.Add(btnAgregar);
             groupBox1.Controls.Add(btnEdittemp);
             groupBox1.Controls.Add(btnCarga);

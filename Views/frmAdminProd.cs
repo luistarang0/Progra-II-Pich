@@ -24,10 +24,22 @@ namespace InvSis
         private void btnCrg_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Archivos CSV (*.csv)|*.csv|Archivos Excel (*.xls)|*.xls";
+            openFileDialog.Tag = "Selecciona el archivo";
+            openFileDialog.Filter = "Archivos CSV (*.csv)|*.csv|Archivos Excel (*.xls)|*.xls|Archivos Excel (*.xlsx)|*.xlsx";
+            openFileDialog.ReadOnlyChecked = true;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName;
+                string extension = Path.GetExtension(filePath).ToLower();
+                if (extension == ".xls" || extension == ".xlsx" || extension == ".csv")
+                {
+                    //Cargar el archivo
+                    MessageBox.Show("Archivo valido " + filePath, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Archivo INVALIDO", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
