@@ -1,3 +1,5 @@
+using InvSis.Views;
+
 namespace InvSis
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace InvSis
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmAdminProd());
+            Application.Run(new frmMDI());
         }
     }
 }
