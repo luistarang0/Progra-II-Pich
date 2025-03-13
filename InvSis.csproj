@@ -9,8 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Business\" />
-    <Folder Include="Business\" />
     <Folder Include="Resources\" />
     <Folder Include="Utilities\" />
     <Folder Include="Utilities\" />

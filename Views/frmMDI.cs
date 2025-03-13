@@ -37,6 +37,11 @@ namespace InvSis.Views
             OpenFormInPanel("frmUsuarios");
         }
 
+        private void btnAPI_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanel("frmRepAPI");
+        }
+
         private void OpenFormInPanel(string formName)
         {
             Form formToShow;
@@ -89,6 +94,8 @@ namespace InvSis.Views
                     return new frmVReportesAuditoria();
                 case "frmUsuarios":
                     return new frmUsuarios();
+                case "frmRepAPI":
+                    return new frmRepAPI();
                 default:
                     MessageBox.Show($"No se reconoce el formulario: {formName}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return null;

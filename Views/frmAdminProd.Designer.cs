@@ -293,6 +293,7 @@
             txtCosto.Name = "txtCosto";
             txtCosto.Size = new Size(253, 23);
             txtCosto.TabIndex = 30;
+            txtCosto.KeyPress += txtCosto_KeyPress;
             // 
             // txtClave
             // 
@@ -300,6 +301,7 @@
             txtClave.Name = "txtClave";
             txtClave.Size = new Size(253, 23);
             txtClave.TabIndex = 29;
+            txtClave.KeyPress += txtClave_KeyPress;
             // 
             // cmbxUbi
             // 

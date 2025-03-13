@@ -114,6 +114,7 @@
             btnAPI.Text = "API";
             btnAPI.TextAlign = ContentAlignment.MiddleRight;
             btnAPI.UseVisualStyleBackColor = true;
+            btnAPI.Click += btnAPI_Click;
             // 
             // btnRepInv
             // 
