@@ -49,6 +49,7 @@
             // 
             splitMDI.Dock = DockStyle.Fill;
             splitMDI.Location = new Point(0, 0);
+            splitMDI.Margin = new Padding(3, 4, 3, 4);
             splitMDI.Name = "splitMDI";
             // 
             // splitMDI.Panel1
@@ -59,18 +60,22 @@
             // splitMDI.Panel2
             // 
             splitMDI.Panel2.AutoScroll = true;
+            splitMDI.Size = new Size(1902, 1033);
+            splitMDI.SplitterDistance = 360;
+            splitMDI.SplitterWidth = 5;
             splitMDI.Panel2.BackColor = Color.Transparent;
             splitMDI.Panel2.BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
             splitMDI.Panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            splitMDI.Size = new Size(1904, 1041);
-            splitMDI.SplitterDistance = 361;
+
             splitMDI.TabIndex = 0;
             // 
             // groupMDIAdm
             // 
-            groupMDIAdm.Location = new Point(3, 580);
+            groupMDIAdm.Location = new Point(3, 773);
+            groupMDIAdm.Margin = new Padding(3, 4, 3, 4);
             groupMDIAdm.Name = "groupMDIAdm";
-            groupMDIAdm.Size = new Size(355, 461);
+            groupMDIAdm.Padding = new Padding(3, 4, 3, 4);
+            groupMDIAdm.Size = new Size(406, 615);
             groupMDIAdm.TabIndex = 1;
             groupMDIAdm.TabStop = false;
             // 
@@ -83,9 +88,11 @@
             groupMDI1.Controls.Add(btnGesRoles);
             groupMDI1.Controls.Add(btnAdmUsr);
             groupMDI1.Controls.Add(btnAdmProd);
-            groupMDI1.Location = new Point(3, 12);
+            groupMDI1.Location = new Point(3, 16);
+            groupMDI1.Margin = new Padding(3, 4, 3, 4);
             groupMDI1.Name = "groupMDI1";
-            groupMDI1.Size = new Size(355, 562);
+            groupMDI1.Padding = new Padding(3, 4, 3, 4);
+            groupMDI1.Size = new Size(406, 749);
             groupMDI1.TabIndex = 0;
             groupMDI1.TabStop = false;
             // 
@@ -93,9 +100,10 @@
             // 
             btnAPI.Image = Properties.Resources._103289_api_icon;
             btnAPI.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAPI.Location = new Point(84, 302);
+            btnAPI.Location = new Point(96, 403);
+            btnAPI.Margin = new Padding(3, 4, 3, 4);
             btnAPI.Name = "btnAPI";
-            btnAPI.Size = new Size(158, 39);
+            btnAPI.Size = new Size(181, 52);
             btnAPI.TabIndex = 5;
             btnAPI.Text = "API";
             btnAPI.TextAlign = ContentAlignment.MiddleRight;
@@ -105,9 +113,10 @@
             // 
             btnRepInv.Image = Properties.Resources._4295569_bulleted_close_list_catalogue_checklist_icon;
             btnRepInv.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRepInv.Location = new Point(84, 257);
+            btnRepInv.Location = new Point(96, 343);
+            btnRepInv.Margin = new Padding(3, 4, 3, 4);
             btnRepInv.Name = "btnRepInv";
-            btnRepInv.Size = new Size(158, 39);
+            btnRepInv.Size = new Size(181, 52);
             btnRepInv.TabIndex = 4;
             btnRepInv.Text = "Reporte de Inventario";
             btnRepInv.TextAlign = ContentAlignment.MiddleRight;
@@ -117,21 +126,25 @@
             // 
             btnRepAud.Image = Properties.Resources._9044242_cloud_auditing_icon;
             btnRepAud.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRepAud.Location = new Point(84, 203);
+            btnRepAud.Location = new Point(96, 271);
+            btnRepAud.Margin = new Padding(3, 4, 3, 4);
             btnRepAud.Name = "btnRepAud";
-            btnRepAud.Size = new Size(158, 39);
+            btnRepAud.Size = new Size(181, 52);
             btnRepAud.TabIndex = 3;
             btnRepAud.Text = "Reportes de Auditoría";
             btnRepAud.TextAlign = ContentAlignment.MiddleRight;
             btnRepAud.UseVisualStyleBackColor = true;
+            btnRepAud.Click += btnRepAud_Click;
+
             // 
             // btnGesRoles
             // 
             btnGesRoles.Image = Properties.Resources._7352780_theater_masks_roles_artists_icon;
             btnGesRoles.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGesRoles.Location = new Point(84, 144);
+            btnGesRoles.Location = new Point(96, 192);
+            btnGesRoles.Margin = new Padding(3, 4, 3, 4);
             btnGesRoles.Name = "btnGesRoles";
-            btnGesRoles.Size = new Size(158, 39);
+            btnGesRoles.Size = new Size(181, 52);
             btnGesRoles.TabIndex = 2;
             btnGesRoles.Text = "Gestionar Roles";
             btnGesRoles.TextAlign = ContentAlignment.MiddleRight;
@@ -141,9 +154,10 @@
             // 
             btnAdmUsr.Image = Properties.Resources._4213440_community_group_leader_people_team_icon;
             btnAdmUsr.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAdmUsr.Location = new Point(84, 86);
+            btnAdmUsr.Location = new Point(96, 115);
+            btnAdmUsr.Margin = new Padding(3, 4, 3, 4);
             btnAdmUsr.Name = "btnAdmUsr";
-            btnAdmUsr.Size = new Size(158, 39);
+            btnAdmUsr.Size = new Size(181, 52);
             btnAdmUsr.TabIndex = 1;
             btnAdmUsr.Text = "Administrar Usuarios";
             btnAdmUsr.TextAlign = ContentAlignment.MiddleRight;
@@ -153,14 +167,15 @@
             // 
             btnAdmProd.Image = Properties.Resources._4945342_document_documents_files_folder_format_icon__1_;
             btnAdmProd.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAdmProd.Location = new Point(84, 22);
+            btnAdmProd.Location = new Point(96, 29);
+            btnAdmProd.Margin = new Padding(3, 4, 3, 4);
             btnAdmProd.Name = "btnAdmProd";
-            btnAdmProd.Size = new Size(158, 39);
+            btnAdmProd.Size = new Size(181, 52);
             btnAdmProd.TabIndex = 0;
             btnAdmProd.Text = "Administrar Productos";
             btnAdmProd.TextAlign = ContentAlignment.MiddleRight;
             btnAdmProd.UseVisualStyleBackColor = true;
-            btnAdmProd.Click += btnAdmProd_Click;
+            btnAdmProd.Click += btnAdmProd_Click;            
             // 
             // btnClose
             // 
@@ -177,7 +192,7 @@
             // 
             // frmMDI
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
             ClientSize = new Size(1904, 1041);

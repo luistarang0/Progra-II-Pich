@@ -18,6 +18,11 @@ namespace InvSis.Views
             InitializeComponent();
         }
 
+        private void btnRepAud_Click(object sender, EventArgs e)
+        {
+            frmVReportesAuditoria frm = new frmVReportesAuditoria();
+            frm.Show();
+        }
         private void btnAdmProd_Click(object sender, EventArgs e)
         {
             OpenFormInPanel("frmAdminProd");
