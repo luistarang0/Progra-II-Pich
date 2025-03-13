@@ -64,7 +64,7 @@
             splitMDI.SplitterDistance = 360;
             splitMDI.SplitterWidth = 5;
             splitMDI.Panel2.BackColor = Color.Transparent;
-            splitMDI.Panel2.BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
+            //splitMDI.Panel2.BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
             splitMDI.Panel2.BackgroundImageLayout = ImageLayout.Stretch;
 
             splitMDI.TabIndex = 0;
@@ -179,7 +179,7 @@
             // 
             // btnClose
             // 
-            btnClose.Image = Properties.Resources._392517_close_delete_remove_icon;
+            //btnClose.Image = Properties.Resources._392517_close_delete_remove_icon;
             btnClose.ImageAlign = ContentAlignment.MiddleLeft;
             btnClose.Location = new Point(84, 347);
             btnClose.Name = "btnClose";
@@ -194,7 +194,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
+            //BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
             ClientSize = new Size(1904, 1041);
             Controls.Add(splitMDI);
             FormBorderStyle = FormBorderStyle.FixedSingle;
