@@ -9,11 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Business\" />
-    <Folder Include="Business\" />
+    <Compile Remove="Business\**" />
+    <Compile Remove="Utilities\**" />
+    <EmbeddedResource Remove="Business\**" />
+    <EmbeddedResource Remove="Utilities\**" />
+    <None Remove="Business\**" />
+    <None Remove="Utilities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="Utilities\" />
-    <Folder Include="Utilities\" />
   </ItemGroup>
 
   <ItemGroup>
