@@ -9,6 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Business\**" />
+    <Compile Remove="Utilities\**" />
+    <EmbeddedResource Remove="Business\**" />
+    <EmbeddedResource Remove="Utilities\**" />
+    <None Remove="Business\**" />
+    <None Remove="Utilities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Resources\" />
   </ItemGroup>
 
