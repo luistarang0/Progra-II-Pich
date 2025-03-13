@@ -20,12 +20,21 @@ namespace InvSis.Views
 
         private void btnRepAud_Click(object sender, EventArgs e)
         {
-            frmVReportesAuditoria frm = new frmVReportesAuditoria();
-            frm.Show();
+            OpenFormInPanel("frmVReportesAuditoria");
         }
         private void btnAdmProd_Click(object sender, EventArgs e)
         {
             OpenFormInPanel("frmAdminProd");
+        }
+
+        private void btnGesRoles_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanel("frmGestionRolesPermisos");
+        }
+
+        private void btnAdmUsr_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanel("frmUsuarios");
         }
 
         private void OpenFormInPanel(string formName)
@@ -49,7 +58,7 @@ namespace InvSis.Views
                 if (formToShow == null)
                 {
                     return;
-                }   
+                }
 
                 // Configurar propiedades de la ventana
                 formToShow.TopLevel = false;
@@ -74,13 +83,12 @@ namespace InvSis.Views
             {
                 case "frmAdminProd":
                     return new frmAdminProd();
-                //case "FormProductos":
-                //    return new FormProductos();
-                //case "FormVentas":
-                //    return new FormVentas();
-                //case "FormReportes":
-                //    return new FormReportes();
-                // Agregar casos para todos tus formularios
+                case "frmGestionRolesPermisos":
+                    return new frmGestionRolesPermisos();
+                case "frmVReportesAuditoria":
+                    return new frmVReportesAuditoria();
+                case "frmUsuarios":
+                    return new frmUsuarios();
                 default:
                     MessageBox.Show($"No se reconoce el formulario: {formName}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return null;
@@ -96,5 +104,7 @@ namespace InvSis.Views
             }
             openForms.Clear();
         }
+
+        
     }
 }

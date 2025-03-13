@@ -151,6 +151,7 @@
             btnGesRoles.Text = "Gestionar Roles";
             btnGesRoles.TextAlign = ContentAlignment.MiddleRight;
             btnGesRoles.UseVisualStyleBackColor = true;
+            btnGesRoles.Click += btnGesRoles_Click;
             // 
             // btnAdmUsr
             // 
@@ -163,6 +164,7 @@
             btnAdmUsr.Text = "Administrar Usuarios";
             btnAdmUsr.TextAlign = ContentAlignment.MiddleRight;
             btnAdmUsr.UseVisualStyleBackColor = true;
+            btnAdmUsr.Click += btnAdmUsr_Click;
             // 
             // btnAdmProd
             // 
