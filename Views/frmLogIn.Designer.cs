@@ -41,10 +41,10 @@
             // 
             lbUsuario.AutoSize = true;
             lbUsuario.Font = new Font("Segoe UI", 12F);
-            lbUsuario.Location = new Point(255, 115);
+            lbUsuario.Location = new Point(223, 86);
             lbUsuario.Margin = new Padding(2, 0, 2, 0);
             lbUsuario.Name = "lbUsuario";
-            lbUsuario.Size = new Size(79, 28);
+            lbUsuario.Size = new Size(64, 21);
             lbUsuario.TabIndex = 0;
             lbUsuario.Text = "Usuario";
             // 
@@ -52,37 +52,37 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(255, 157);
+            label1.Location = new Point(223, 118);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(110, 28);
+            label1.Size = new Size(89, 21);
             label1.TabIndex = 1;
             label1.Text = "Contraseña";
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(381, 117);
+            txtUsuario.Location = new Point(333, 88);
             txtUsuario.Margin = new Padding(2);
             txtUsuario.MaxLength = 25;
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(177, 27);
+            txtUsuario.Size = new Size(155, 23);
             txtUsuario.TabIndex = 2;
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(381, 157);
+            txtContraseña.Location = new Point(333, 118);
             txtContraseña.Margin = new Padding(2);
             txtContraseña.MaxLength = 20;
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(177, 27);
+            txtContraseña.Size = new Size(155, 23);
             txtContraseña.TabIndex = 3;
             // 
             // btnIniciarSesion
             // 
-            btnIniciarSesion.Location = new Point(457, 198);
+            btnIniciarSesion.Location = new Point(400, 148);
             btnIniciarSesion.Margin = new Padding(2);
             btnIniciarSesion.Name = "btnIniciarSesion";
-            btnIniciarSesion.Size = new Size(100, 27);
+            btnIniciarSesion.Size = new Size(88, 20);
             btnIniciarSesion.TabIndex = 4;
             btnIniciarSesion.Text = "Iniciar sesion";
             btnIniciarSesion.UseVisualStyleBackColor = true;
@@ -91,20 +91,21 @@
             // pictureBoxAvatar
             // 
             pictureBoxAvatar.BackColor = SystemColors.Control;
-            pictureBoxAvatar.BackgroundImage = Properties.Resources._6372974_account_avatar_log_in_login_register_icon;
             pictureBoxAvatar.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBoxAvatar.Location = new Point(68, 81);
+            pictureBoxAvatar.Image = Properties.Resources._6372974_account_avatar_log_in_login_register_icon1;
+            pictureBoxAvatar.Location = new Point(60, 61);
             pictureBoxAvatar.Margin = new Padding(2);
             pictureBoxAvatar.Name = "pictureBoxAvatar";
-            pictureBoxAvatar.Size = new Size(148, 170);
+            pictureBoxAvatar.Size = new Size(130, 128);
+            pictureBoxAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxAvatar.TabIndex = 5;
             pictureBoxAvatar.TabStop = false;
             // 
             // frmLogIn
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(622, 355);
+            ClientSize = new Size(544, 266);
             Controls.Add(pictureBoxAvatar);
             Controls.Add(btnIniciarSesion);
             Controls.Add(txtContraseña);

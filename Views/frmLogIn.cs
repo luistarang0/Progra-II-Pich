@@ -29,14 +29,14 @@ namespace InvSis.Views
             // Validaciones 
 
             // Validar que el campo usuario no este vacio
-            if (string.IsNullOrEmpty(txtUsuario.Text))
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
             {
                 MessageBox.Show("El campo de usuario no puede de estar vacio. ", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Validar que el campo contraseña no este vacio
-            if (string.IsNullOrEmpty(txtContraseña.Text))
+            if (string.IsNullOrWhiteSpace(txtContraseña.Text))
             {
                 MessageBox.Show("El campo de contraseña no puede de estar vacio. ", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -50,17 +50,11 @@ namespace InvSis.Views
             }
 
             MessageBox.Show("Ha iniciado sesion. ", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            // Cierra el forms actual
-            this.Hide();
-
-            //abre el forms MDI
-            frmMDI mdi = new frmMDI();
-            mdi.Show();
-
-            #region Solucion a los comentarios
+            
+                    
             this.DialogResult = DialogResult.OK;
             this.Close();
-            #endregion
+            
         }
     }
 }
