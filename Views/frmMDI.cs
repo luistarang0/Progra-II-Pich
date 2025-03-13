@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace InvSis.Views
 {
-    public partial class frmMDI: Form
+    public partial class frmMDI : Form
     {
         public frmMDI()
         {
             InitializeComponent();
+        }
+
+        private void btnRepAud_Click(object sender, EventArgs e)
+        {
+            frmVReportesAuditoria frm = new frmVReportesAuditoria();
+            frm.Show();
         }
     }
 }

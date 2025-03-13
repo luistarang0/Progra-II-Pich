@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InvSis.Views
 {
-    public partial class frmVentanaReportes: Form
+    public partial class frmVReportesAuditoria: Form
     {
-        public frmVentanaReportes()
+        public frmVReportesAuditoria()
         {
             InitializeComponent();
         }
