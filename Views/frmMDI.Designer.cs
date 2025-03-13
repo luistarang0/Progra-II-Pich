@@ -38,6 +38,7 @@
             btnGesRoles = new Button();
             btnAdmUsr = new Button();
             btnAdmProd = new Button();
+            btnClose = new Button();
             ((System.ComponentModel.ISupportInitialize)splitMDI).BeginInit();
             splitMDI.Panel1.SuspendLayout();
             splitMDI.SuspendLayout();
@@ -62,6 +63,10 @@
             splitMDI.Size = new Size(1902, 1033);
             splitMDI.SplitterDistance = 360;
             splitMDI.SplitterWidth = 5;
+            splitMDI.Panel2.BackColor = Color.Transparent;
+            splitMDI.Panel2.BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
+            splitMDI.Panel2.BackgroundImageLayout = ImageLayout.Stretch;
+
             splitMDI.TabIndex = 0;
             // 
             // groupMDIAdm
@@ -76,6 +81,7 @@
             // 
             // groupMDI1
             // 
+            groupMDI1.Controls.Add(btnClose);
             groupMDI1.Controls.Add(btnAPI);
             groupMDI1.Controls.Add(btnRepInv);
             groupMDI1.Controls.Add(btnRepAud);
@@ -129,6 +135,7 @@
             btnRepAud.TextAlign = ContentAlignment.MiddleRight;
             btnRepAud.UseVisualStyleBackColor = true;
             btnRepAud.Click += btnRepAud_Click;
+
             // 
             // btnGesRoles
             // 
@@ -168,16 +175,31 @@
             btnAdmProd.Text = "Administrar Productos";
             btnAdmProd.TextAlign = ContentAlignment.MiddleRight;
             btnAdmProd.UseVisualStyleBackColor = true;
+            btnAdmProd.Click += btnAdmProd_Click;            
+            // 
+            // btnClose
+            // 
+            btnClose.Image = Properties.Resources._392517_close_delete_remove_icon;
+            btnClose.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClose.Location = new Point(84, 347);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(158, 39);
+            btnClose.TabIndex = 6;
+            btnClose.Text = "Cerrar Ventanas";
+            btnClose.TextAlign = ContentAlignment.MiddleRight;
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
             // frmMDI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1902, 1033);
+            BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
+            ClientSize = new Size(1904, 1041);
             Controls.Add(splitMDI);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
+            IsMdiContainer = true;
             Name = "frmMDI";
             Text = "Sistema de Inventarios";
             splitMDI.Panel1.ResumeLayout(false);
@@ -198,5 +220,6 @@
         private Button btnGesRoles;
         private Button btnRepInv;
         private Button btnAPI;
+        private Button btnClose;
     }
 }

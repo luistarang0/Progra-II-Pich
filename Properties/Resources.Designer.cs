@@ -73,6 +73,16 @@ namespace InvSis.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _392517_close_delete_remove_icon {
+            get {
+                object obj = ResourceManager.GetObject("392517_close_delete_remove_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4213440_community_group_leader_people_team_icon {
             get {
                 object obj = ResourceManager.GetObject("4213440_community_group_leader_people_team_icon", resourceCulture);
@@ -136,6 +146,16 @@ namespace InvSis.Properties {
         internal static System.Drawing.Bitmap _9044242_cloud_auditing_icon {
             get {
                 object obj = ResourceManager.GetObject("9044242_cloud_auditing_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventario_e1548898364548_Photoroom {
+            get {
+                object obj = ResourceManager.GetObject("inventario-e1548898364548-Photoroom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
