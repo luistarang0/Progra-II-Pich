@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMDI));
             splitMDI = new SplitContainer();
-            groupMDIAdm = new GroupBox();
             groupMDI1 = new GroupBox();
             btnRegMov = new Button();
             btnClose = new Button();
@@ -40,8 +39,11 @@
             btnGesRoles = new Button();
             btnAdmUsr = new Button();
             btnAdmProd = new Button();
+            lblBienvenida = new Label();
+            btnCambiarUsuario = new Button();
             ((System.ComponentModel.ISupportInitialize)splitMDI).BeginInit();
             splitMDI.Panel1.SuspendLayout();
+            splitMDI.Panel2.SuspendLayout();
             splitMDI.SuspendLayout();
             groupMDI1.SuspendLayout();
             SuspendLayout();
@@ -54,7 +56,6 @@
             // 
             // splitMDI.Panel1
             // 
-            splitMDI.Panel1.Controls.Add(groupMDIAdm);
             splitMDI.Panel1.Controls.Add(groupMDI1);
             // 
             // splitMDI.Panel2
@@ -63,17 +64,11 @@
             splitMDI.Panel2.BackColor = Color.Transparent;
             splitMDI.Panel2.BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
             splitMDI.Panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            splitMDI.Panel2.Controls.Add(lblBienvenida);
+            splitMDI.Panel2.Controls.Add(btnCambiarUsuario);
             splitMDI.Size = new Size(1666, 781);
             splitMDI.SplitterDistance = 315;
             splitMDI.TabIndex = 0;
-            // 
-            // groupMDIAdm
-            // 
-            groupMDIAdm.Location = new Point(3, 580);
-            groupMDIAdm.Name = "groupMDIAdm";
-            groupMDIAdm.Size = new Size(355, 461);
-            groupMDIAdm.TabIndex = 1;
-            groupMDIAdm.TabStop = false;
             // 
             // groupMDI1
             // 
@@ -85,9 +80,9 @@
             groupMDI1.Controls.Add(btnGesRoles);
             groupMDI1.Controls.Add(btnAdmUsr);
             groupMDI1.Controls.Add(btnAdmProd);
-            groupMDI1.Location = new Point(3, 12);
+            groupMDI1.Location = new Point(3, 3);
             groupMDI1.Name = "groupMDI1";
-            groupMDI1.Size = new Size(355, 562);
+            groupMDI1.Size = new Size(309, 775);
             groupMDI1.TabIndex = 0;
             groupMDI1.TabStop = false;
             // 
@@ -196,6 +191,27 @@
             btnAdmProd.UseVisualStyleBackColor = true;
             btnAdmProd.Click += btnAdmProd_Click;
             // 
+            // lblBienvenida
+            // 
+            lblBienvenida.AutoSize = true;
+            lblBienvenida.Font = new Font("MS PGothic", 52F, FontStyle.Bold, GraphicsUnit.World, 0);
+            lblBienvenida.ForeColor = SystemColors.ButtonHighlight;
+            lblBienvenida.Location = new Point(375, 339);
+            lblBienvenida.Name = "lblBienvenida";
+            lblBienvenida.Size = new Size(520, 104);
+            lblBienvenida.TabIndex = 1;
+            lblBienvenida.Text = "Bienvenido al Sistema\r\nde Inventarios";
+            // 
+            // btnCambiarUsuario
+            // 
+            btnCambiarUsuario.Location = new Point(983, 12);
+            btnCambiarUsuario.Name = "btnCambiarUsuario";
+            btnCambiarUsuario.Size = new Size(148, 65);
+            btnCambiarUsuario.TabIndex = 0;
+            btnCambiarUsuario.Text = "Cambio de Usuario";
+            btnCambiarUsuario.UseVisualStyleBackColor = true;
+            btnCambiarUsuario.Click += btnCambiarUsuario_Click;
+            // 
             // frmMDI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -209,6 +225,8 @@
             Name = "frmMDI";
             Text = "Sistema de Inventarios";
             splitMDI.Panel1.ResumeLayout(false);
+            splitMDI.Panel2.ResumeLayout(false);
+            splitMDI.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitMDI).EndInit();
             splitMDI.ResumeLayout(false);
             groupMDI1.ResumeLayout(false);
@@ -218,7 +236,6 @@
         #endregion
 
         private SplitContainer splitMDI;
-        private GroupBox groupMDIAdm;
         private GroupBox groupMDI1;
         private Button btnAdmProd;
         private Button btnAdmUsr;
@@ -228,5 +245,7 @@
         private Button btnAPI;
         private Button btnClose;
         private Button btnRegMov;
+        private Label lblBienvenida;
+        private Button btnCambiarUsuario;
     }
 }
