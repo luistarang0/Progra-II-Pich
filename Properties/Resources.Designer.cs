@@ -103,9 +103,9 @@ namespace InvSis.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4945342_document_documents_files_folder_format_icon {
+        internal static System.Drawing.Bitmap _4945342_document_documents_files_folder_format_icon__1_ {
             get {
-                object obj = ResourceManager.GetObject("4945342_document_documents_files_folder_format_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("4945342_document_documents_files_folder_format_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,19 @@ namespace InvSis.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4945342_document_documents_files_folder_format_icon__1_ {
+        internal static System.Drawing.Bitmap _6372974_account_avatar_log_in_login_register_icon {
             get {
-                object obj = ResourceManager.GetObject("4945342_document_documents_files_folder_format_icon (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("6372974_account_avatar_log in_login_register_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6372974_account_avatar_log_in_login_register_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("6372974_account_avatar_log in_login_register_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
