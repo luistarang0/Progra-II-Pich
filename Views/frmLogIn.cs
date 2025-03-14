@@ -42,7 +42,17 @@ namespace InvSis.Views
                 return;
             }
 
+            if (txtUsuario.Text.Trim().ToLower() == "admin")
+            {
+                // Si es admin, permitir acceso sin validar formato
+                MessageBox.Show("Ha iniciado sesion como administrador. ", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                return;
+            }
+
             // Validar que el campo usuario tenga un formato correcto
+
             if (!UsuarioNegocio.EsFormatoValido(txtUsuario.Text))
             {
                 MessageBox.Show("El campo usuario no tiene un formato correcto. ", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);

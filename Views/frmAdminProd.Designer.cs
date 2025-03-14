@@ -315,10 +315,11 @@
             // cmbxCat
             // 
             cmbxCat.FormattingEnabled = true;
-            cmbxCat.Items.AddRange(new object[] { "", "Cat X", "Cat Y", "Cat Z" });
+            cmbxCat.Items.AddRange(new object[] { "Cat X", "Cat Y", "Cat Z" });
             cmbxCat.Location = new Point(36, 93);
             cmbxCat.Name = "cmbxCat";
             cmbxCat.Size = new Size(253, 23);
+            cmbxCat.Sorted = true;
             cmbxCat.TabIndex = 27;
             // 
             // txtNombre

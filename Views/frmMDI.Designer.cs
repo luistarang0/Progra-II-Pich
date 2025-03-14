@@ -32,6 +32,7 @@
             splitMDI = new SplitContainer();
             groupMDIAdm = new GroupBox();
             groupMDI1 = new GroupBox();
+            btnRegMov = new Button();
             btnClose = new Button();
             btnAPI = new Button();
             btnRepInv = new Button();
@@ -76,6 +77,7 @@
             // 
             // groupMDI1
             // 
+            groupMDI1.Controls.Add(btnRegMov);
             groupMDI1.Controls.Add(btnClose);
             groupMDI1.Controls.Add(btnAPI);
             groupMDI1.Controls.Add(btnRepInv);
@@ -89,11 +91,24 @@
             groupMDI1.TabIndex = 0;
             groupMDI1.TabStop = false;
             // 
+            // btnRegMov
+            // 
+            btnRegMov.Image = Properties.Resources._9068689_cycle_movement_icon;
+            btnRegMov.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRegMov.Location = new Point(84, 302);
+            btnRegMov.Name = "btnRegMov";
+            btnRegMov.Size = new Size(158, 39);
+            btnRegMov.TabIndex = 7;
+            btnRegMov.Text = "Registrar Movimientos";
+            btnRegMov.TextAlign = ContentAlignment.MiddleRight;
+            btnRegMov.UseVisualStyleBackColor = true;
+            btnRegMov.Click += btnRegMov_Click;
+            // 
             // btnClose
             // 
             btnClose.Image = Properties.Resources._392517_close_delete_remove_icon;
             btnClose.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClose.Location = new Point(104, 359);
+            btnClose.Location = new Point(104, 411);
             btnClose.Margin = new Padding(3, 2, 3, 2);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(138, 29);
@@ -107,7 +122,7 @@
             // 
             btnAPI.Image = Properties.Resources._103289_api_icon;
             btnAPI.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAPI.Location = new Point(84, 302);
+            btnAPI.Location = new Point(84, 348);
             btnAPI.Name = "btnAPI";
             btnAPI.Size = new Size(158, 39);
             btnAPI.TabIndex = 5;
@@ -127,6 +142,7 @@
             btnRepInv.Text = "Reporte de Inventario";
             btnRepInv.TextAlign = ContentAlignment.MiddleRight;
             btnRepInv.UseVisualStyleBackColor = true;
+            btnRepInv.Click += btnRepInv_Click;
             // 
             // btnRepAud
             // 
@@ -211,5 +227,6 @@
         private Button btnRepInv;
         private Button btnAPI;
         private Button btnClose;
+        private Button btnRegMov;
     }
 }

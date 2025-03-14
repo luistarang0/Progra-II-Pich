@@ -153,6 +153,16 @@ namespace InvSis.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _9068689_cycle_movement_icon {
+            get {
+                object obj = ResourceManager.GetObject("9068689_cycle_movement_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap inventario_e1548898364548_Photoroom {
             get {
                 object obj = ResourceManager.GetObject("inventario-e1548898364548-Photoroom", resourceCulture);
