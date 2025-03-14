@@ -10,9 +10,8 @@ using System.Windows.Forms;
 
 namespace InvSis.Views
 {
-    public partial class frmMDI : Form
+    public partial class frmMDI: Form
     {
-        private Dictionary<string, Form> openForms = new Dictionary<string, Form>();
         public frmMDI()
         {
             InitializeComponent();
