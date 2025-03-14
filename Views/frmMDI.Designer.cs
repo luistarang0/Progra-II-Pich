@@ -52,6 +52,7 @@
             // 
             splitMDI.Dock = DockStyle.Fill;
             splitMDI.Location = new Point(0, 0);
+            splitMDI.Margin = new Padding(3, 4, 3, 4);
             splitMDI.Name = "splitMDI";
             // 
             // splitMDI.Panel1
@@ -238,9 +239,9 @@
             // 
             // frmMDI
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1666, 781);
+            ClientSize = new Size(1904, 1041);
             Controls.Add(splitMDI);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");

@@ -11,9 +11,8 @@ using InvSis.Business;
 
 namespace InvSis.Views
 {
-    public partial class frmMDI : Form
+    public partial class frmMDI: Form
     {
-        private Dictionary<string, Form> openForms = new Dictionary<string, Form>();
         public frmMDI()
         {
             InitializeComponent();
@@ -63,6 +62,7 @@ namespace InvSis.Views
             btnGesRoles.Enabled = Sesion.EsAdministrador;
             btnRepAud.Enabled = Sesion.EsAdministrador;
             btnAPI.Enabled = Sesion.EsAdministrador;
+
         }
 
         private void OpenFormInPanel(string formName)
