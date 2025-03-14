@@ -30,10 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMDI));
             splitMDI = new SplitContainer();
-            groupMDI1 = new GroupBox();
             groupMDIAdm = new GroupBox();
-            btnAdmProd = new Button();
+            groupMDI1 = new GroupBox();
             btnClose = new Button();
+            btnAPI = new Button();
+            btnRepInv = new Button();
+            btnRepAud = new Button();
+            btnGesRoles = new Button();
+            btnAdmUsr = new Button();
+            btnAdmProd = new Button();
             ((System.ComponentModel.ISupportInitialize)splitMDI).BeginInit();
             splitMDI.Panel1.SuspendLayout();
             splitMDI.SuspendLayout();
@@ -44,6 +49,7 @@
             // 
             splitMDI.Dock = DockStyle.Fill;
             splitMDI.Location = new Point(0, 0);
+            splitMDI.Margin = new Padding(3, 4, 3, 4);
             splitMDI.Name = "splitMDI";
             // 
             // splitMDI.Panel1
@@ -54,13 +60,12 @@
             // splitMDI.Panel2
             // 
             splitMDI.Panel2.AutoScroll = true;
-            splitMDI.Size = new Size(1902, 1033);
-            splitMDI.SplitterDistance = 360;
-            splitMDI.SplitterWidth = 5;
             splitMDI.Panel2.BackColor = Color.Transparent;
             splitMDI.Panel2.BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
             splitMDI.Panel2.BackgroundImageLayout = ImageLayout.Stretch;
-
+            splitMDI.Size = new Size(1904, 1041);
+            splitMDI.SplitterDistance = 360;
+            splitMDI.SplitterWidth = 5;
             splitMDI.TabIndex = 0;
             // 
             // groupMDIAdm
@@ -75,27 +80,49 @@
             // 
             // groupMDI1
             // 
+            groupMDI1.Controls.Add(btnClose);
             groupMDI1.Controls.Add(btnAPI);
             groupMDI1.Controls.Add(btnRepInv);
             groupMDI1.Controls.Add(btnRepAud);
             groupMDI1.Controls.Add(btnGesRoles);
             groupMDI1.Controls.Add(btnAdmUsr);
             groupMDI1.Controls.Add(btnAdmProd);
-            groupMDI1.Location = new Point(3, 12);
+            groupMDI1.Location = new Point(3, 16);
+            groupMDI1.Margin = new Padding(3, 4, 3, 4);
             groupMDI1.Name = "groupMDI1";
-            groupMDI1.Size = new Size(355, 562);
+            groupMDI1.Padding = new Padding(3, 4, 3, 4);
+            groupMDI1.Size = new Size(406, 749);
             groupMDI1.TabIndex = 0;
             groupMDI1.TabStop = false;
             // 
-            // groupMDIAdm
+            // btnClose
             // 
-            groupMDIAdm.Location = new Point(3, 580);
-            groupMDIAdm.Name = "groupMDIAdm";
-            groupMDIAdm.Size = new Size(355, 461);
-            groupMDIAdm.TabIndex = 1;
-            groupMDIAdm.TabStop = false;
+            btnClose.Image = Properties.Resources._392517_close_delete_remove_icon;
+            btnClose.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClose.Location = new Point(119, 479);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(158, 39);
+            btnClose.TabIndex = 6;
+            btnClose.Text = "Cerrar Ventanas";
+            btnClose.TextAlign = ContentAlignment.MiddleRight;
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
-            // btnAdmProd
+            // btnAPI
+            // 
+            btnAPI.Image = Properties.Resources._103289_api_icon;
+            btnAPI.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAPI.Location = new Point(96, 403);
+            btnAPI.Margin = new Padding(3, 4, 3, 4);
+            btnAPI.Name = "btnAPI";
+            btnAPI.Size = new Size(181, 52);
+            btnAPI.TabIndex = 5;
+            btnAPI.Text = "API";
+            btnAPI.TextAlign = ContentAlignment.MiddleRight;
+            btnAPI.UseVisualStyleBackColor = true;
+            btnAPI.Click += btnAPI_Click;
+            // 
+            // btnRepInv
             // 
             btnRepInv.Image = Properties.Resources._4295569_bulleted_close_list_catalogue_checklist_icon;
             btnRepInv.ImageAlign = ContentAlignment.MiddleLeft;
@@ -107,8 +134,9 @@
             btnRepInv.Text = "Reporte de Inventario";
             btnRepInv.TextAlign = ContentAlignment.MiddleRight;
             btnRepInv.UseVisualStyleBackColor = true;
+            btnRepInv.Click += btnRepInv_Click;
             // 
-            // btnAdmUsr
+            // btnRepAud
             // 
             btnRepAud.Image = Properties.Resources._9044242_cloud_auditing_icon;
             btnRepAud.ImageAlign = ContentAlignment.MiddleLeft;
@@ -121,7 +149,6 @@
             btnRepAud.TextAlign = ContentAlignment.MiddleRight;
             btnRepAud.UseVisualStyleBackColor = true;
             btnRepAud.Click += btnRepAud_Click;
-
             // 
             // btnGesRoles
             // 
@@ -135,8 +162,9 @@
             btnGesRoles.Text = "Gestionar Roles";
             btnGesRoles.TextAlign = ContentAlignment.MiddleRight;
             btnGesRoles.UseVisualStyleBackColor = true;
+            btnGesRoles.Click += btnGesRoles_Click;
             // 
-            // btnRepAud
+            // btnAdmUsr
             // 
             btnAdmUsr.Image = Properties.Resources._4213440_community_group_leader_people_team_icon;
             btnAdmUsr.ImageAlign = ContentAlignment.MiddleLeft;
@@ -148,8 +176,9 @@
             btnAdmUsr.Text = "Administrar Usuarios";
             btnAdmUsr.TextAlign = ContentAlignment.MiddleRight;
             btnAdmUsr.UseVisualStyleBackColor = true;
+            btnAdmUsr.Click += btnAdmUsr_Click;
             // 
-            // btnRepInv
+            // btnAdmProd
             // 
             btnAdmProd.Image = Properties.Resources._4945342_document_documents_files_folder_format_icon__1_;
             btnAdmProd.ImageAlign = ContentAlignment.MiddleLeft;
@@ -161,26 +190,12 @@
             btnAdmProd.Text = "Administrar Productos";
             btnAdmProd.TextAlign = ContentAlignment.MiddleRight;
             btnAdmProd.UseVisualStyleBackColor = true;
-            btnAdmProd.Click += btnAdmProd_Click;            
-            // 
-            // btnAPI
-            // 
-            btnClose.Image = Properties.Resources._392517_close_delete_remove_icon;
-            btnClose.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClose.Location = new Point(84, 347);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(158, 39);
-            btnClose.TabIndex = 6;
-            btnClose.Text = "Cerrar Ventanas";
-            btnClose.TextAlign = ContentAlignment.MiddleRight;
-            btnClose.UseVisualStyleBackColor = true;
-            btnClose.Click += btnClose_Click;
+            btnAdmProd.Click += btnAdmProd_Click;
             // 
             // frmMDI
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
             ClientSize = new Size(1904, 1041);
             Controls.Add(splitMDI);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -206,5 +221,6 @@
         private Button btnGesRoles;
         private Button btnRepInv;
         private Button btnAPI;
+        private Button btnClose;
     }
 }

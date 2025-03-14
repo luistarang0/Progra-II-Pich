@@ -62,7 +62,7 @@
             // txtUsuario
             // 
             txtUsuario.Location = new Point(381, 117);
-            txtUsuario.Margin = new Padding(2);
+            txtUsuario.Margin = new Padding(2, 3, 2, 3);
             txtUsuario.MaxLength = 25;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(177, 27);
@@ -71,7 +71,7 @@
             // txtContraseña
             // 
             txtContraseña.Location = new Point(381, 157);
-            txtContraseña.Margin = new Padding(2);
+            txtContraseña.Margin = new Padding(2, 3, 2, 3);
             txtContraseña.MaxLength = 20;
             txtContraseña.Name = "txtContraseña";
             txtContraseña.Size = new Size(177, 27);
@@ -79,10 +79,10 @@
             // 
             // btnIniciarSesion
             // 
-            btnIniciarSesion.Location = new Point(457, 198);
-            btnIniciarSesion.Margin = new Padding(2);
+            btnIniciarSesion.Location = new Point(457, 197);
+            btnIniciarSesion.Margin = new Padding(2, 3, 2, 3);
             btnIniciarSesion.Name = "btnIniciarSesion";
-            btnIniciarSesion.Size = new Size(100, 27);
+            btnIniciarSesion.Size = new Size(101, 27);
             btnIniciarSesion.TabIndex = 4;
             btnIniciarSesion.Text = "Iniciar sesion";
             btnIniciarSesion.UseVisualStyleBackColor = true;
@@ -91,12 +91,13 @@
             // pictureBoxAvatar
             // 
             pictureBoxAvatar.BackColor = SystemColors.Control;
-            pictureBoxAvatar.BackgroundImage = Properties.Resources._6372974_account_avatar_log_in_login_register_icon;
+            pictureBoxAvatar.BackgroundImage = Properties.Resources._6372974_account_avatar_log_in_login_register_icon1;
             pictureBoxAvatar.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBoxAvatar.Location = new Point(68, 81);
-            pictureBoxAvatar.Margin = new Padding(2);
+            pictureBoxAvatar.Location = new Point(69, 81);
+            pictureBoxAvatar.Margin = new Padding(2, 3, 2, 3);
             pictureBoxAvatar.Name = "pictureBoxAvatar";
-            pictureBoxAvatar.Size = new Size(148, 170);
+            pictureBoxAvatar.Size = new Size(149, 171);
+            pictureBoxAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxAvatar.TabIndex = 5;
             pictureBoxAvatar.TabStop = false;
             // 
@@ -111,7 +112,7 @@
             Controls.Add(txtUsuario);
             Controls.Add(label1);
             Controls.Add(lbUsuario);
-            Margin = new Padding(2);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "frmLogIn";
             Text = "LogIn";
             ((System.ComponentModel.ISupportInitialize)pictureBoxAvatar).EndInit();
