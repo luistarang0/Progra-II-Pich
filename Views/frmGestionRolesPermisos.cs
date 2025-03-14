@@ -185,6 +185,9 @@ namespace InvSis.Views
             }
         }
 
+        private void lblSelecciónPermiso3_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

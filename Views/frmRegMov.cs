@@ -177,5 +177,10 @@ namespace InvSis.Views
         {
             LimpiarFormulario();
         }
+
+        private void dgvSeleccion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

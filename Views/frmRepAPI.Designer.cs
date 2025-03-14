@@ -41,6 +41,7 @@
             lblNom = new Label();
             btnEnviar = new Button();
             btnBuscar = new Button();
+            lblTitulo = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             dgvProductos.AllowUserToOrderColumns = true;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProductos.Columns.AddRange(new DataGridViewColumn[] { ID_Producto, nombre, Stock, estatus, Impuesto });
-            dgvProductos.Location = new Point(131, 170);
+            dgvProductos.Location = new Point(266, 271);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.ReadOnly = true;
             dgvProductos.Size = new Size(544, 150);
@@ -89,7 +90,7 @@
             // 
             // txtBusNom
             // 
-            txtBusNom.Location = new Point(416, 120);
+            txtBusNom.Location = new Point(669, 168);
             txtBusNom.Name = "txtBusNom";
             txtBusNom.Size = new Size(141, 23);
             txtBusNom.TabIndex = 1;
@@ -97,7 +98,7 @@
             // lblBus
             // 
             lblBus.AutoSize = true;
-            lblBus.Location = new Point(182, 67);
+            lblBus.Location = new Point(346, 135);
             lblBus.Name = "lblBus";
             lblBus.Size = new Size(97, 15);
             lblBus.TabIndex = 2;
@@ -105,7 +106,7 @@
             // 
             // txtBusID
             // 
-            txtBusID.Location = new Point(416, 59);
+            txtBusID.Location = new Point(669, 94);
             txtBusID.Name = "txtBusID";
             txtBusID.Size = new Size(141, 23);
             txtBusID.TabIndex = 3;
@@ -113,7 +114,7 @@
             // lblID
             // 
             lblID.AutoSize = true;
-            lblID.Location = new Point(429, 30);
+            lblID.Location = new Point(771, 67);
             lblID.Name = "lblID";
             lblID.Size = new Size(39, 15);
             lblID.TabIndex = 4;
@@ -123,7 +124,7 @@
             // lblNom
             // 
             lblNom.AutoSize = true;
-            lblNom.Location = new Point(429, 102);
+            lblNom.Location = new Point(738, 135);
             lblNom.Name = "lblNom";
             lblNom.Size = new Size(72, 15);
             lblNom.TabIndex = 5;
@@ -131,7 +132,7 @@
             // 
             // btnEnviar
             // 
-            btnEnviar.Location = new Point(296, 377);
+            btnEnviar.Location = new Point(426, 472);
             btnEnviar.Name = "btnEnviar";
             btnEnviar.Size = new Size(208, 23);
             btnEnviar.TabIndex = 6;
@@ -141,7 +142,7 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(592, 120);
+            btnBuscar.Location = new Point(744, 217);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(66, 23);
             btnBuscar.TabIndex = 7;
@@ -149,11 +150,25 @@
             btnBuscar.UseVisualStyleBackColor = true;
             btnBuscar.Click += btnBuscar_Click;
             // 
+            // lblTitulo
+            // 
+            lblTitulo.BackColor = SystemColors.InactiveCaption;
+            lblTitulo.Dock = DockStyle.Top;
+            lblTitulo.Font = new Font("Segoe UI Symbol", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.ActiveCaptionText;
+            lblTitulo.Location = new Point(0, 0);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(1070, 37);
+            lblTitulo.TabIndex = 8;
+            lblTitulo.Text = "API";
+            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // frmRepAPI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1070, 549);
+            Controls.Add(lblTitulo);
             Controls.Add(btnBuscar);
             Controls.Add(btnEnviar);
             Controls.Add(lblNom);
@@ -184,5 +199,6 @@
         private Label lblNom;
         private Button btnEnviar;
         private Button btnBuscar;
+        private Label lblTitulo;
     }
 }

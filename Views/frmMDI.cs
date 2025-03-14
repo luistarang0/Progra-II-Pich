@@ -51,7 +51,7 @@ namespace InvSis.Views
 
         private void btnRepInv_Click(object sender, EventArgs e)
         {
-            OpenFormInPanel("frmRepInv");
+            OpenFormInPanel("frmReporteProductos");
         }
 
         // En el formulario principal, después de iniciar sesión:
@@ -122,8 +122,8 @@ namespace InvSis.Views
                     return new frmRepAPI();
                 case "frmRegMov":
                     return new frmRegMov();
-                case "frmRepInv":
-                    return new frmRepInv();
+                case "frmReporteProductos":
+                    return new frmReporteProductos();
                 default:
                     MessageBox.Show($"No se reconoce el formulario: {formName}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return null;

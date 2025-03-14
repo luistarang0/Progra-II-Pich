@@ -1,4 +1,7 @@
 using InvSis.Business;
+using InvSis.Views;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace InvSis
 {
@@ -129,6 +132,41 @@ namespace InvSis
             cmbxUbi.SelectedIndex = 0;
             cmbxStatus.SelectedIndex = 0;
             cmbxImpuesto.SelectedIndex = 0;
+        }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario de detalles
+            frmDetalleProductoForm detalleProducto = new frmDetalleProductoForm();
+
+            detalleProducto.StartPosition = FormStartPosition.CenterParent;
+            detalleProducto.FormBorderStyle = FormBorderStyle.FixedDialog;
+            detalleProducto.MaximizeBox = false;
+            detalleProducto.MinimizeBox = false;
+
+            // Pasar los datos del producto al formulario de detalles
+
+
+            // Mostrar el formulario como diálogo
+            detalleProducto.ShowDialog(this);
+        }
+
+        private void btnApF_Click(object sender, EventArgs e)
+        {
+            // Verificar si al menos uno de los combobox tiene una selección válida
+            bool combo1Seleccionado = cmbCat.SelectedIndex != -1;
+            bool combo2Seleccionado = cmbEstatus.SelectedIndex != -1;
+
+            if (!combo1Seleccionado && !combo2Seleccionado)
+            {
+                MessageBox.Show("Debe seleccionar al menos un criterio de filtrado.",
+                    "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Si al menos uno está seleccionado, continuar con la aplicación de filtros
+            MessageBox.Show("Aplica los filtros a la tabla",
+                    "Filtrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
