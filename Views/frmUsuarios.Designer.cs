@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             lblTitulo = new Label();
             scUsuarios = new SplitContainer();
             gbAlta = new GroupBox();
+            btAlta = new Button();
             pbPersona = new PictureBox();
             btRegistroPersona = new Button();
             cbPersonas = new ComboBox();
@@ -47,10 +47,9 @@
             txtNickname = new TextBox();
             lblNickname = new Label();
             gbEdicionOEliminacion = new GroupBox();
-            toolTipPersona = new ToolTip(components);
-            btAlta = new Button();
-            cbSelección = new ComboBox();
-            lblSelección = new Label();
+            btEliminar = new Button();
+            btGuardarCambios = new Button();
+            lblCambioPersona = new Label();
             cbCambioEstatus = new ComboBox();
             lblCambioEstatus = new Label();
             txtCambioContraseña = new TextBox();
@@ -59,9 +58,9 @@
             lblCambioRol = new Label();
             txtCambioNickname = new TextBox();
             lblCambioNickname = new Label();
-            lblCambioPersona = new Label();
-            btGuardarCambios = new Button();
-            btEliminar = new Button();
+            lblSelección = new Label();
+            cbSelección = new ComboBox();
+            toolTipPersona = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)scUsuarios).BeginInit();
             scUsuarios.Panel1.SuspendLayout();
             scUsuarios.Panel2.SuspendLayout();
@@ -126,9 +125,21 @@
             gbAlta.TabStop = false;
             gbAlta.Text = "Alta de usuario";
             // 
+            // btAlta
+            // 
+            btAlta.AutoSize = true;
+            btAlta.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btAlta.Location = new Point(228, 575);
+            btAlta.Name = "btAlta";
+            btAlta.Size = new Size(82, 33);
+            btAlta.TabIndex = 13;
+            btAlta.Text = "Guardar";
+            btAlta.TextAlign = ContentAlignment.MiddleRight;
+            btAlta.UseVisualStyleBackColor = true;
+            btAlta.Click += btAlta_Click;
+            // 
             // pbPersona
             // 
-            pbPersona.Image = (Image)resources.GetObject("pbPersona.Image");
             pbPersona.Location = new Point(171, 497);
             pbPersona.Name = "pbPersona";
             pbPersona.Size = new Size(36, 35);
@@ -147,6 +158,7 @@
             btRegistroPersona.TabIndex = 11;
             btRegistroPersona.Text = "Registrar persona";
             btRegistroPersona.UseVisualStyleBackColor = true;
+            btRegistroPersona.Click += btRegistroPersona_Click;
             // 
             // cbPersonas
             // 
@@ -275,35 +287,41 @@
             gbEdicionOEliminacion.TabStop = false;
             gbEdicionOEliminacion.Text = "Edición o eliminación de usuario";
             // 
-            // btAlta
+            // btEliminar
             // 
-            btAlta.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btAlta.Location = new Point(190, 575);
-            btAlta.Name = "btAlta";
-            btAlta.Size = new Size(120, 33);
-            btAlta.TabIndex = 13;
-            btAlta.Text = "Guardar";
-            btAlta.TextAlign = ContentAlignment.MiddleRight;
-            btAlta.UseVisualStyleBackColor = true;
+            btEliminar.AutoSize = true;
+            btEliminar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btEliminar.Location = new Point(292, 575);
+            btEliminar.Name = "btEliminar";
+            btEliminar.Size = new Size(142, 33);
+            btEliminar.TabIndex = 24;
+            btEliminar.Text = "Eliminar usuario";
+            btEliminar.TextAlign = ContentAlignment.MiddleRight;
+            btEliminar.UseVisualStyleBackColor = true;
+            btEliminar.Click += btEliminar_Click;
             // 
-            // cbSelección
+            // btGuardarCambios
             // 
-            cbSelección.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbSelección.FormattingEnabled = true;
-            cbSelección.Location = new Point(21, 75);
-            cbSelección.Name = "cbSelección";
-            cbSelección.Size = new Size(413, 33);
-            cbSelección.TabIndex = 4;
+            btGuardarCambios.AutoSize = true;
+            btGuardarCambios.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btGuardarCambios.Location = new Point(21, 575);
+            btGuardarCambios.Name = "btGuardarCambios";
+            btGuardarCambios.Size = new Size(150, 33);
+            btGuardarCambios.TabIndex = 23;
+            btGuardarCambios.Text = "Guardar cambios";
+            btGuardarCambios.TextAlign = ContentAlignment.MiddleRight;
+            btGuardarCambios.UseVisualStyleBackColor = true;
+            btGuardarCambios.Click += btGuardarCambios_Click;
             // 
-            // lblSelección
+            // lblCambioPersona
             // 
-            lblSelección.AutoSize = true;
-            lblSelección.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSelección.Location = new Point(21, 49);
-            lblSelección.Name = "lblSelección";
-            lblSelección.Size = new Size(178, 23);
-            lblSelección.TabIndex = 14;
-            lblSelección.Text = "Selección de usuario *";
+            lblCambioPersona.AutoSize = true;
+            lblCambioPersona.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCambioPersona.Location = new Point(21, 483);
+            lblCambioPersona.Name = "lblCambioPersona";
+            lblCambioPersona.Size = new Size(413, 69);
+            lblCambioPersona.TabIndex = 14;
+            lblCambioPersona.Text = "Cambio de persona no disponible mediante edición, \r\nelimine al usuario y vuelva a crearlo seleccionando\r\nla persona correcta";
             // 
             // cbCambioEstatus
             // 
@@ -379,37 +397,25 @@
             lblCambioNickname.TabIndex = 15;
             lblCambioNickname.Text = "Cambio de nickname";
             // 
-            // lblCambioPersona
+            // lblSelección
             // 
-            lblCambioPersona.AutoSize = true;
-            lblCambioPersona.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCambioPersona.Location = new Point(21, 483);
-            lblCambioPersona.Name = "lblCambioPersona";
-            lblCambioPersona.Size = new Size(413, 69);
-            lblCambioPersona.TabIndex = 14;
-            lblCambioPersona.Text = "Cambio de persona no disponible mediante edición, \r\nelimine al usuario y vuelva a crearlo seleccionando\r\nla persona correcta";
+            lblSelección.AutoSize = true;
+            lblSelección.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSelección.Location = new Point(21, 49);
+            lblSelección.Name = "lblSelección";
+            lblSelección.Size = new Size(178, 23);
+            lblSelección.TabIndex = 14;
+            lblSelección.Text = "Selección de usuario *";
             // 
-            // btGuardarCambios
+            // cbSelección
             // 
-            btGuardarCambios.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btGuardarCambios.Location = new Point(21, 575);
-            btGuardarCambios.Name = "btGuardarCambios";
-            btGuardarCambios.Size = new Size(182, 33);
-            btGuardarCambios.TabIndex = 23;
-            btGuardarCambios.Text = "Guardar cambios";
-            btGuardarCambios.TextAlign = ContentAlignment.MiddleRight;
-            btGuardarCambios.UseVisualStyleBackColor = true;
-            // 
-            // btEliminar
-            // 
-            btEliminar.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btEliminar.Location = new Point(252, 575);
-            btEliminar.Name = "btEliminar";
-            btEliminar.Size = new Size(182, 33);
-            btEliminar.TabIndex = 24;
-            btEliminar.Text = "Eliminar usuario";
-            btEliminar.TextAlign = ContentAlignment.MiddleRight;
-            btEliminar.UseVisualStyleBackColor = true;
+            cbSelección.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbSelección.FormattingEnabled = true;
+            cbSelección.Location = new Point(21, 75);
+            cbSelección.Name = "cbSelección";
+            cbSelección.Size = new Size(413, 33);
+            cbSelección.TabIndex = 4;
+            cbSelección.SelectedIndexChanged += cbSelección_SelectedIndexChanged;
             // 
             // frmUsuarios
             // 
