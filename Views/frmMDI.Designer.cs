@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMDI));
             splitMDI = new SplitContainer();
-            groupMDIAdm = new GroupBox();
             groupMDI1 = new GroupBox();
+            btnRegMov = new Button();
             btnClose = new Button();
             btnAPI = new Button();
             btnRepInv = new Button();
@@ -39,8 +39,11 @@
             btnGesRoles = new Button();
             btnAdmUsr = new Button();
             btnAdmProd = new Button();
+            lblBienvenida = new Label();
+            btnCambiarUsuario = new Button();
             ((System.ComponentModel.ISupportInitialize)splitMDI).BeginInit();
             splitMDI.Panel1.SuspendLayout();
+            splitMDI.Panel2.SuspendLayout();
             splitMDI.SuspendLayout();
             groupMDI1.SuspendLayout();
             SuspendLayout();
@@ -54,7 +57,6 @@
             // 
             // splitMDI.Panel1
             // 
-            splitMDI.Panel1.Controls.Add(groupMDIAdm);
             splitMDI.Panel1.Controls.Add(groupMDI1);
             // 
             // splitMDI.Panel2
@@ -63,23 +65,15 @@
             splitMDI.Panel2.BackColor = Color.Transparent;
             splitMDI.Panel2.BackgroundImage = Properties.Resources.inventario_e1548898364548_Photoroom;
             splitMDI.Panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            splitMDI.Size = new Size(1904, 1041);
-            splitMDI.SplitterDistance = 360;
-            splitMDI.SplitterWidth = 5;
+            splitMDI.Panel2.Controls.Add(lblBienvenida);
+            splitMDI.Size = new Size(1666, 781);
+            splitMDI.SplitterDistance = 315;
             splitMDI.TabIndex = 0;
-            // 
-            // groupMDIAdm
-            // 
-            groupMDIAdm.Location = new Point(3, 773);
-            groupMDIAdm.Margin = new Padding(3, 4, 3, 4);
-            groupMDIAdm.Name = "groupMDIAdm";
-            groupMDIAdm.Padding = new Padding(3, 4, 3, 4);
-            groupMDIAdm.Size = new Size(406, 615);
-            groupMDIAdm.TabIndex = 1;
-            groupMDIAdm.TabStop = false;
             // 
             // groupMDI1
             // 
+            groupMDI1.Controls.Add(btnRegMov);
+            groupMDI1.Controls.Add(btnCambiarUsuario);
             groupMDI1.Controls.Add(btnClose);
             groupMDI1.Controls.Add(btnAPI);
             groupMDI1.Controls.Add(btnRepInv);
@@ -87,110 +81,161 @@
             groupMDI1.Controls.Add(btnGesRoles);
             groupMDI1.Controls.Add(btnAdmUsr);
             groupMDI1.Controls.Add(btnAdmProd);
-            groupMDI1.Location = new Point(3, 16);
-            groupMDI1.Margin = new Padding(3, 4, 3, 4);
+            groupMDI1.Location = new Point(3, 3);
             groupMDI1.Name = "groupMDI1";
-            groupMDI1.Padding = new Padding(3, 4, 3, 4);
-            groupMDI1.Size = new Size(406, 749);
+            groupMDI1.Size = new Size(309, 775);
             groupMDI1.TabIndex = 0;
             groupMDI1.TabStop = false;
             // 
+            // btnRegMov
+            // 
+            btnRegMov.BackColor = Color.PeachPuff;
+            btnRegMov.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegMov.Image = Properties.Resources._9068689_cycle_movement_icon;
+            btnRegMov.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRegMov.Location = new Point(-3, 255);
+            btnRegMov.Name = "btnRegMov";
+            btnRegMov.Size = new Size(312, 86);
+            btnRegMov.TabIndex = 7;
+            btnRegMov.Text = "Registrar Movimientos";
+            btnRegMov.TextAlign = ContentAlignment.MiddleRight;
+            btnRegMov.UseVisualStyleBackColor = false;
+            btnRegMov.Click += btnRegMov_Click;
+            // 
             // btnClose
             // 
+            btnClose.BackColor = Color.PeachPuff;
+            btnClose.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.Image = Properties.Resources._392517_close_delete_remove_icon;
             btnClose.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClose.Location = new Point(119, 479);
+            btnClose.Location = new Point(-3, 685);
+            btnClose.Margin = new Padding(3, 2, 3, 2);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(158, 39);
+            btnClose.Size = new Size(312, 86);
             btnClose.TabIndex = 6;
             btnClose.Text = "Cerrar Ventanas";
             btnClose.TextAlign = ContentAlignment.MiddleRight;
-            btnClose.UseVisualStyleBackColor = true;
+            btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
             // 
             // btnAPI
             // 
+            btnAPI.BackColor = Color.PeachPuff;
+            btnAPI.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAPI.Image = Properties.Resources._103289_api_icon;
             btnAPI.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAPI.Location = new Point(96, 403);
-            btnAPI.Margin = new Padding(3, 4, 3, 4);
+            btnAPI.Location = new Point(-3, 513);
             btnAPI.Name = "btnAPI";
-            btnAPI.Size = new Size(181, 52);
+            btnAPI.Size = new Size(312, 86);
             btnAPI.TabIndex = 5;
             btnAPI.Text = "API";
             btnAPI.TextAlign = ContentAlignment.MiddleRight;
-            btnAPI.UseVisualStyleBackColor = true;
+            btnAPI.UseVisualStyleBackColor = false;
             btnAPI.Click += btnAPI_Click;
             // 
             // btnRepInv
             // 
+            btnRepInv.BackColor = Color.PeachPuff;
+            btnRepInv.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRepInv.Image = Properties.Resources._4295569_bulleted_close_list_catalogue_checklist_icon;
             btnRepInv.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRepInv.Location = new Point(96, 343);
-            btnRepInv.Margin = new Padding(3, 4, 3, 4);
+            btnRepInv.Location = new Point(-3, 341);
             btnRepInv.Name = "btnRepInv";
-            btnRepInv.Size = new Size(181, 52);
+            btnRepInv.Size = new Size(312, 86);
             btnRepInv.TabIndex = 4;
-            btnRepInv.Text = "Reporte de Inventario";
+            btnRepInv.Text = "Reporte de\r\nInventario";
             btnRepInv.TextAlign = ContentAlignment.MiddleRight;
-            btnRepInv.UseVisualStyleBackColor = true;
+            btnRepInv.UseVisualStyleBackColor = false;
             btnRepInv.Click += btnRepInv_Click;
             // 
             // btnRepAud
             // 
+            btnRepAud.BackColor = Color.PeachPuff;
+            btnRepAud.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRepAud.Image = Properties.Resources._9044242_cloud_auditing_icon;
             btnRepAud.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRepAud.Location = new Point(96, 271);
-            btnRepAud.Margin = new Padding(3, 4, 3, 4);
+            btnRepAud.Location = new Point(-3, 427);
             btnRepAud.Name = "btnRepAud";
-            btnRepAud.Size = new Size(181, 52);
+            btnRepAud.Size = new Size(312, 86);
             btnRepAud.TabIndex = 3;
             btnRepAud.Text = "Reportes de Auditoría";
             btnRepAud.TextAlign = ContentAlignment.MiddleRight;
-            btnRepAud.UseVisualStyleBackColor = true;
+            btnRepAud.UseVisualStyleBackColor = false;
             btnRepAud.Click += btnRepAud_Click;
             // 
             // btnGesRoles
             // 
+            btnGesRoles.BackColor = Color.PeachPuff;
+            btnGesRoles.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGesRoles.Image = Properties.Resources._7352780_theater_masks_roles_artists_icon;
             btnGesRoles.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGesRoles.Location = new Point(96, 192);
-            btnGesRoles.Margin = new Padding(3, 4, 3, 4);
+            btnGesRoles.Location = new Point(-3, 169);
             btnGesRoles.Name = "btnGesRoles";
-            btnGesRoles.Size = new Size(181, 52);
+            btnGesRoles.Size = new Size(312, 86);
             btnGesRoles.TabIndex = 2;
             btnGesRoles.Text = "Gestionar Roles";
             btnGesRoles.TextAlign = ContentAlignment.MiddleRight;
-            btnGesRoles.UseVisualStyleBackColor = true;
+            btnGesRoles.UseVisualStyleBackColor = false;
             btnGesRoles.Click += btnGesRoles_Click;
             // 
             // btnAdmUsr
             // 
+            btnAdmUsr.BackColor = Color.PeachPuff;
+            btnAdmUsr.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdmUsr.Image = Properties.Resources._4213440_community_group_leader_people_team_icon;
             btnAdmUsr.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAdmUsr.Location = new Point(96, 115);
-            btnAdmUsr.Margin = new Padding(3, 4, 3, 4);
+            btnAdmUsr.Location = new Point(-3, 83);
             btnAdmUsr.Name = "btnAdmUsr";
-            btnAdmUsr.Size = new Size(181, 52);
+            btnAdmUsr.Size = new Size(312, 86);
             btnAdmUsr.TabIndex = 1;
             btnAdmUsr.Text = "Administrar Usuarios";
             btnAdmUsr.TextAlign = ContentAlignment.MiddleRight;
-            btnAdmUsr.UseVisualStyleBackColor = true;
+            btnAdmUsr.UseVisualStyleBackColor = false;
             btnAdmUsr.Click += btnAdmUsr_Click;
             // 
             // btnAdmProd
             // 
+            btnAdmProd.BackColor = Color.PeachPuff;
+            btnAdmProd.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdmProd.ForeColor = SystemColors.ActiveCaptionText;
             btnAdmProd.Image = Properties.Resources._4945342_document_documents_files_folder_format_icon__1_;
             btnAdmProd.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAdmProd.Location = new Point(96, 29);
-            btnAdmProd.Margin = new Padding(3, 4, 3, 4);
+            btnAdmProd.Location = new Point(-3, -3);
             btnAdmProd.Name = "btnAdmProd";
-            btnAdmProd.Size = new Size(181, 52);
+            btnAdmProd.Size = new Size(312, 86);
             btnAdmProd.TabIndex = 0;
             btnAdmProd.Text = "Administrar Productos";
             btnAdmProd.TextAlign = ContentAlignment.MiddleRight;
-            btnAdmProd.UseVisualStyleBackColor = true;
+            btnAdmProd.UseVisualStyleBackColor = false;
             btnAdmProd.Click += btnAdmProd_Click;
+            // 
+            // lblBienvenida
+            // 
+            lblBienvenida.AutoSize = true;
+            lblBienvenida.BackColor = Color.FromArgb(255, 192, 128);
+            lblBienvenida.Font = new Font("MS PGothic", 52F, FontStyle.Bold, GraphicsUnit.World, 0);
+            lblBienvenida.ForeColor = SystemColors.ActiveCaptionText;
+            lblBienvenida.Location = new Point(455, 339);
+            lblBienvenida.Name = "lblBienvenida";
+            lblBienvenida.Size = new Size(520, 104);
+            lblBienvenida.TabIndex = 1;
+            lblBienvenida.Text = "Bienvenido al Sistema\r\nde Inventarios";
+            lblBienvenida.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnCambiarUsuario
+            // 
+            btnCambiarUsuario.BackColor = Color.PeachPuff;
+            btnCambiarUsuario.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCambiarUsuario.Image = Properties.Resources._8673648_ic_fluent_people_swap_filled_icon;
+            btnCambiarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCambiarUsuario.Location = new Point(-3, 599);
+            btnCambiarUsuario.Name = "btnCambiarUsuario";
+            btnCambiarUsuario.Size = new Size(312, 86);
+            btnCambiarUsuario.TabIndex = 0;
+            btnCambiarUsuario.Text = "Cambio de\r\nUsuario";
+            btnCambiarUsuario.TextAlign = ContentAlignment.MiddleRight;
+            btnCambiarUsuario.UseVisualStyleBackColor = false;
+            btnCambiarUsuario.Click += btnCambiarUsuario_Click;
             // 
             // frmMDI
             // 
@@ -201,9 +246,14 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
+            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "frmMDI";
             Text = "Sistema de Inventarios";
+            WindowState = FormWindowState.Maximized;
             splitMDI.Panel1.ResumeLayout(false);
+            splitMDI.Panel2.ResumeLayout(false);
+            splitMDI.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitMDI).EndInit();
             splitMDI.ResumeLayout(false);
             groupMDI1.ResumeLayout(false);
@@ -213,7 +263,6 @@
         #endregion
 
         private SplitContainer splitMDI;
-        private GroupBox groupMDIAdm;
         private GroupBox groupMDI1;
         private Button btnAdmProd;
         private Button btnAdmUsr;
@@ -222,5 +271,8 @@
         private Button btnRepInv;
         private Button btnAPI;
         private Button btnClose;
+        private Button btnRegMov;
+        private Label lblBienvenida;
+        private Button btnCambiarUsuario;
     }
 }

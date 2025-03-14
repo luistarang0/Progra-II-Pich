@@ -143,9 +143,29 @@ namespace InvSis.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8673648_ic_fluent_people_swap_filled_icon {
+            get {
+                object obj = ResourceManager.GetObject("8673648_ic_fluent_people_swap_filled_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _9044242_cloud_auditing_icon {
             get {
                 object obj = ResourceManager.GetObject("9044242_cloud_auditing_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9068689_cycle_movement_icon {
+            get {
+                object obj = ResourceManager.GetObject("9068689_cycle_movement_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

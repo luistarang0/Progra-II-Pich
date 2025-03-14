@@ -10,6 +10,10 @@ namespace InvSis
         {
             InitializeComponent();
             spcProductos.Panel2Collapsed = true;
+            cmbxCat.SelectedIndex = 0;
+            cmbxUbi.SelectedIndex = 0;
+            cmbxStatus.SelectedIndex = 0;
+            cmbxImpuesto.SelectedIndex = 0;
 
         }
 
@@ -45,11 +49,6 @@ namespace InvSis
             }
         }
 
-
-
-
-
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (!ClaveProducto.ValidarCodigoProducto(txtClave.Text))
@@ -74,38 +73,12 @@ namespace InvSis
                 return;
             }
 
-            // Validar que categoria no este vacio
-            if (string.IsNullOrWhiteSpace(cmbxCat.Text))
-            {
-                MessageBox.Show("El campo de categoria no puede de estar vacio. ", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Validar que el campo impuesto no este vacio
-            if (string.IsNullOrWhiteSpace(cmbxImpuesto.Text))
-            {
-                MessageBox.Show("El campo de impuesto no puede de estar vacio. ", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Validar que el campo estatus no este vacio
-            if (string.IsNullOrWhiteSpace(cmbxStatus.Text))
-            {
-                MessageBox.Show("El campo de estatus no puede de estar vacio. ", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Validar que el campo ubicacion no este vacio
-            if (string.IsNullOrWhiteSpace(cmbxUbi.Text))
-            {
-                MessageBox.Show("El campo de ubicacion no puede de estar vacio. ", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-
+            MessageBox.Show("El Producto es valido para guardado ", "Informacion del sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             spcProductos.Panel2Collapsed = true;
 
             spcProductos.Panel1.Enabled = true;
+            ReiniciarCampos();
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -144,6 +117,18 @@ namespace InvSis
             {
                 e.Handled = true;
             }
+        }
+
+        private void ReiniciarCampos()
+        {
+            txtClave.Text = "";
+            txtNombre.Text = "";
+            txtCosto.Text = "";
+            nmupdnStock.Value = 0;
+            cmbxCat.SelectedIndex = 0;
+            cmbxUbi.SelectedIndex = 0;
+            cmbxStatus.SelectedIndex = 0;
+            cmbxImpuesto.SelectedIndex = 0;
         }
     }
 }

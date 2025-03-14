@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InvSis.Business;
 
 namespace InvSis.Views
 {
@@ -15,6 +16,7 @@ namespace InvSis.Views
         public frmMDI()
         {
             InitializeComponent();
+            ConfigurarPermisosBotones();
         }
 
         private void btnRepAud_Click(object sender, EventArgs e)
@@ -41,9 +43,26 @@ namespace InvSis.Views
             OpenFormInPanel("frmRepAPI");
         }
 
+        private void btnRegMov_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanel("frmRegMov");
+        }
+
         private void btnRepInv_Click(object sender, EventArgs e)
         {
-            OpenFormInPanel("frmDetalleProductoForm");
+            OpenFormInPanel("frmRepInv");
+        }
+
+        // En el formulario principal, después de iniciar sesión:
+        private void ConfigurarPermisosBotones()
+        {
+
+            // Botones solo para administradores
+            btnAdmUsr.Enabled = Sesion.EsAdministrador;
+            btnGesRoles.Enabled = Sesion.EsAdministrador;
+            btnRepAud.Enabled = Sesion.EsAdministrador;
+            btnAPI.Enabled = Sesion.EsAdministrador;
+
         }
 
         private void OpenFormInPanel(string formName)
@@ -100,8 +119,10 @@ namespace InvSis.Views
                     return new frmUsuarios();
                 case "frmRepAPI":
                     return new frmRepAPI();
-                case "frmDetalleProductoForm":
-                    return new frmDetalleProductoForm();
+                case "frmRegMov":
+                    return new frmRegMov();
+                case "frmRepInv":
+                    return new frmRepInv();
                 default:
                     MessageBox.Show($"No se reconoce el formulario: {formName}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return null;
@@ -118,6 +139,39 @@ namespace InvSis.Views
             openForms.Clear();
         }
 
-        
+        private void btnCambiarUsuario_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+        $"¿Está seguro que desea cerrar la sesión de {Sesion.UsuarioActual}?",
+        "Cerrar Sesión",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Cerrar todas las ventanas abiertas
+                foreach (Form form in openForms.Values)
+                {
+                    form.Close();
+                    form.Dispose();
+                }
+                openForms.Clear();
+
+                Sesion.CerrarSesion();
+
+                // Mostrar formulario de login
+                frmLogIn login = new frmLogIn();
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    // Después de iniciar sesión, configurar los permisos
+                    ConfigurarPermisosBotones();
+                }
+                else
+                {
+                    // Si canceló el login, cerrar la aplicación
+                    this.Close();
+                }
+            }
+        }
     }
 }
