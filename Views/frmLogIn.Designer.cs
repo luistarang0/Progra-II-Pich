@@ -62,7 +62,7 @@
             // txtUsuario
             // 
             txtUsuario.Location = new Point(333, 88);
-            txtUsuario.Margin = new Padding(2, 2, 2, 2);
+            txtUsuario.Margin = new Padding(2);
             txtUsuario.MaxLength = 25;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(155, 23);
@@ -71,7 +71,7 @@
             // txtContraseña
             // 
             txtContraseña.Location = new Point(333, 118);
-            txtContraseña.Margin = new Padding(2, 2, 2, 2);
+            txtContraseña.Margin = new Padding(2);
             txtContraseña.MaxLength = 20;
             txtContraseña.Name = "txtContraseña";
             txtContraseña.Size = new Size(155, 23);
@@ -80,7 +80,7 @@
             // btnIniciarSesion
             // 
             btnIniciarSesion.Location = new Point(400, 148);
-            btnIniciarSesion.Margin = new Padding(2, 2, 2, 2);
+            btnIniciarSesion.Margin = new Padding(2);
             btnIniciarSesion.Name = "btnIniciarSesion";
             btnIniciarSesion.Size = new Size(88, 20);
             btnIniciarSesion.TabIndex = 4;
@@ -94,7 +94,7 @@
             pictureBoxAvatar.BackgroundImage = Properties.Resources._6372974_account_avatar_log_in_login_register_icon1;
             pictureBoxAvatar.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBoxAvatar.Location = new Point(60, 61);
-            pictureBoxAvatar.Margin = new Padding(2, 2, 2, 2);
+            pictureBoxAvatar.Margin = new Padding(2);
             pictureBoxAvatar.Name = "pictureBoxAvatar";
             pictureBoxAvatar.Size = new Size(130, 128);
             pictureBoxAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -112,7 +112,8 @@
             Controls.Add(txtUsuario);
             Controls.Add(label1);
             Controls.Add(lbUsuario);
-            Margin = new Padding(2, 2, 2, 2);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "frmLogIn";
             StartPosition = FormStartPosition.CenterScreen;

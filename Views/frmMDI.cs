@@ -13,6 +13,7 @@ namespace InvSis.Views
 {
     public partial class frmMDI: Form
     {
+        private Dictionary<string, Form> openForms = new Dictionary<string, Form>();
         public frmMDI()
         {
             InitializeComponent();
