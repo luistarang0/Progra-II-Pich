@@ -52,7 +52,7 @@
             // dtpInicio
             // 
             dtpInicio.Format = DateTimePickerFormat.Short;
-            dtpInicio.Location = new Point(109, 59);
+            dtpInicio.Location = new Point(109, 27);
             dtpInicio.Name = "dtpInicio";
             dtpInicio.Size = new Size(200, 23);
             dtpInicio.TabIndex = 0;
@@ -60,7 +60,7 @@
             // dtpFin
             // 
             dtpFin.Format = DateTimePickerFormat.Short;
-            dtpFin.Location = new Point(481, 59);
+            dtpFin.Location = new Point(481, 27);
             dtpFin.Name = "dtpFin";
             dtpFin.Size = new Size(200, 23);
             dtpFin.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             cmbCat.FormattingEnabled = true;
             cmbCat.Items.AddRange(new object[] { "Todo", "Cat X", "Cat Y", "Cat Z" });
-            cmbCat.Location = new Point(109, 140);
+            cmbCat.Location = new Point(109, 83);
             cmbCat.Name = "cmbCat";
             cmbCat.Size = new Size(200, 23);
             cmbCat.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             cmbMov.FormattingEnabled = true;
             cmbMov.Items.AddRange(new object[] { "Todo", "Mov A", "Mov B", "Mov C" });
-            cmbMov.Location = new Point(481, 140);
+            cmbMov.Location = new Point(481, 83);
             cmbMov.Name = "cmbMov";
             cmbMov.Size = new Size(200, 23);
             cmbMov.TabIndex = 3;
@@ -87,7 +87,7 @@
             // lblFecIni
             // 
             lblFecIni.AutoSize = true;
-            lblFecIni.Location = new Point(178, 31);
+            lblFecIni.Location = new Point(181, 9);
             lblFecIni.Name = "lblFecIni";
             lblFecIni.Size = new Size(72, 15);
             lblFecIni.TabIndex = 5;
@@ -96,7 +96,7 @@
             // lblFecFin
             // 
             lblFecFin.AutoSize = true;
-            lblFecFin.Location = new Point(561, 31);
+            lblFecFin.Location = new Point(561, 9);
             lblFecFin.Name = "lblFecFin";
             lblFecFin.Size = new Size(66, 15);
             lblFecFin.TabIndex = 6;
@@ -105,7 +105,7 @@
             // lblCat
             // 
             lblCat.AutoSize = true;
-            lblCat.Location = new Point(195, 113);
+            lblCat.Location = new Point(181, 65);
             lblCat.Name = "lblCat";
             lblCat.Size = new Size(58, 15);
             lblCat.TabIndex = 7;
@@ -114,7 +114,7 @@
             // lblMov
             // 
             lblMov.AutoSize = true;
-            lblMov.Location = new Point(555, 109);
+            lblMov.Location = new Point(555, 65);
             lblMov.Name = "lblMov";
             lblMov.Size = new Size(72, 15);
             lblMov.TabIndex = 8;
@@ -122,11 +122,11 @@
             // 
             // btnApF
             // 
-            btnApF.Location = new Point(335, 210);
+            btnApF.Location = new Point(335, 127);
             btnApF.Name = "btnApF";
             btnApF.Size = new Size(126, 23);
             btnApF.TabIndex = 9;
-            btnApF.Text = "Aplicar Filtro";
+            btnApF.Text = "Aplicar Filtros";
             btnApF.UseVisualStyleBackColor = true;
             btnApF.Click += btnApF_Click;
             // 
@@ -142,11 +142,11 @@
             dgvProductos.Columns.AddRange(new DataGridViewColumn[] { colClave, colNombre, colCosto, colCategoria, colStock, colUbicacion, colImpuesto, colEstatus });
             dgvProductos.GridColor = SystemColors.Info;
             dgvProductos.ImeMode = ImeMode.Disable;
-            dgvProductos.Location = new Point(80, 266);
+            dgvProductos.Location = new Point(12, 156);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.ReadOnly = true;
             dgvProductos.RowHeadersVisible = false;
-            dgvProductos.Size = new Size(651, 173);
+            dgvProductos.Size = new Size(797, 300);
             dgvProductos.TabIndex = 10;
             // 
             // colClave

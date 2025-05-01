@@ -17,7 +17,7 @@ namespace InvSis.Data
         private static readonly Logger _logger = LoggingManager.GetLogger("InvSis.Data.BitacoraDataAccess");
         private readonly PostgreSQLDataAccess _dbAccess;
         private readonly MovimientoProductoDataAccess _movimientoProductoData;
-        private readonly UsuarioDataAccess _usuarioData;
+        private readonly UsuariosDataAccess _usuarioData;
 
         public BitacoraDataAccess()
         {
@@ -25,7 +25,7 @@ namespace InvSis.Data
             {
                 _dbAccess = PostgreSQLDataAccess.GetInstance();
                 _movimientoProductoData = new MovimientoProductoDataAccess();
-                _usuarioData = new UsuarioDataAccess();
+                _usuarioData = new UsuariosDataAccess();
             }
             catch (Exception ex)
             {
