@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
 using InvSis.Utilities;
 using NLog;
 using InvSis.Data;
@@ -6,15 +7,14 @@ using InvSis.Model;
 
 namespace InvSis.Controller
 {
-    public class RolesController
+    public class PermisosController
     {
         private static readonly Logger _Logger = LoggingManager.GetLogger("InvSis.Controller.RolesController");
         private readonly RolesDataAccess _rolesData;
         private readonly PermisosDataAccess _permisosData;
 
-        public RolesController()
+        public  PermisosController()
         {
-            _rolesData = new RolesDataAccess(); 
             _permisosData = new PermisosDataAccess();
         }
 
@@ -88,79 +88,6 @@ namespace InvSis.Controller
             catch (Exception ex)
             {
                 _Logger.Error(ex, $"Error al verificar existencia de permiso con descripción: {descripcion}");
-                return false;
-            }
-        }
-
-
-        public List<Rol> ObtenerTodosLosRoles(bool soloActivos = true)
-        {
-            try
-            {
-                return _rolesData.ObtenerTodosLosRoles(soloActivos);
-            }
-            catch (Exception ex)
-            {
-                _Logger.Error(ex, "Error al obtener los roles");
-                return new List<Rol>();
-            }
-        }
-
-        public Rol? ObtenerRolPorId(int idRol)
-        {
-            try
-            {
-                return _rolesData.ObtenerRolPorId(idRol);
-            }
-            catch (Exception ex)
-            {
-                _Logger.Error(ex, $"Error al obtener el rol con ID {idRol}");
-                return null;
-            }
-        }
-
-        public bool GuardarRol(Rol rol)
-        {
-            try
-            {
-                if (rol.IdRol == 0)
-                {
-                    return _rolesData.InsertarRol(rol) > 0;
-                }
-                else
-                {
-                    return _rolesData.ActualizarRol(rol);
-                }
-            }
-            catch (Exception ex)
-            {
-                _Logger.Error(ex, "Error al guardar el rol");
-                return false;
-            }
-        }
-
-        public bool EliminarRol(int idRol)
-        {
-            try
-            {
-                return _rolesData.EliminarRol(idRol);
-            }
-            catch (Exception ex)
-            {
-                _Logger.Error(ex, $"Error al eliminar el rol con ID {idRol}");
-                return false;
-            }
-        }
-
-        public bool ExisteRol(string nombre)
-        {
-            try
-            {
-                return _rolesData.ExisteNombreRol(nombre);
-            }
-            catch (Exception ex)
-            {
-                _Logger.Error(ex, $"Error al verificar existencia del rol con nombre '{nombre}'");
                 return false;
             }
         }
