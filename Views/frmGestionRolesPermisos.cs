@@ -189,5 +189,10 @@ namespace InvSis.Views
         {
 
         }
+
+        private void cbEstatusRolAlta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -163,6 +163,7 @@
             cbEstatusRolAlta.Name = "cbEstatusRolAlta";
             cbEstatusRolAlta.Size = new Size(126, 32);
             cbEstatusRolAlta.TabIndex = 4;
+            cbEstatusRolAlta.SelectedIndexChanged += cbEstatusRolAlta_SelectedIndexChanged;
             // 
             // lblEstatusRol
             // 
