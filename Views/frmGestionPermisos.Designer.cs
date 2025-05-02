@@ -1,7 +1,7 @@
 ﻿
 namespace InvSis.Views
 {
-    partial class frmGestrionPermisos
+    partial class frmGestionPermisos
     {
         /// <summary>
         /// Required designer variable.
@@ -268,7 +268,7 @@ namespace InvSis.Views
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
-            throw new NotImplementedException();
+            //algo
         }
 
         #endregion

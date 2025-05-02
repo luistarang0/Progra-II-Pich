@@ -13,12 +13,12 @@ using InvSis.Model;
 
 namespace InvSis.Views
 {
-    public partial class frmGestrionPermisos : Form
+    public partial class frmGestionPermisos : Form
     {
         private Permiso? permisoActual = null;
         private PermisosController _permisosController;
 
-        public frmGestrionPermisos()
+        public frmGestionPermisos()
         {
             InitializeComponent();
             _permisosController = new PermisosController(); // o PermisosController si tienes uno separado
