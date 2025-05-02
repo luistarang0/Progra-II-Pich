@@ -404,7 +404,8 @@ namespace InvSis.Views
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
-            throw new NotImplementedException();
+            // Add custom painting logic here, if needed.
+            // Example: e.Graphics.DrawString("Hello", Font, Brushes.Black, new PointF(10, 10));
         }
 
         #endregion

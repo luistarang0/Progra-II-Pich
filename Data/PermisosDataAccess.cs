@@ -301,5 +301,65 @@ namespace InvSis.Data
                 _dbAccess.Disconnect();
             }
         }
+
+        public Permiso? ObtenerPermisoPorDescripcion(string descripcion)
+        {
+            try
+            {
+                string query = "SELECT id_permiso, descripcion, estatus FROM Permisos WHERE descripcion = @Descripcion";
+
+                var paramDescripcion = _dbAccess.CreateParameter("@Descripcion", descripcion);
+
+                _dbAccess.Connect();
+                DataTable resultado = _dbAccess.ExecuteQuery_Reader(query, paramDescripcion);
+
+                if (resultado.Rows.Count == 0)
+                {
+                    _logger.Info($"No se encontró ningún permiso con la descripción '{descripcion}'.");
+                    return null;
+                }
+
+                DataRow row = resultado.Rows[0];
+                return new Permiso(
+                    Convert.ToInt32(row["id_permiso"]),
+                    row["descripcion"].ToString() ?? "",
+                    Convert.ToInt32(row["estatus"])
+                );
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, $"Error al obtener el permiso con descripción '{descripcion}'");
+                return null;
+            }
+            finally
+            {
+                _dbAccess.Disconnect();
+            }
+        }
+
+        public int ObtenerUltimoIdPermiso()
+        {
+            try
+            {
+                string query = "SELECT COALESCE(MAX(id_permiso), 0) FROM Permisos";
+
+                _dbAccess.Connect();
+                object? resultado = _dbAccess.ExecuteScalar(query);
+
+                return Convert.ToInt32(resultado);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error al obtener el último ID de permiso");
+                return 0;
+            }
+            finally
+            {
+                _dbAccess.Disconnect();
+            }
+        }
+
+
+
     }
 }

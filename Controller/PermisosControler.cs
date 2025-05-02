@@ -63,12 +63,14 @@ namespace InvSis.Controller
             {
                 if (permiso.IdPermiso == 0)
                 {
-                    // Insertar nuevo permiso
+                    // Obtener el último ID e incrementarlo
+                    int ultimoId = _permisosData.ObtenerUltimoIdPermiso();
+                    permiso.IdPermiso = ultimoId + 1;
+
                     return _permisosData.InsertarPermiso(permiso) > 0;
                 }
                 else
                 {
-                    // Actualizar permiso existente
                     return _permisosData.ActualizarPermiso(permiso);
                 }
             }
@@ -103,6 +105,11 @@ namespace InvSis.Controller
                 _Logger.Error(ex, $"Error al verificar existencia de permiso con descripción: {descripcion}");
                 return false;
             }
+        }
+
+        public Permiso? ObtenerPermisoPorDescripcion(string descripcion)
+        {
+            return _permisosData.ObtenerPermisoPorDescripcion(descripcion);
         }
     }
 }
