@@ -31,7 +31,7 @@ namespace InvSis.Model
         /// <summary>
         /// Stock disponible
         /// </summary>
-        public int? Stock { get; set; }
+        public int Stock { get; set; }
 
         /// <summary>
         /// Ubicación del producto
@@ -95,7 +95,7 @@ namespace InvSis.Model
         /// <summary>
         /// Constructor completo
         /// </summary>
-        public Producto(int idProducto, string nombre, string categoria, decimal costo, int? stock,
+        public Producto(int idProducto, string nombre, string categoria, decimal costo, int stock,
                     string ubicacion, string clave, int estatus, bool aplicaImpuesto, int? idImpuesto)
         {
             IdProducto = idProducto;
