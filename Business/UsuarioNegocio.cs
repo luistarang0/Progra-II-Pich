@@ -13,5 +13,7 @@ namespace InvSis.Business
         {
             return Validaciones.EsCorreoValido(correo);
         }
+
+
     }
 }
