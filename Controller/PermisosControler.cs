@@ -31,6 +31,19 @@ namespace InvSis.Controller
             }
         }
 
+        public List<Permiso> ObtenerTodosPermisos(bool soloActivos = true)
+        {
+            try
+            {
+                return _permisosData.ObtenerTodosLosPermisos();
+            }
+            catch (Exception ex)
+            {
+                _Logger.Error(ex, "Error al obtener permisos");
+                return new List<Permiso>();
+            }
+        }
+
         public Permiso? ObtenerPermisoPorId(int idPermiso)
         {
             try

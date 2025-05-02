@@ -92,6 +92,19 @@ namespace InvSis.Controller
             }
         }
 
+        public bool AsignarPermisoARol(int idRol, int idPermiso)
+        {
+            try
+            {
+                return _rolesData.AsignarPermisoARol(idRol, idPermiso);
+            }
+            catch (Exception ex)
+            {
+                _Logger.Error(ex, "Error al asignar permiso al rol.");
+                return false;
+            }
+        }
+
 
         public List<Rol> ObtenerTodosLosRoles(bool soloActivos = true)
         {
@@ -164,6 +177,16 @@ namespace InvSis.Controller
                 return false;
             }
         }
+        public List<Permiso> ObtenerPermisosDeRol(int idRol)
+        {
+            return _rolesData.ObtenerPermisosDeRol(idRol);
+        }
+
+        public bool RemoverPermisoDeRol(int idRol, int idPermiso)
+        {
+            return _rolesData.RemoverPermisoDeRol(idRol, idPermiso);
+        }
+
     }
 }
 
