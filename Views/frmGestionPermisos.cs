@@ -21,9 +21,10 @@ namespace InvSis.Views
         public frmGestionPermisos()
         {
             InitializeComponent();
-            _permisosController = new PermisosController(); // o PermisosController si tienes uno separado
+            _permisosController = new PermisosController(); 
             CargarComboEstatus();
             EstablecerCamposActivos(false);
+            CargarComboPermisosEliminar();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -53,10 +54,12 @@ namespace InvSis.Views
                 {
                     MessageBox.Show("Permiso agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCamposPermiso();
+                    CargarComboPermisosEliminar();
                 }
                 else
                 {
                     MessageBox.Show("Error al agregar el permiso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CargarComboPermisosEliminar();
                 }
             }
             else
@@ -71,10 +74,12 @@ namespace InvSis.Views
                 {
                     MessageBox.Show("Permiso actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCamposPermiso();
+                    CargarComboPermisosEliminar();
                 }
                 else
                 {
                     MessageBox.Show("Error al actualizar el permiso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CargarComboPermisosEliminar();
                 }
             }
         }
@@ -121,7 +126,7 @@ namespace InvSis.Views
             // Verificamos si ya existe
             if (_permisosController.ExistePermiso(nombre))
             {
-                permisoActual = _permisosController.ObtenerPermisoPorDescripcion(nombre); // Este método deberías tenerlo
+                permisoActual = _permisosController.ObtenerPermisoPorDescripcion(nombre);
                 if (permisoActual != null)
                 {
                     txtDescripcionPermiso.Text = permisoActual.Descripcion;
@@ -148,6 +153,58 @@ namespace InvSis.Views
             EstablecerCamposActivos(false);
             btnAgregar.Text = "Agregar";
             permisoActual = null;
+        }
+
+        private void cbxPermisoEliminar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxPermisoEliminar.SelectedItem is Permiso permiso)
+            {
+                lbDescripcionPermiso.Text = permiso.Descripcion;
+                lblEstatus.Text = permiso.Estatus == 1 ? "Activo" : "Inactivo";
+                lblEstatus.ForeColor = permiso.Estatus == 1 ? Color.Green : Color.Red;
+            }
+            else
+            {
+                lbDescripcionPermiso.Text = "";
+                lblEstatus.Text = "";
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (cbxPermisoEliminar.SelectedItem is not Permiso permisoSeleccionado)
+            {
+                MessageBox.Show("Selecciona un permiso a eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var confirm = MessageBox.Show($"¿Estás seguro de eliminar el permiso \"{permisoSeleccionado.Descripcion}\"?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm == DialogResult.Yes)
+            {
+                bool exito = _permisosController.EliminarPermiso(permisoSeleccionado.IdPermiso);
+
+                if (exito)
+                {
+                    MessageBox.Show("Permiso eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarComboPermisosEliminar();
+                    lbDescripcionPermiso.Text = "";
+                    lblEstatus.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Error al eliminar el permiso.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void CargarComboPermisosEliminar()
+        {
+            var permisos = _permisosController.ObtenerPermisos(true); // true = traer Activos
+            cbxPermisoEliminar.DataSource = null;
+            cbxPermisoEliminar.DataSource = permisos;
+            cbxPermisoEliminar.DisplayMember = "Descripcion";
+            cbxPermisoEliminar.ValueMember = "IdPermiso";
         }
 
 

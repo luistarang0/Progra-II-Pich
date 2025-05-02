@@ -39,12 +39,12 @@ namespace InvSis.Views
             txtNombrePermiso = new TextBox();
             lblNombrePermiso = new Label();
             lbAgregarEditarPermiso = new Label();
-            button1 = new Button();
+            btnEliminar = new Button();
             lblEstatus = new Label();
             lblEstatusEliminar = new Label();
             lbDescripcionPermiso = new Label();
             LBdESCpERMISO = new Label();
-            cbxPermisoElimicar = new ComboBox();
+            cbxPermisoEliminar = new ComboBox();
             LBpERMISOeLIMINAR = new Label();
             lbEliminarPermiso = new Label();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -84,12 +84,12 @@ namespace InvSis.Views
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(button1);
+            splitContainer1.Panel2.Controls.Add(btnEliminar);
             splitContainer1.Panel2.Controls.Add(lblEstatus);
             splitContainer1.Panel2.Controls.Add(lblEstatusEliminar);
             splitContainer1.Panel2.Controls.Add(lbDescripcionPermiso);
             splitContainer1.Panel2.Controls.Add(LBdESCpERMISO);
-            splitContainer1.Panel2.Controls.Add(cbxPermisoElimicar);
+            splitContainer1.Panel2.Controls.Add(cbxPermisoEliminar);
             splitContainer1.Panel2.Controls.Add(LBpERMISOeLIMINAR);
             splitContainer1.Panel2.Controls.Add(lbEliminarPermiso);
             splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
@@ -172,15 +172,16 @@ namespace InvSis.Views
             lbAgregarEditarPermiso.TabIndex = 0;
             lbAgregarEditarPermiso.Text = "Agregar o editar permiso";
             // 
-            // button1
+            // btnEliminar
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(552, 264);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 37);
-            button1.TabIndex = 8;
-            button1.Text = "Eliminar";
-            button1.UseVisualStyleBackColor = true;
+            btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEliminar.Location = new Point(552, 264);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(94, 37);
+            btnEliminar.TabIndex = 8;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // lblEstatus
             // 
@@ -220,13 +221,14 @@ namespace InvSis.Views
             LBdESCpERMISO.TabIndex = 4;
             LBdESCpERMISO.Text = "Descripcion del permiso";
             // 
-            // cbxPermisoElimicar
+            // cbxPermisoEliminar
             // 
-            cbxPermisoElimicar.FormattingEnabled = true;
-            cbxPermisoElimicar.Location = new Point(241, 63);
-            cbxPermisoElimicar.Name = "cbxPermisoElimicar";
-            cbxPermisoElimicar.Size = new Size(406, 25);
-            cbxPermisoElimicar.TabIndex = 3;
+            cbxPermisoEliminar.FormattingEnabled = true;
+            cbxPermisoEliminar.Location = new Point(241, 63);
+            cbxPermisoEliminar.Name = "cbxPermisoEliminar";
+            cbxPermisoEliminar.Size = new Size(406, 25);
+            cbxPermisoEliminar.TabIndex = 3;
+            cbxPermisoEliminar.SelectedIndexChanged += cbxPermisoEliminar_SelectedIndexChanged;
             // 
             // LBpERMISOeLIMINAR
             // 
@@ -248,14 +250,14 @@ namespace InvSis.Views
             lbEliminarPermiso.TabIndex = 1;
             lbEliminarPermiso.Text = "Eliminar permiso";
             // 
-            // frmGestrionPermisos
+            // frmGestionPermisos
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1347, 382);
             Controls.Add(splitContainer1);
             Controls.Add(lbTituloGestionRoles);
-            Name = "frmGestrionPermisos";
+            Name = "frmGestionPermisos";
             Text = "frmGestionPermisos";
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
@@ -288,8 +290,8 @@ namespace InvSis.Views
         private Label lblEstatusEliminar;
         private Label lbDescripcionPermiso;
         private Label LBdESCpERMISO;
-        private ComboBox cbxPermisoElimicar;
+        private ComboBox cbxPermisoEliminar;
         private Label LBpERMISOeLIMINAR;
-        private Button button1;
+        private Button btnEliminar;
     }
 }
