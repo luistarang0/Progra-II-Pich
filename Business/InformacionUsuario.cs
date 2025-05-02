@@ -21,6 +21,15 @@ namespace InvSis.Business
             return nombreComputadora;
         }
 
+/*
+    Implementación de ip:
+    // Obtener la IP (método asíncrono)
+                string ip = await InformacionUusuario.ObtenerIpCompletaAsync();
+
+    // Mostrar resultado al usuario
+    txtResultadoIP.Text = ip;
+*/
+
         private static readonly Logger _logger = LoggingManager.GetLogger("InvSis.Business.InformacionUsuario");
 
         public static async Task<string> ObtenerIpCompletaAsync()
@@ -134,13 +143,5 @@ namespace InvSis.Business
         public NetworkInformationException(string message, Exception inner) : base(message, inner) { }
     }
 
-    /*
-    Implementación de ip:
-    // Obtener la IP (método asíncrono)
-                string ip = await InformacionUusuario.ObtenerIpCompletaAsync();
-
-    // Mostrar resultado al usuario
-    txtResultadoIP.Text = ip;
-    */
-
+    
 }
