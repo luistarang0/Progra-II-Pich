@@ -31,7 +31,7 @@ namespace InvSis.Views
 
         private void btnGesRoles_Click(object sender, EventArgs e)
         {
-            OpenFormInPanel("frmGestionRolesPermisos");
+            OpenFormInPanel("frmGestionRoles");
         }
 
         private void btnAdmUsr_Click(object sender, EventArgs e)
@@ -112,8 +112,8 @@ namespace InvSis.Views
             {
                 case "frmAdminProd":
                     return new frmAdminProd();
-                case "frmGestionRolesPermisos":
-                    return new frmGestionRolesPermisos();
+                case "frmGestionRoles":
+                    return new frmGestionPermisos();
                 case "frmVReportesAuditoria":
                     return new frmVReportesAuditoria();
                 case "frmUsuarios":

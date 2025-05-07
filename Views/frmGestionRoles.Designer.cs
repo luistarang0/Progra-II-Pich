@@ -77,6 +77,19 @@ namespace InvSis.Views
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
 
             // 
+            // lbTituloGestionRoles
+            // 
+            lbTituloGestionRoles.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lbTituloGestionRoles.BackColor = SystemColors.ActiveCaption;
+            lbTituloGestionRoles.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbTituloGestionRoles.ForeColor = SystemColors.ControlText;
+            lbTituloGestionRoles.Location = new Point(-7, 9);
+            lbTituloGestionRoles.Name = "lbTituloGestionRoles";
+            lbTituloGestionRoles.Size = new Size(1546, 50);
+            lbTituloGestionRoles.TabIndex = 0;
+            lbTituloGestionRoles.Text = "Gestion de roles";
+            lbTituloGestionRoles.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // splitContainer1
             // 
             splitContainer1.Location = new Point(2, 74);
@@ -176,6 +189,7 @@ namespace InvSis.Views
             btnAgregarRol.TabIndex = 5;
             btnAgregarRol.Text = "Agregar rol";
             btnAgregarRol.UseVisualStyleBackColor = true;
+            btnAgregarRol.Click += btnAgregarRol_Click;
             // 
             // cbxEstatus
             // 
@@ -310,6 +324,22 @@ namespace InvSis.Views
             btnAgregarPermiso.TabIndex = 18;
             btnAgregarPermiso.Text = "Agregar";
             btnAgregarPermiso.UseVisualStyleBackColor = true;
+            btnAgregarPermiso.Click += btnAgregarPermiso_Click;
+            // 
+            // lblContenidoDescripcion
+            // 
+            lblContenidoDescripcion.Location = new Point(187, 275);
+            lblContenidoDescripcion.Name = "lblContenidoDescripcion";
+            lblContenidoDescripcion.Size = new Size(680, 75);
+            lblContenidoDescripcion.TabIndex = 16;
+            // 
+            // cbxPermiso
+            // 
+            cbxPermiso.FormattingEnabled = true;
+            cbxPermiso.Location = new Point(187, 237);
+            cbxPermiso.Name = "cbxPermiso";
+            cbxPermiso.Size = new Size(260, 25);
+            cbxPermiso.TabIndex = 15;
             // 
             // lblContenidoDescripcion
             // 
@@ -432,7 +462,8 @@ namespace InvSis.Views
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
-            throw new NotImplementedException();
+            // Add custom painting logic here, if needed.
+            // Example: e.Graphics.DrawString("Hello", Font, Brushes.Black, new PointF(10, 10));
         }
 
         #endregion

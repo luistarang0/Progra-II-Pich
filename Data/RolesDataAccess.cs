@@ -304,5 +304,99 @@ namespace InvSis.Data
                 _dbAccess.Disconnect();
             }
         }
+
+        public bool AsignarPermisoARol(int idRol, int idPermiso)
+        {
+            try
+            {
+                string query = "INSERT INTO Roles_Permisos (id_rol, id_permiso) VALUES (@IdRol, @IdPermiso)";
+
+                var paramRol = _dbAccess.CreateParameter("@IdRol", idRol);
+                var paramPermiso = _dbAccess.CreateParameter("@IdPermiso", idPermiso);
+
+                _dbAccess.Connect();
+                int filas = _dbAccess.ExecuteNonQuery(query, paramRol, paramPermiso);
+
+                return filas > 0;
+            }
+            catch (PostgresException ex) when (ex.SqlState == "23505") // Unique violation
+            {
+                _logger.Warn($"Permiso ya asignado al rol: {idRol}-{idPermiso}");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error al asignar permiso al rol");
+                return false;
+            }
+            finally
+            {
+                _dbAccess.Disconnect();
+            }
+        }
+
+        public List<Permiso> ObtenerPermisosDeRol(int idRol)
+        {
+            var permisos = new List<Permiso>();
+            try
+            {
+                string query = @"SELECT p.id_permiso, p.descripcion, p.estatus 
+                         FROM Permisos p
+                         INNER JOIN Roles_Permisos rp ON p.id_permiso = rp.id_permiso
+                         WHERE rp.id_rol = @IdRol";
+
+                var param = _dbAccess.CreateParameter("@IdRol", idRol);
+
+                _dbAccess.Connect();
+                var tabla = _dbAccess.ExecuteQuery_Reader(query, param);
+
+                foreach (DataRow row in tabla.Rows)
+                {
+                    permisos.Add(new Permiso(
+                        Convert.ToInt32(row["id_permiso"]),
+                        row["descripcion"].ToString() ?? "",
+                        Convert.ToInt32(row["estatus"])
+                    ));
+                }
+
+                return permisos;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error al obtener permisos del rol.");
+                return permisos;
+            }
+            finally
+            {
+                _dbAccess.Disconnect();
+            }
+        }
+
+        public bool RemoverPermisoDeRol(int idRol, int idPermiso)
+        {
+            try
+            {
+                string query = "DELETE FROM Roles_Permisos WHERE id_rol = @IdRol AND id_permiso = @IdPermiso";
+
+                var paramRol = _dbAccess.CreateParameter("@IdRol", idRol);
+                var paramPermiso = _dbAccess.CreateParameter("@IdPermiso", idPermiso);
+
+                _dbAccess.Connect();
+                int filas = _dbAccess.ExecuteNonQuery(query, paramRol, paramPermiso);
+
+                return filas > 0;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Error al remover permiso del rol");
+                return false;
+            }
+            finally
+            {
+                _dbAccess.Disconnect();
+            }
+        }
+
+
     }
 }
