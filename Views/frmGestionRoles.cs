@@ -279,5 +279,10 @@ namespace InvSis.Views
                 }
             }
         }
+
+        private void lbEstatusRol_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

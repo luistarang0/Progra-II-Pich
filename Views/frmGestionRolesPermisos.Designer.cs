@@ -94,18 +94,20 @@
             lblTitulo.ForeColor = SystemColors.ActiveCaptionText;
             lblTitulo.Location = new Point(0, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(1539, 49);
+            lblTitulo.Size = new Size(1347, 37);
             lblTitulo.TabIndex = 1;
-            lblTitulo.Text = "Gestión de roles y permisos";
+            lblTitulo.Text = "Gestión de roles y permisos (PRUEBA)";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // gbRoles
             // 
             gbRoles.Controls.Add(scRoles);
             gbRoles.Font = new Font("MS PGothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gbRoles.Location = new Point(7, 52);
+            gbRoles.Location = new Point(6, 39);
+            gbRoles.Margin = new Padding(3, 2, 3, 2);
             gbRoles.Name = "gbRoles";
-            gbRoles.Size = new Size(769, 839);
+            gbRoles.Padding = new Padding(3, 2, 3, 2);
+            gbRoles.Size = new Size(673, 629);
             gbRoles.TabIndex = 2;
             gbRoles.TabStop = false;
             gbRoles.Text = "Roles";
@@ -113,7 +115,8 @@
             // scRoles
             // 
             scRoles.Dock = DockStyle.Fill;
-            scRoles.Location = new Point(3, 27);
+            scRoles.Location = new Point(3, 21);
+            scRoles.Margin = new Padding(3, 2, 3, 2);
             scRoles.Name = "scRoles";
             scRoles.Orientation = Orientation.Horizontal;
             // 
@@ -137,18 +140,19 @@
             scRoles.Panel2.Controls.Add(lblCambioEstatusRol);
             scRoles.Panel2.Controls.Add(lblSelecciónRol);
             scRoles.Panel2.Controls.Add(lblEdiciónOEliminaciónRol);
-            scRoles.Size = new Size(763, 809);
-            scRoles.SplitterDistance = 377;
-            scRoles.SplitterWidth = 3;
+            scRoles.Size = new Size(667, 606);
+            scRoles.SplitterDistance = 282;
+            scRoles.SplitterWidth = 2;
             scRoles.TabIndex = 0;
             scRoles.SplitterMoved += splitContainer1_SplitterMoved;
             // 
             // btAltaRol
             // 
             btAltaRol.AutoSize = true;
-            btAltaRol.Location = new Point(383, 288);
+            btAltaRol.Location = new Point(335, 216);
+            btAltaRol.Margin = new Padding(3, 2, 3, 2);
             btAltaRol.Name = "btAltaRol";
-            btAltaRol.Size = new Size(120, 45);
+            btAltaRol.Size = new Size(105, 34);
             btAltaRol.TabIndex = 5;
             btAltaRol.Text = "Guardar";
             btAltaRol.TextAlign = ContentAlignment.MiddleRight;
@@ -159,53 +163,56 @@
             // 
             cbEstatusRolAlta.DropDownStyle = ComboBoxStyle.DropDownList;
             cbEstatusRolAlta.FormattingEnabled = true;
-            cbEstatusRolAlta.Location = new Point(29, 291);
+            cbEstatusRolAlta.Location = new Point(25, 218);
+            cbEstatusRolAlta.Margin = new Padding(3, 2, 3, 2);
             cbEstatusRolAlta.Name = "cbEstatusRolAlta";
-            cbEstatusRolAlta.Size = new Size(126, 32);
+            cbEstatusRolAlta.Size = new Size(111, 27);
             cbEstatusRolAlta.TabIndex = 4;
             cbEstatusRolAlta.SelectedIndexChanged += cbEstatusRolAlta_SelectedIndexChanged;
             // 
             // lblEstatusRol
             // 
             lblEstatusRol.AutoSize = true;
-            lblEstatusRol.Location = new Point(29, 241);
+            lblEstatusRol.Location = new Point(25, 181);
             lblEstatusRol.Name = "lblEstatusRol";
-            lblEstatusRol.Size = new Size(113, 24);
+            lblEstatusRol.Size = new Size(96, 19);
             lblEstatusRol.TabIndex = 3;
             lblEstatusRol.Text = "Estatus *";
             // 
             // txtNombreRol
             // 
-            txtNombreRol.Location = new Point(259, 95);
+            txtNombreRol.Location = new Point(227, 71);
+            txtNombreRol.Margin = new Padding(3, 2, 3, 2);
             txtNombreRol.MaxLength = 20;
             txtNombreRol.Name = "txtNombreRol";
-            txtNombreRol.Size = new Size(246, 31);
+            txtNombreRol.Size = new Size(216, 26);
             txtNombreRol.TabIndex = 2;
             // 
             // lblNombreRol
             // 
             lblNombreRol.AutoSize = true;
-            lblNombreRol.Location = new Point(29, 99);
+            lblNombreRol.Location = new Point(25, 74);
             lblNombreRol.Name = "lblNombreRol";
-            lblNombreRol.Size = new Size(114, 24);
+            lblNombreRol.Size = new Size(95, 19);
             lblNombreRol.TabIndex = 1;
             lblNombreRol.Text = "Nombre *";
             // 
             // lblAltaRol
             // 
             lblAltaRol.AutoSize = true;
-            lblAltaRol.Location = new Point(6, 4);
+            lblAltaRol.Location = new Point(5, 3);
             lblAltaRol.Name = "lblAltaRol";
-            lblAltaRol.Size = new Size(123, 24);
+            lblAltaRol.Size = new Size(104, 19);
             lblAltaRol.TabIndex = 0;
             lblAltaRol.Text = "Alta de rol";
             // 
             // btEliminarRol
             // 
             btEliminarRol.AutoSize = true;
-            btEliminarRol.Location = new Point(398, 365);
+            btEliminarRol.Location = new Point(348, 274);
+            btEliminarRol.Margin = new Padding(3, 2, 3, 2);
             btEliminarRol.Name = "btEliminarRol";
-            btEliminarRol.Size = new Size(162, 45);
+            btEliminarRol.Size = new Size(142, 34);
             btEliminarRol.TabIndex = 15;
             btEliminarRol.Text = "Eliminar rol";
             btEliminarRol.TextAlign = ContentAlignment.MiddleRight;
@@ -214,18 +221,19 @@
             // 
             // txtCambioNombreRol
             // 
-            txtCambioNombreRol.Location = new Point(398, 155);
+            txtCambioNombreRol.Location = new Point(348, 116);
+            txtCambioNombreRol.Margin = new Padding(3, 2, 3, 2);
             txtCambioNombreRol.MaxLength = 20;
             txtCambioNombreRol.Name = "txtCambioNombreRol";
-            txtCambioNombreRol.Size = new Size(108, 31);
+            txtCambioNombreRol.Size = new Size(95, 26);
             txtCambioNombreRol.TabIndex = 14;
             // 
             // lblCambioNombreRol
             // 
             lblCambioNombreRol.AutoSize = true;
-            lblCambioNombreRol.Location = new Point(398, 105);
+            lblCambioNombreRol.Location = new Point(348, 79);
             lblCambioNombreRol.Name = "lblCambioNombreRol";
-            lblCambioNombreRol.Size = new Size(93, 24);
+            lblCambioNombreRol.Size = new Size(77, 19);
             lblCambioNombreRol.TabIndex = 13;
             lblCambioNombreRol.Text = "Nombre";
             // 
@@ -233,17 +241,19 @@
             // 
             cbCambioSelecciónRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCambioSelecciónRol.FormattingEnabled = true;
-            cbCambioSelecciónRol.Location = new Point(29, 155);
+            cbCambioSelecciónRol.Location = new Point(25, 116);
+            cbCambioSelecciónRol.Margin = new Padding(3, 2, 3, 2);
             cbCambioSelecciónRol.Name = "cbCambioSelecciónRol";
-            cbCambioSelecciónRol.Size = new Size(125, 32);
+            cbCambioSelecciónRol.Size = new Size(110, 27);
             cbCambioSelecciónRol.TabIndex = 12;
             // 
             // btGuardarCambiosRol
             // 
             btGuardarCambiosRol.AutoSize = true;
-            btGuardarCambiosRol.Location = new Point(398, 231);
+            btGuardarCambiosRol.Location = new Point(348, 173);
+            btGuardarCambiosRol.Margin = new Padding(3, 2, 3, 2);
             btGuardarCambiosRol.Name = "btGuardarCambiosRol";
-            btGuardarCambiosRol.Size = new Size(230, 45);
+            btGuardarCambiosRol.Size = new Size(201, 34);
             btGuardarCambiosRol.TabIndex = 11;
             btGuardarCambiosRol.Text = "Guardar cambios";
             btGuardarCambiosRol.TextAlign = ContentAlignment.MiddleRight;
@@ -254,35 +264,36 @@
             // 
             cbCambioEstatusRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCambioEstatusRol.FormattingEnabled = true;
-            cbCambioEstatusRol.Location = new Point(29, 368);
+            cbCambioEstatusRol.Location = new Point(25, 276);
+            cbCambioEstatusRol.Margin = new Padding(3, 2, 3, 2);
             cbCambioEstatusRol.Name = "cbCambioEstatusRol";
-            cbCambioEstatusRol.Size = new Size(126, 32);
+            cbCambioEstatusRol.Size = new Size(111, 27);
             cbCambioEstatusRol.TabIndex = 10;
             // 
             // lblCambioEstatusRol
             // 
             lblCambioEstatusRol.AutoSize = true;
-            lblCambioEstatusRol.Location = new Point(29, 315);
+            lblCambioEstatusRol.Location = new Point(25, 236);
             lblCambioEstatusRol.Name = "lblCambioEstatusRol";
-            lblCambioEstatusRol.Size = new Size(92, 24);
+            lblCambioEstatusRol.Size = new Size(78, 19);
             lblCambioEstatusRol.TabIndex = 9;
             lblCambioEstatusRol.Text = "Estatus";
             // 
             // lblSelecciónRol
             // 
             lblSelecciónRol.AutoSize = true;
-            lblSelecciónRol.Location = new Point(29, 105);
+            lblSelecciónRol.Location = new Point(25, 79);
             lblSelecciónRol.Name = "lblSelecciónRol";
-            lblSelecciónRol.Size = new Size(206, 24);
+            lblSelecciónRol.Size = new Size(174, 19);
             lblSelecciónRol.TabIndex = 7;
             lblSelecciónRol.Text = "Selección de rol *";
             // 
             // lblEdiciónOEliminaciónRol
             // 
             lblEdiciónOEliminaciónRol.AutoSize = true;
-            lblEdiciónOEliminaciónRol.Location = new Point(29, 21);
+            lblEdiciónOEliminaciónRol.Location = new Point(25, 16);
             lblEdiciónOEliminaciónRol.Name = "lblEdiciónOEliminaciónRol";
-            lblEdiciónOEliminaciónRol.Size = new Size(308, 24);
+            lblEdiciónOEliminaciónRol.Size = new Size(258, 19);
             lblEdiciónOEliminaciónRol.TabIndex = 6;
             lblEdiciónOEliminaciónRol.Text = "Edición o eliminación de rol";
             // 
@@ -290,9 +301,11 @@
             // 
             gbPermisos.Controls.Add(scPermisos);
             gbPermisos.Font = new Font("MS PGothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gbPermisos.Location = new Point(787, 52);
+            gbPermisos.Location = new Point(689, 39);
+            gbPermisos.Margin = new Padding(3, 2, 3, 2);
             gbPermisos.Name = "gbPermisos";
-            gbPermisos.Size = new Size(738, 839);
+            gbPermisos.Padding = new Padding(3, 2, 3, 2);
+            gbPermisos.Size = new Size(646, 629);
             gbPermisos.TabIndex = 3;
             gbPermisos.TabStop = false;
             gbPermisos.Text = "Permisos";
@@ -300,7 +313,8 @@
             // scPermisos
             // 
             scPermisos.Dock = DockStyle.Fill;
-            scPermisos.Location = new Point(3, 27);
+            scPermisos.Location = new Point(3, 21);
+            scPermisos.Margin = new Padding(3, 2, 3, 2);
             scPermisos.Name = "scPermisos";
             scPermisos.Orientation = Orientation.Horizontal;
             // 
@@ -324,17 +338,18 @@
             scPermisos.Panel2.Controls.Add(lblCambioEstatusPermiso);
             scPermisos.Panel2.Controls.Add(lblSelecciónPermiso);
             scPermisos.Panel2.Controls.Add(lblEdiciónOEliminaciónPermiso);
-            scPermisos.Size = new Size(732, 809);
-            scPermisos.SplitterDistance = 377;
-            scPermisos.SplitterWidth = 3;
+            scPermisos.Size = new Size(640, 606);
+            scPermisos.SplitterDistance = 282;
+            scPermisos.SplitterWidth = 2;
             scPermisos.TabIndex = 0;
             // 
             // btAltaPermiso
             // 
             btAltaPermiso.AutoSize = true;
-            btAltaPermiso.Location = new Point(402, 291);
+            btAltaPermiso.Location = new Point(352, 218);
+            btAltaPermiso.Margin = new Padding(3, 2, 3, 2);
             btAltaPermiso.Name = "btAltaPermiso";
-            btAltaPermiso.Size = new Size(120, 45);
+            btAltaPermiso.Size = new Size(105, 34);
             btAltaPermiso.TabIndex = 5;
             btAltaPermiso.Text = "Guardar";
             btAltaPermiso.TextAlign = ContentAlignment.MiddleRight;
@@ -345,52 +360,55 @@
             // 
             cbEstatusPermisoAlta.DropDownStyle = ComboBoxStyle.DropDownList;
             cbEstatusPermisoAlta.FormattingEnabled = true;
-            cbEstatusPermisoAlta.Location = new Point(32, 291);
+            cbEstatusPermisoAlta.Location = new Point(28, 218);
+            cbEstatusPermisoAlta.Margin = new Padding(3, 2, 3, 2);
             cbEstatusPermisoAlta.Name = "cbEstatusPermisoAlta";
-            cbEstatusPermisoAlta.Size = new Size(163, 32);
+            cbEstatusPermisoAlta.Size = new Size(143, 27);
             cbEstatusPermisoAlta.TabIndex = 4;
             // 
             // lblEstatusPermiso
             // 
             lblEstatusPermiso.AutoSize = true;
-            lblEstatusPermiso.Location = new Point(32, 241);
+            lblEstatusPermiso.Location = new Point(28, 181);
             lblEstatusPermiso.Name = "lblEstatusPermiso";
-            lblEstatusPermiso.Size = new Size(113, 24);
+            lblEstatusPermiso.Size = new Size(96, 19);
             lblEstatusPermiso.TabIndex = 3;
             lblEstatusPermiso.Text = "Estatus *";
             // 
             // txtDescripciónPermiso
             // 
-            txtDescripciónPermiso.Location = new Point(287, 95);
+            txtDescripciónPermiso.Location = new Point(251, 71);
+            txtDescripciónPermiso.Margin = new Padding(3, 2, 3, 2);
             txtDescripciónPermiso.MaxLength = 100;
             txtDescripciónPermiso.Name = "txtDescripciónPermiso";
-            txtDescripciónPermiso.Size = new Size(246, 31);
+            txtDescripciónPermiso.Size = new Size(216, 26);
             txtDescripciónPermiso.TabIndex = 2;
             // 
             // lblDescripciónPermiso
             // 
             lblDescripciónPermiso.AutoSize = true;
-            lblDescripciónPermiso.Location = new Point(32, 99);
+            lblDescripciónPermiso.Location = new Point(28, 74);
             lblDescripciónPermiso.Name = "lblDescripciónPermiso";
-            lblDescripciónPermiso.Size = new Size(159, 24);
+            lblDescripciónPermiso.Size = new Size(133, 19);
             lblDescripciónPermiso.TabIndex = 1;
             lblDescripciónPermiso.Text = "Descripción *";
             // 
             // lblAltaPermiso
             // 
             lblAltaPermiso.AutoSize = true;
-            lblAltaPermiso.Location = new Point(6, 4);
+            lblAltaPermiso.Location = new Point(5, 3);
             lblAltaPermiso.Name = "lblAltaPermiso";
-            lblAltaPermiso.Size = new Size(180, 24);
+            lblAltaPermiso.Size = new Size(150, 19);
             lblAltaPermiso.TabIndex = 0;
             lblAltaPermiso.Text = "Alta de permiso";
             // 
             // btEliminarPermiso
             // 
             btEliminarPermiso.AutoSize = true;
-            btEliminarPermiso.Location = new Point(402, 365);
+            btEliminarPermiso.Location = new Point(352, 274);
+            btEliminarPermiso.Margin = new Padding(3, 2, 3, 2);
             btEliminarPermiso.Name = "btEliminarPermiso";
-            btEliminarPermiso.Size = new Size(227, 45);
+            btEliminarPermiso.Size = new Size(199, 34);
             btEliminarPermiso.TabIndex = 15;
             btEliminarPermiso.Text = "Eliminar permiso";
             btEliminarPermiso.TextAlign = ContentAlignment.MiddleRight;
@@ -399,18 +417,19 @@
             // 
             // txtCambioDescripciónPermiso
             // 
-            txtCambioDescripciónPermiso.Location = new Point(402, 127);
+            txtCambioDescripciónPermiso.Location = new Point(352, 95);
+            txtCambioDescripciónPermiso.Margin = new Padding(3, 2, 3, 2);
             txtCambioDescripciónPermiso.MaxLength = 100;
             txtCambioDescripciónPermiso.Name = "txtCambioDescripciónPermiso";
-            txtCambioDescripciónPermiso.Size = new Size(108, 31);
+            txtCambioDescripciónPermiso.Size = new Size(95, 26);
             txtCambioDescripciónPermiso.TabIndex = 14;
             // 
             // lblCambioDescripciónPermiso
             // 
             lblCambioDescripciónPermiso.AutoSize = true;
-            lblCambioDescripciónPermiso.Location = new Point(402, 75);
+            lblCambioDescripciónPermiso.Location = new Point(352, 56);
             lblCambioDescripciónPermiso.Name = "lblCambioDescripciónPermiso";
-            lblCambioDescripciónPermiso.Size = new Size(138, 24);
+            lblCambioDescripciónPermiso.Size = new Size(115, 19);
             lblCambioDescripciónPermiso.TabIndex = 13;
             lblCambioDescripciónPermiso.Text = "Descripción";
             // 
@@ -418,17 +437,19 @@
             // 
             cbCambioSelecciónPermiso.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCambioSelecciónPermiso.FormattingEnabled = true;
-            cbCambioSelecciónPermiso.Location = new Point(32, 125);
+            cbCambioSelecciónPermiso.Location = new Point(28, 94);
+            cbCambioSelecciónPermiso.Margin = new Padding(3, 2, 3, 2);
             cbCambioSelecciónPermiso.Name = "cbCambioSelecciónPermiso";
-            cbCambioSelecciónPermiso.Size = new Size(125, 32);
+            cbCambioSelecciónPermiso.Size = new Size(110, 27);
             cbCambioSelecciónPermiso.TabIndex = 12;
             // 
             // btGuardarCambiosPermiso
             // 
             btGuardarCambiosPermiso.AutoSize = true;
-            btGuardarCambiosPermiso.Location = new Point(402, 252);
+            btGuardarCambiosPermiso.Location = new Point(352, 189);
+            btGuardarCambiosPermiso.Margin = new Padding(3, 2, 3, 2);
             btGuardarCambiosPermiso.Name = "btGuardarCambiosPermiso";
-            btGuardarCambiosPermiso.Size = new Size(230, 45);
+            btGuardarCambiosPermiso.Size = new Size(201, 34);
             btGuardarCambiosPermiso.TabIndex = 11;
             btGuardarCambiosPermiso.Text = "Guardar cambios";
             btGuardarCambiosPermiso.TextAlign = ContentAlignment.MiddleRight;
@@ -439,35 +460,36 @@
             // 
             cbCambioEstatusPermiso.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCambioEstatusPermiso.FormattingEnabled = true;
-            cbCambioEstatusPermiso.Location = new Point(32, 365);
+            cbCambioEstatusPermiso.Location = new Point(28, 274);
+            cbCambioEstatusPermiso.Margin = new Padding(3, 2, 3, 2);
             cbCambioEstatusPermiso.Name = "cbCambioEstatusPermiso";
-            cbCambioEstatusPermiso.Size = new Size(126, 32);
+            cbCambioEstatusPermiso.Size = new Size(111, 27);
             cbCambioEstatusPermiso.TabIndex = 10;
             // 
             // lblCambioEstatusPermiso
             // 
             lblCambioEstatusPermiso.AutoSize = true;
-            lblCambioEstatusPermiso.Location = new Point(32, 315);
+            lblCambioEstatusPermiso.Location = new Point(28, 236);
             lblCambioEstatusPermiso.Name = "lblCambioEstatusPermiso";
-            lblCambioEstatusPermiso.Size = new Size(92, 24);
+            lblCambioEstatusPermiso.Size = new Size(78, 19);
             lblCambioEstatusPermiso.TabIndex = 9;
             lblCambioEstatusPermiso.Text = "Estatus";
             // 
             // lblSelecciónPermiso
             // 
             lblSelecciónPermiso.AutoSize = true;
-            lblSelecciónPermiso.Location = new Point(32, 75);
+            lblSelecciónPermiso.Location = new Point(28, 56);
             lblSelecciónPermiso.Name = "lblSelecciónPermiso";
-            lblSelecciónPermiso.Size = new Size(263, 24);
+            lblSelecciónPermiso.Size = new Size(220, 19);
             lblSelecciónPermiso.TabIndex = 7;
             lblSelecciónPermiso.Text = "Selección de permiso *";
             // 
             // lblEdiciónOEliminaciónPermiso
             // 
             lblEdiciónOEliminaciónPermiso.AutoSize = true;
-            lblEdiciónOEliminaciónPermiso.Location = new Point(32, 4);
+            lblEdiciónOEliminaciónPermiso.Location = new Point(28, 3);
             lblEdiciónOEliminaciónPermiso.Name = "lblEdiciónOEliminaciónPermiso";
-            lblEdiciónOEliminaciónPermiso.Size = new Size(365, 24);
+            lblEdiciónOEliminaciónPermiso.Size = new Size(304, 19);
             lblEdiciónOEliminaciónPermiso.TabIndex = 6;
             lblEdiciónOEliminaciónPermiso.Text = "Edición o eliminación de permiso";
             // 
@@ -483,9 +505,11 @@
             gbAsignaciónRP.Controls.Add(cbAsignaciónSelecciónRol);
             gbAsignaciónRP.Controls.Add(lblAsignaciónSelecciónRol);
             gbAsignaciónRP.Font = new Font("MS PGothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gbAsignaciónRP.Location = new Point(2, 888);
+            gbAsignaciónRP.Location = new Point(2, 666);
+            gbAsignaciónRP.Margin = new Padding(3, 2, 3, 2);
             gbAsignaciónRP.Name = "gbAsignaciónRP";
-            gbAsignaciónRP.Size = new Size(1523, 139);
+            gbAsignaciónRP.Padding = new Padding(3, 2, 3, 2);
+            gbAsignaciónRP.Size = new Size(1333, 104);
             gbAsignaciónRP.TabIndex = 4;
             gbAsignaciónRP.TabStop = false;
             gbAsignaciónRP.Text = "Asignación de permisos a rol";
@@ -493,9 +517,10 @@
             // btGuardarAsignaciónRP
             // 
             btGuardarAsignaciónRP.AutoSize = true;
-            btGuardarAsignaciónRP.Location = new Point(11, 104);
+            btGuardarAsignaciónRP.Location = new Point(10, 78);
+            btGuardarAsignaciónRP.Margin = new Padding(3, 2, 3, 2);
             btGuardarAsignaciónRP.Name = "btGuardarAsignaciónRP";
-            btGuardarAsignaciónRP.Size = new Size(103, 39);
+            btGuardarAsignaciónRP.Size = new Size(90, 29);
             btGuardarAsignaciónRP.TabIndex = 6;
             btGuardarAsignaciónRP.Text = "Guardar";
             btGuardarAsignaciónRP.TextAlign = ContentAlignment.MiddleRight;
@@ -506,17 +531,18 @@
             // 
             cbSelecciónPermiso3.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSelecciónPermiso3.FormattingEnabled = true;
-            cbSelecciónPermiso3.Location = new Point(1305, 56);
+            cbSelecciónPermiso3.Location = new Point(1142, 42);
+            cbSelecciónPermiso3.Margin = new Padding(3, 2, 3, 2);
             cbSelecciónPermiso3.Name = "cbSelecciónPermiso3";
-            cbSelecciónPermiso3.Size = new Size(177, 27);
+            cbSelecciónPermiso3.Size = new Size(155, 23);
             cbSelecciónPermiso3.TabIndex = 20;
             // 
             // lblSelecciónPermiso3
             // 
             lblSelecciónPermiso3.AutoSize = true;
-            lblSelecciónPermiso3.Location = new Point(1278, 33);
+            lblSelecciónPermiso3.Location = new Point(1118, 25);
             lblSelecciónPermiso3.Name = "lblSelecciónPermiso3";
-            lblSelecciónPermiso3.Size = new Size(220, 19);
+            lblSelecciónPermiso3.Size = new Size(179, 15);
             lblSelecciónPermiso3.TabIndex = 19;
             lblSelecciónPermiso3.Text = "Selección de permiso 3";
             lblSelecciónPermiso3.Click += lblSelecciónPermiso3_Click;
@@ -525,17 +551,18 @@
             // 
             cbSelecciónPermiso2.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSelecciónPermiso2.FormattingEnabled = true;
-            cbSelecciónPermiso2.Location = new Point(877, 56);
+            cbSelecciónPermiso2.Location = new Point(767, 42);
+            cbSelecciónPermiso2.Margin = new Padding(3, 2, 3, 2);
             cbSelecciónPermiso2.Name = "cbSelecciónPermiso2";
-            cbSelecciónPermiso2.Size = new Size(177, 27);
+            cbSelecciónPermiso2.Size = new Size(155, 23);
             cbSelecciónPermiso2.TabIndex = 18;
             // 
             // lblSelecciónPermiso2
             // 
             lblSelecciónPermiso2.AutoSize = true;
-            lblSelecciónPermiso2.Location = new Point(877, 33);
+            lblSelecciónPermiso2.Location = new Point(767, 25);
             lblSelecciónPermiso2.Name = "lblSelecciónPermiso2";
-            lblSelecciónPermiso2.Size = new Size(220, 19);
+            lblSelecciónPermiso2.Size = new Size(179, 15);
             lblSelecciónPermiso2.TabIndex = 17;
             lblSelecciónPermiso2.Text = "Selección de permiso 2";
             // 
@@ -543,17 +570,18 @@
             // 
             cbSelecciónPermiso1.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSelecciónPermiso1.FormattingEnabled = true;
-            cbSelecciónPermiso1.Location = new Point(448, 56);
+            cbSelecciónPermiso1.Location = new Point(392, 42);
+            cbSelecciónPermiso1.Margin = new Padding(3, 2, 3, 2);
             cbSelecciónPermiso1.Name = "cbSelecciónPermiso1";
-            cbSelecciónPermiso1.Size = new Size(177, 27);
+            cbSelecciónPermiso1.Size = new Size(155, 23);
             cbSelecciónPermiso1.TabIndex = 16;
             // 
             // lblSelecciónPermiso1
             // 
             lblSelecciónPermiso1.AutoSize = true;
-            lblSelecciónPermiso1.Location = new Point(448, 33);
+            lblSelecciónPermiso1.Location = new Point(392, 25);
             lblSelecciónPermiso1.Name = "lblSelecciónPermiso1";
-            lblSelecciónPermiso1.Size = new Size(238, 19);
+            lblSelecciónPermiso1.Size = new Size(194, 15);
             lblSelecciónPermiso1.TabIndex = 15;
             lblSelecciónPermiso1.Text = "Selección de permiso 1 *";
             // 
@@ -561,30 +589,32 @@
             // 
             cbAsignaciónSelecciónRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cbAsignaciónSelecciónRol.FormattingEnabled = true;
-            cbAsignaciónSelecciónRol.Location = new Point(11, 56);
+            cbAsignaciónSelecciónRol.Location = new Point(10, 42);
+            cbAsignaciónSelecciónRol.Margin = new Padding(3, 2, 3, 2);
             cbAsignaciónSelecciónRol.Name = "cbAsignaciónSelecciónRol";
-            cbAsignaciónSelecciónRol.Size = new Size(185, 27);
+            cbAsignaciónSelecciónRol.Size = new Size(162, 23);
             cbAsignaciónSelecciónRol.TabIndex = 14;
             // 
             // lblAsignaciónSelecciónRol
             // 
             lblAsignaciónSelecciónRol.AutoSize = true;
             lblAsignaciónSelecciónRol.Font = new Font("MS PGothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAsignaciónSelecciónRol.Location = new Point(11, 33);
+            lblAsignaciónSelecciónRol.Location = new Point(10, 25);
             lblAsignaciónSelecciónRol.Name = "lblAsignaciónSelecciónRol";
-            lblAsignaciónSelecciónRol.Size = new Size(174, 19);
+            lblAsignaciónSelecciónRol.Size = new Size(142, 15);
             lblAsignaciónSelecciónRol.TabIndex = 13;
             lblAsignaciónSelecciónRol.Text = "Selección de rol *";
             // 
             // frmGestionRolesPermisos
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1539, 1041);
+            ClientSize = new Size(1347, 781);
             Controls.Add(gbAsignaciónRP);
             Controls.Add(gbPermisos);
             Controls.Add(gbRoles);
             Controls.Add(lblTitulo);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmGestionRolesPermisos";
             Text = "frmGestionRolesPermisos";
             gbRoles.ResumeLayout(false);

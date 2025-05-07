@@ -21,7 +21,7 @@ namespace InvSis.Views
         public frmGestionPermisos()
         {
             InitializeComponent();
-            _permisosController = new PermisosController(); 
+            _permisosController = new PermisosController();
             CargarComboEstatus();
             EstablecerCamposActivos(false);
             CargarComboPermisosEliminar();
@@ -207,6 +207,9 @@ namespace InvSis.Views
             cbxPermisoEliminar.ValueMember = "IdPermiso";
         }
 
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

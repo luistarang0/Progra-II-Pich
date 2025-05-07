@@ -43,8 +43,6 @@
             btnBuscar = new Button();
             pnlTitulo = new Panel();
             lblTitulo = new Label();
-            ForeColor = ColorTranslator.FromHtml("#9F7AEA");
-            Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             pnlTitulo.SuspendLayout();
             SuspendLayout();
@@ -56,12 +54,11 @@
             dgvProductos.AllowUserToOrderColumns = true;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProductos.Columns.AddRange(new DataGridViewColumn[] { ID_Producto, nombre, Stock, estatus, Impuesto });
-            dgvProductos.Location = new Point(151, 157);
-            dgvProductos.Margin = new Padding(4, 5, 4, 5);
+            dgvProductos.Location = new Point(119, 148);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.ReadOnly = true;
             dgvProductos.RowHeadersWidth = 62;
-            dgvProductos.Size = new Size(777, 751);
+            dgvProductos.Size = new Size(815, 342);
             dgvProductos.TabIndex = 0;
             // 
             // ID_Producto
@@ -106,37 +103,33 @@
             // 
             // txtBusNom
             // 
-            txtBusNom.Location = new Point(963, 221);
-            txtBusNom.Margin = new Padding(4, 5, 4, 5);
+            txtBusNom.Location = new Point(463, 71);
             txtBusNom.Name = "txtBusNom";
-            txtBusNom.Size = new Size(200, 31);
+            txtBusNom.Size = new Size(141, 23);
             txtBusNom.TabIndex = 1;
             // 
             // lblBus
             // 
             lblBus.AutoSize = true;
-            lblBus.Location = new Point(260, 112);
-            lblBus.Margin = new Padding(4, 0, 4, 0);
+            lblBus.Location = new Point(104, 71);
             lblBus.Name = "lblBus";
-            lblBus.Size = new Size(145, 25);
+            lblBus.Size = new Size(101, 15);
             lblBus.TabIndex = 2;
             lblBus.Text = "Buscar Producto:";
             // 
             // txtBusID
             // 
-            txtBusID.Location = new Point(963, 119);
-            txtBusID.Margin = new Padding(4, 5, 4, 5);
+            txtBusID.Location = new Point(266, 68);
             txtBusID.Name = "txtBusID";
-            txtBusID.Size = new Size(200, 31);
+            txtBusID.Size = new Size(141, 23);
             txtBusID.TabIndex = 3;
             // 
             // lblID
             // 
             lblID.AutoSize = true;
-            lblID.Location = new Point(1039, 89);
-            lblID.Margin = new Padding(4, 0, 4, 0);
+            lblID.Location = new Point(266, 50);
             lblID.Name = "lblID";
-            lblID.Size = new Size(61, 25);
+            lblID.Size = new Size(42, 15);
             lblID.TabIndex = 4;
             lblID.Text = "Por ID";
             lblID.Click += label1_Click;
@@ -144,19 +137,17 @@
             // lblNom
             // 
             lblNom.AutoSize = true;
-            lblNom.Location = new Point(1022, 174);
-            lblNom.Margin = new Padding(4, 0, 4, 0);
+            lblNom.Location = new Point(463, 50);
             lblNom.Name = "lblNom";
-            lblNom.Size = new Size(109, 25);
+            lblNom.Size = new Size(75, 15);
             lblNom.TabIndex = 5;
             lblNom.Text = "Por Nombre";
             // 
             // btnEnviar
             // 
-            btnEnviar.Location = new Point(1022, 488);
-            btnEnviar.Margin = new Padding(4, 5, 4, 5);
+            btnEnviar.Location = new Point(805, 71);
             btnEnviar.Name = "btnEnviar";
-            btnEnviar.Size = new Size(297, 38);
+            btnEnviar.Size = new Size(208, 23);
             btnEnviar.TabIndex = 6;
             btnEnviar.Text = "Enviar Reporte Manualmente";
             btnEnviar.UseVisualStyleBackColor = true;
@@ -164,15 +155,13 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(1194, 174);
-            btnBuscar.Margin = new Padding(4, 5, 4, 5);
+            btnBuscar.Location = new Point(691, 71);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(94, 38);
+            btnBuscar.Size = new Size(66, 23);
             btnBuscar.TabIndex = 7;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
             btnBuscar.Click += btnBuscar_Click;
-           
             // 
             // pnlTitulo
             // 
@@ -180,8 +169,9 @@
             pnlTitulo.Controls.Add(lblTitulo);
             pnlTitulo.Dock = DockStyle.Top;
             pnlTitulo.Location = new Point(0, 0);
+            pnlTitulo.Margin = new Padding(2, 2, 2, 2);
             pnlTitulo.Name = "pnlTitulo";
-            pnlTitulo.Size = new Size(1529, 60);
+            pnlTitulo.Size = new Size(1070, 36);
             pnlTitulo.TabIndex = 0;
             // 
             // lblTitulo
@@ -191,19 +181,20 @@
             lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(0, 0);
+            lblTitulo.Margin = new Padding(2, 0, 2, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Padding = new Padding(0, 10, 0, 0);
-            lblTitulo.Size = new Size(1529, 60);
+            lblTitulo.Padding = new Padding(0, 6, 0, 0);
+            lblTitulo.Size = new Size(1070, 36);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "API";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // frmRepAPI
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(230, 242, 248);
-            ClientSize = new Size(1529, 915);
+            ClientSize = new Size(1070, 549);
             Controls.Add(pnlTitulo);
             Controls.Add(btnBuscar);
             Controls.Add(btnEnviar);
@@ -213,7 +204,8 @@
             Controls.Add(lblBus);
             Controls.Add(txtBusNom);
             Controls.Add(dgvProductos);
-            Margin = new Padding(4, 5, 4, 5);
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            ForeColor = Color.FromArgb(159, 122, 234);
             Name = "frmRepAPI";
             Text = "frmRepAPI";
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();

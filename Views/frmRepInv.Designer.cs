@@ -61,8 +61,9 @@
             pnlTitulo.Controls.Add(lblTitulo);
             pnlTitulo.Dock = DockStyle.Top;
             pnlTitulo.Location = new Point(0, 0);
+            pnlTitulo.Margin = new Padding(2, 2, 2, 2);
             pnlTitulo.Name = "pnlTitulo";
-            pnlTitulo.Size = new Size(1399, 60);
+            pnlTitulo.Size = new Size(979, 36);
             pnlTitulo.TabIndex = 0;
             // 
             // lblTitulo
@@ -72,8 +73,9 @@
             lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(0, 0);
+            lblTitulo.Margin = new Padding(2, 0, 2, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(1399, 60);
+            lblTitulo.Size = new Size(979, 36);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "REPORTE DE INVENTARIO";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
@@ -108,13 +110,12 @@
             dgvProductos.DefaultCellStyle = dataGridViewCellStyle3;
             dgvProductos.GridColor = Color.FromArgb(224, 224, 224);
             dgvProductos.ImeMode = ImeMode.Disable;
-            dgvProductos.Location = new Point(206, 208);
-            dgvProductos.Margin = new Padding(4, 5, 4, 5);
+            dgvProductos.Location = new Point(144, 159);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.ReadOnly = true;
             dgvProductos.RowHeadersVisible = false;
             dgvProductos.RowHeadersWidth = 62;
-            dgvProductos.Size = new Size(1040, 506);
+            dgvProductos.Size = new Size(728, 304);
             dgvProductos.TabIndex = 10;
             // 
             // colClave
@@ -186,10 +187,9 @@
             lblFecIni.AutoSize = true;
             lblFecIni.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             lblFecIni.ForeColor = Color.FromArgb(64, 64, 64);
-            lblFecIni.Location = new Point(247, 25);
-            lblFecIni.Margin = new Padding(4, 0, 4, 0);
+            lblFecIni.Location = new Point(173, 15);
             lblFecIni.Name = "lblFecIni";
-            lblFecIni.Size = new Size(122, 28);
+            lblFecIni.Size = new Size(87, 19);
             lblFecIni.TabIndex = 5;
             lblFecIni.Text = "Fecha Inicial";
             // 
@@ -198,10 +198,9 @@
             lblFecFin.AutoSize = true;
             lblFecFin.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             lblFecFin.ForeColor = Color.FromArgb(64, 64, 64);
-            lblFecFin.Location = new Point(1026, 25);
-            lblFecFin.Margin = new Padding(4, 0, 4, 0);
+            lblFecFin.Location = new Point(718, 15);
             lblFecFin.Name = "lblFecFin";
-            lblFecFin.Size = new Size(112, 28);
+            lblFecFin.Size = new Size(79, 19);
             lblFecFin.TabIndex = 6;
             lblFecFin.Text = "Fecha Final";
             // 
@@ -213,10 +212,9 @@
             cmbCat.ForeColor = Color.DimGray;
             cmbCat.FormattingEnabled = true;
             cmbCat.Items.AddRange(new object[] { "Todo", "Cat X", "Cat Y", "Cat Z" });
-            cmbCat.Location = new Point(226, 135);
-            cmbCat.Margin = new Padding(4, 5, 4, 5);
+            cmbCat.Location = new Point(158, 96);
             cmbCat.Name = "cmbCat";
-            cmbCat.Size = new Size(284, 36);
+            cmbCat.Size = new Size(200, 25);
             cmbCat.TabIndex = 2;
             // 
             // cmbMov
@@ -227,10 +225,9 @@
             cmbMov.ForeColor = Color.DimGray;
             cmbMov.FormattingEnabled = true;
             cmbMov.Items.AddRange(new object[] { "Todo", "Mov A", "Mov B", "Mov C" });
-            cmbMov.Location = new Point(943, 160);
-            cmbMov.Margin = new Padding(4, 5, 4, 5);
+            cmbMov.Location = new Point(660, 96);
             cmbMov.Name = "cmbMov";
-            cmbMov.Size = new Size(284, 36);
+            cmbMov.Size = new Size(200, 25);
             cmbMov.TabIndex = 3;
             // 
             // dtpInicio
@@ -239,10 +236,9 @@
             dtpInicio.Font = new Font("Segoe UI", 9F);
             dtpInicio.ForeColor = Color.DimGray;
             dtpInicio.Format = DateTimePickerFormat.Short;
-            dtpInicio.Location = new Point(226, 68);
-            dtpInicio.Margin = new Padding(4, 5, 4, 5);
+            dtpInicio.Location = new Point(158, 41);
             dtpInicio.Name = "dtpInicio";
-            dtpInicio.Size = new Size(284, 31);
+            dtpInicio.Size = new Size(200, 23);
             dtpInicio.TabIndex = 0;
             // 
             // dtpFin
@@ -251,10 +247,9 @@
             dtpFin.Font = new Font("Segoe UI", 9F);
             dtpFin.ForeColor = Color.DimGray;
             dtpFin.Format = DateTimePickerFormat.Short;
-            dtpFin.Location = new Point(962, 68);
-            dtpFin.Margin = new Padding(4, 5, 4, 5);
+            dtpFin.Location = new Point(673, 41);
             dtpFin.Name = "dtpFin";
-            dtpFin.Size = new Size(284, 31);
+            dtpFin.Size = new Size(200, 23);
             dtpFin.TabIndex = 1;
             dtpFin.ValueChanged += dtpFin_ValueChanged;
             // 
@@ -262,10 +257,9 @@
             // 
             lblCat.AutoSize = true;
             lblCat.ForeColor = Color.FromArgb(159, 122, 234);
-            lblCat.Location = new Point(302, 105);
-            lblCat.Margin = new Padding(4, 0, 4, 0);
+            lblCat.Location = new Point(211, 71);
             lblCat.Name = "lblCat";
-            lblCat.Size = new Size(88, 25);
+            lblCat.Size = new Size(58, 15);
             lblCat.TabIndex = 7;
             lblCat.Text = "Categoría";
             // 
@@ -273,10 +267,9 @@
             // 
             lblMov.AutoSize = true;
             lblMov.ForeColor = Color.FromArgb(159, 122, 234);
-            lblMov.Location = new Point(1030, 118);
-            lblMov.Margin = new Padding(4, 0, 4, 0);
+            lblMov.Location = new Point(721, 71);
             lblMov.Name = "lblMov";
-            lblMov.Size = new Size(108, 25);
+            lblMov.Size = new Size(72, 15);
             lblMov.TabIndex = 8;
             lblMov.Text = "Movimiento";
             // 
@@ -284,10 +277,9 @@
             // 
             btnApF.BackColor = Color.FromArgb(159, 122, 234);
             btnApF.ForeColor = Color.White;
-            btnApF.Location = new Point(599, 160);
-            btnApF.Margin = new Padding(4, 5, 4, 5);
+            btnApF.Location = new Point(445, 96);
             btnApF.Name = "btnApF";
-            btnApF.Size = new Size(180, 38);
+            btnApF.Size = new Size(126, 23);
             btnApF.TabIndex = 9;
             btnApF.Text = "Aplicar Filtro";
             btnApF.UseVisualStyleBackColor = false;
@@ -295,10 +287,10 @@
             // 
             // frmRepInv
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1399, 687);
-            BackColor = ColorTranslator.FromHtml("#E6F2F8");
+            BackColor = Color.FromArgb(230, 242, 248);
+            ClientSize = new Size(979, 481);
             Controls.Add(pnlTitulo);
             Controls.Add(dgvProductos);
             Controls.Add(btnApF);
@@ -310,14 +302,12 @@
             Controls.Add(cmbCat);
             Controls.Add(dtpFin);
             Controls.Add(dtpInicio);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "frmRepInv";
             Text = "frmRepInv";
             pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             ResumeLayout(false);
             PerformLayout();
-
         }
 
 
