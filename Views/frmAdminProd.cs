@@ -168,5 +168,10 @@ namespace InvSis
             MessageBox.Show("Aplica los filtros a la tabla",
                     "Filtrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void lblFilCat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

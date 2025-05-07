@@ -29,58 +29,58 @@ namespace InvSis.Views
         /// </summary>
         private void InitializeComponent()
         {
-            lbTituloGestionRoles = new Label();
+            lblTitulo = new Label();
             splitContainer1 = new SplitContainer();
-            lbAgregarRol = new Label();
-            lbAgregarPermisosRol = new Label();
-            lbNombreRol = new Label();
-            label3 = new Label();
-            txtNombreRol = new TextBox();
-            cbxEstatus = new ComboBox();
-            btnAgregarRol = new Button();
-            lblEliminarRol = new Label();
-            lblNombreEliminacionRol = new Label();
-            cbxRolEliminar = new ComboBox();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             btnEliminar = new Button();
-            cbxRolAgregarPermisos = new ComboBox();
-            label4 = new Label();
-            lblSeleccionaPermisos = new Label();
-            lblPermiso1 = new Label();
-            lblEstatus = new Label();
-            lblDescripcion = new Label();
-            cbxPermiso = new ComboBox();
-            lblContenidoDescripcion = new Label();
-            btnAgregarPermiso = new Button();
-            lblRemoverPermisos = new Label();
-            lbEstatusRol = new Label();
+            cbxRolEliminar = new ComboBox();
+            lblNombreEliminacionRol = new Label();
+            lblEliminarRol = new Label();
+            btnAgregarRol = new Button();
+            cbxEstatus = new ComboBox();
+            txtNombreRol = new TextBox();
+            label3 = new Label();
+            lbNombreRol = new Label();
+            lbAgregarRol = new Label();
+            btnRemoverPermiso = new Button();
+            cbxPermisoAremover = new ComboBox();
+            lbPermisoRemover = new Label();
             cbxRolRemoverPermisos = new ComboBox();
             lbRemoverPermisos = new Label();
-            lbPermisoRemover = new Label();
-            cbxPermisoAremover = new ComboBox();
-            btnRemoverPermiso = new Button();
+            lbEstatusRol = new Label();
+            lblRemoverPermisos = new Label();
+            btnAgregarPermiso = new Button();
+            lblContenidoDescripcion = new Label();
+            cbxPermiso = new ComboBox();
+            lblDescripcion = new Label();
+            lblEstatus = new Label();
+            lblPermiso1 = new Label();
+            lblSeleccionaPermisos = new Label();
+            cbxRolAgregarPermisos = new ComboBox();
+            label4 = new Label();
+            lbAgregarPermisosRol = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             SuspendLayout();
-            // 
-            // lbTituloGestionRoles
-            // 
-            lbTituloGestionRoles.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lbTituloGestionRoles.BackColor = SystemColors.ActiveCaption;
-            lbTituloGestionRoles.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloGestionRoles.ForeColor = SystemColors.ControlText;
-            lbTituloGestionRoles.Location = new Point(-7, 9);
-            lbTituloGestionRoles.Name = "lbTituloGestionRoles";
-            lbTituloGestionRoles.Size = new Size(1546, 50);
-            lbTituloGestionRoles.TabIndex = 0;
-            lbTituloGestionRoles.Text = "Gestion de roles";
-            lbTituloGestionRoles.TextAlign = ContentAlignment.MiddleCenter;
+            // lblTitulo 
+            lblTitulo.BackColor = ColorTranslator.FromHtml("#9F7AEA");
+            lblTitulo.Dock = DockStyle.Top;
+            lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(0, 0);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(833, 55);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "GESTION DE ROLES";
+            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+
             // 
             // splitContainer1
             // 
-            splitContainer1.Location = new Point(2, 59);
+            splitContainer1.Location = new Point(2, 74);
+            splitContainer1.Margin = new Padding(4, 4, 4, 4);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -98,6 +98,7 @@ namespace InvSis.Views
             // 
             // splitContainer1.Panel2
             // 
+            
             splitContainer1.Panel2.Controls.Add(btnRemoverPermiso);
             splitContainer1.Panel2.Controls.Add(cbxPermisoAremover);
             splitContainer1.Panel2.Controls.Add(lbPermisoRemover);
@@ -115,272 +116,304 @@ namespace InvSis.Views
             splitContainer1.Panel2.Controls.Add(cbxRolAgregarPermisos);
             splitContainer1.Panel2.Controls.Add(label4);
             splitContainer1.Panel2.Controls.Add(lbAgregarPermisosRol);
-            splitContainer1.Panel2.Paint += this.splitContainer1_Panel2_Paint;
-            splitContainer1.Size = new Size(1537, 851);
-            splitContainer1.SplitterDistance = 512;
+            splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
+            splitContainer1.Size = new Size(1921, 1064);
+            splitContainer1.SplitterDistance = 639;
+            splitContainer1.SplitterWidth = 5;
             splitContainer1.TabIndex = 1;
+            splitContainer1.ForeColor = ColorTranslator.FromHtml("#9F7AEA");
+            splitContainer1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             // 
-            // lbAgregarRol
+            // btnEliminar
             // 
-            lbAgregarRol.AutoSize = true;
-            lbAgregarRol.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbAgregarRol.Location = new Point(120, 23);
-            lbAgregarRol.Name = "lbAgregarRol";
-            lbAgregarRol.Size = new Size(260, 38);
-            lbAgregarRol.TabIndex = 0;
-            lbAgregarRol.Text = "Agregar o editar rol";
+            btnEliminar.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEliminar.Location = new Point(458, 584);
+            btnEliminar.Margin = new Padding(4, 4, 4, 4);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(146, 45);
+            btnEliminar.TabIndex = 9;
+            btnEliminar.Text = "Eliminar rol";
+            btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // lbAgregarPermisosRol
+            // cbxRolEliminar
             // 
-            lbAgregarPermisosRol.AutoSize = true;
-            lbAgregarPermisosRol.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbAgregarPermisosRol.Location = new Point(343, 23);
-            lbAgregarPermisosRol.Name = "lbAgregarPermisosRol";
-            lbAgregarPermisosRol.Size = new Size(299, 38);
-            lbAgregarPermisosRol.TabIndex = 0;
-            lbAgregarPermisosRol.Text = "Agregar permisos a rol";
-            // 
-            // lbNombreRol
-            // 
-            lbNombreRol.AutoSize = true;
-            lbNombreRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbNombreRol.Location = new Point(38, 100);
-            lbNombreRol.Name = "lbNombreRol";
-            lbNombreRol.Size = new Size(146, 28);
-            lbNombreRol.TabIndex = 1;
-            lbNombreRol.Text = "Nombre del rol";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(38, 147);
-            label3.Name = "label3";
-            label3.Size = new Size(73, 28);
-            label3.TabIndex = 2;
-            label3.Text = "Estatus";
-            // 
-            // txtNombreRol
-            // 
-            txtNombreRol.Location = new Point(192, 98);
-            txtNombreRol.Name = "txtNombreRol";
-            txtNombreRol.Size = new Size(291, 27);
-            txtNombreRol.TabIndex = 3;
-            // 
-            // cbxEstatus
-            // 
-            cbxEstatus.FormattingEnabled = true;
-            cbxEstatus.Location = new Point(192, 147);
-            cbxEstatus.Name = "cbxEstatus";
-            cbxEstatus.Size = new Size(291, 28);
-            cbxEstatus.TabIndex = 4;
-            // 
-            // btnAgregarRol
-            // 
-            btnAgregarRol.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAgregarRol.Location = new Point(366, 199);
-            btnAgregarRol.Name = "btnAgregarRol";
-            btnAgregarRol.Size = new Size(117, 36);
-            btnAgregarRol.TabIndex = 5;
-            btnAgregarRol.Text = "Agregar rol";
-            btnAgregarRol.UseVisualStyleBackColor = true;
-            // 
-            // lblEliminarRol
-            // 
-            lblEliminarRol.AutoSize = true;
-            lblEliminarRol.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEliminarRol.Location = new Point(169, 310);
-            lblEliminarRol.Name = "lblEliminarRol";
-            lblEliminarRol.Size = new Size(157, 38);
-            lblEliminarRol.TabIndex = 6;
-            lblEliminarRol.Text = "Eliminar rol";
+            cbxRolEliminar.FormattingEnabled = true;
+            cbxRolEliminar.Location = new Point(48, 514);
+            cbxRolEliminar.Margin = new Padding(4, 4, 4, 4);
+            cbxRolEliminar.Name = "cbxRolEliminar";
+            cbxRolEliminar.Size = new Size(555, 33);
+            cbxRolEliminar.TabIndex = 8;
             // 
             // lblNombreEliminacionRol
             // 
             lblNombreEliminacionRol.AutoSize = true;
             lblNombreEliminacionRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombreEliminacionRol.Location = new Point(38, 367);
+            lblNombreEliminacionRol.Location = new Point(48, 459);
+            lblNombreEliminacionRol.Margin = new Padding(4, 0, 4, 0);
             lblNombreEliminacionRol.Name = "lblNombreEliminacionRol";
-            lblNombreEliminacionRol.Size = new Size(234, 28);
+            lblNombreEliminacionRol.Size = new Size(289, 32);
             lblNombreEliminacionRol.TabIndex = 7;
             lblNombreEliminacionRol.Text = "Seleciona el rol a eliminar";
-            //lblNombreEliminacionRol.Click += this.lblNombreEliminacionRol_Click;
             // 
-            // cbxRolEliminar
+            // lblEliminarRol
             // 
-            cbxRolEliminar.FormattingEnabled = true;
-            cbxRolEliminar.Location = new Point(38, 411);
-            cbxRolEliminar.Name = "cbxRolEliminar";
-            cbxRolEliminar.Size = new Size(445, 28);
-            cbxRolEliminar.TabIndex = 8;
+            lblEliminarRol.AutoSize = true;
+            lblEliminarRol.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEliminarRol.Location = new Point(211, 388);
+            lblEliminarRol.Margin = new Padding(4, 0, 4, 0);
+            lblEliminarRol.Name = "lblEliminarRol";
+            lblEliminarRol.Size = new Size(183, 45);
+            lblEliminarRol.TabIndex = 6;
+            lblEliminarRol.Text = "Eliminar rol";
             // 
-            // btnEliminar
+            // btnAgregarRol
             // 
-            btnEliminar.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEliminar.Location = new Point(366, 467);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(117, 36);
-            btnEliminar.TabIndex = 9;
-            btnEliminar.Text = "Eliminar rol";
-            btnEliminar.UseVisualStyleBackColor = true;
+            btnAgregarRol.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAgregarRol.Location = new Point(458, 249);
+            btnAgregarRol.Margin = new Padding(4, 4, 4, 4);
+            btnAgregarRol.Name = "btnAgregarRol";
+            btnAgregarRol.Size = new Size(146, 45);
+            btnAgregarRol.TabIndex = 5;
+            btnAgregarRol.Text = "Agregar rol";
+            btnAgregarRol.UseVisualStyleBackColor = true;
             // 
-            // cbxRolAgregarPermisos
+            // cbxEstatus
             // 
-            cbxRolAgregarPermisos.FormattingEnabled = true;
-            cbxRolAgregarPermisos.Location = new Point(41, 147);
-            cbxRolAgregarPermisos.Name = "cbxRolAgregarPermisos";
-            cbxRolAgregarPermisos.Size = new Size(949, 28);
-            cbxRolAgregarPermisos.TabIndex = 10;
+            cbxEstatus.FormattingEnabled = true;
+            cbxEstatus.Location = new Point(240, 184);
+            cbxEstatus.Margin = new Padding(4, 4, 4, 4);
+            cbxEstatus.Name = "cbxEstatus";
+            cbxEstatus.Size = new Size(363, 33);
+            cbxEstatus.TabIndex = 4;
             // 
-            // label4
+            // txtNombreRol
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(41, 103);
-            label4.Name = "label4";
-            label4.Size = new Size(470, 28);
-            label4.TabIndex = 9;
-            label4.Text = "Seleciona el rol al cual se le desean agregar permisos";
+            txtNombreRol.Location = new Point(240, 122);
+            txtNombreRol.Margin = new Padding(4, 4, 4, 4);
+            txtNombreRol.Name = "txtNombreRol";
+            txtNombreRol.Size = new Size(363, 31);
+            txtNombreRol.TabIndex = 3;
             // 
-            // lblSeleccionaPermisos
+            // label3
             // 
-            lblSeleccionaPermisos.AutoSize = true;
-            lblSeleccionaPermisos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSeleccionaPermisos.Location = new Point(41, 219);
-            lblSeleccionaPermisos.Name = "lblSeleccionaPermisos";
-            lblSeleccionaPermisos.Size = new Size(288, 28);
-            lblSeleccionaPermisos.TabIndex = 11;
-            lblSeleccionaPermisos.Text = "Selecciona el permiso a agregar";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(48, 184);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(88, 32);
+            label3.TabIndex = 2;
+            label3.Text = "Estatus";
             // 
-            // lblPermiso1
+            // lbNombreRol
             // 
-            lblPermiso1.AutoSize = true;
-            lblPermiso1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPermiso1.Location = new Point(54, 279);
-            lblPermiso1.Name = "lblPermiso1";
-            lblPermiso1.Size = new Size(86, 28);
-            lblPermiso1.TabIndex = 12;
-            lblPermiso1.Text = "Permiso ";
+            lbNombreRol.AutoSize = true;
+            lbNombreRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbNombreRol.Location = new Point(48, 125);
+            lbNombreRol.Margin = new Padding(4, 0, 4, 0);
+            lbNombreRol.Name = "lbNombreRol";
+            lbNombreRol.Size = new Size(177, 32);
+            lbNombreRol.TabIndex = 1;
+            lbNombreRol.Text = "Nombre del rol";
             // 
-            // lblEstatus
+            // lbAgregarRol
             // 
-            lblEstatus.AutoSize = true;
-            lblEstatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEstatus.Location = new Point(54, 423);
-            lblEstatus.Name = "lblEstatus";
-            lblEstatus.Size = new Size(73, 28);
-            lblEstatus.TabIndex = 13;
-            lblEstatus.Text = "Estatus";
+            lbAgregarRol.AutoSize = true;
+            lbAgregarRol.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbAgregarRol.Location = new Point(150, 29);
+            lbAgregarRol.Margin = new Padding(4, 0, 4, 0);
+            lbAgregarRol.Name = "lbAgregarRol";
+            lbAgregarRol.Size = new Size(302, 45);
+            lbAgregarRol.TabIndex = 0;
+            lbAgregarRol.Text = "Agregar o editar rol";
             // 
-            // lblDescripcion
+            // btnRemoverPermiso
             // 
-            lblDescripcion.AutoSize = true;
-            lblDescripcion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDescripcion.Location = new Point(54, 351);
-            lblDescripcion.Name = "lblDescripcion";
-            lblDescripcion.Size = new Size(114, 28);
-            lblDescripcion.TabIndex = 14;
-            lblDescripcion.Text = "Descripcion";
+            btnRemoverPermiso.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRemoverPermiso.Location = new Point(1006, 918);
+            btnRemoverPermiso.Margin = new Padding(4, 4, 4, 4);
+            btnRemoverPermiso.Name = "btnRemoverPermiso";
+            btnRemoverPermiso.Size = new Size(231, 55);
+            btnRemoverPermiso.TabIndex = 25;
+            btnRemoverPermiso.Text = "Remover permiso";
+            btnRemoverPermiso.UseVisualStyleBackColor = true;
             // 
-            // cbxPermiso
+            // cbxPermisoAremover
             // 
-            cbxPermiso.FormattingEnabled = true;
-            cbxPermiso.Location = new Point(214, 279);
-            cbxPermiso.Name = "cbxPermiso";
-            cbxPermiso.Size = new Size(297, 28);
-            cbxPermiso.TabIndex = 15;
+            cbxPermisoAremover.FormattingEnabled = true;
+            cbxPermisoAremover.Location = new Point(429, 826);
+            cbxPermisoAremover.Margin = new Padding(4, 4, 4, 4);
+            cbxPermisoAremover.Name = "cbxPermisoAremover";
+            cbxPermisoAremover.Size = new Size(808, 33);
+            cbxPermisoAremover.TabIndex = 24;
             // 
-            // lblContenidoDescripcion
+            // lbPermisoRemover
             // 
-            lblContenidoDescripcion.Location = new Point(214, 324);
-            lblContenidoDescripcion.Name = "lblContenidoDescripcion";
-            lblContenidoDescripcion.Size = new Size(777, 88);
-            lblContenidoDescripcion.TabIndex = 16;
-            // 
-            // btnAgregarPermiso
-            // 
-            btnAgregarPermiso.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAgregarPermiso.Location = new Point(885, 423);
-            btnAgregarPermiso.Name = "btnAgregarPermiso";
-            btnAgregarPermiso.Size = new Size(105, 44);
-            btnAgregarPermiso.TabIndex = 18;
-            btnAgregarPermiso.Text = "Agregar";
-            btnAgregarPermiso.UseVisualStyleBackColor = true;
-            // 
-            // lblRemoverPermisos
-            // 
-            lblRemoverPermisos.AutoSize = true;
-            lblRemoverPermisos.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblRemoverPermisos.Location = new Point(343, 482);
-            lblRemoverPermisos.Name = "lblRemoverPermisos";
-            lblRemoverPermisos.Size = new Size(285, 38);
-            lblRemoverPermisos.TabIndex = 19;
-            lblRemoverPermisos.Text = "Quitar permisos a rol ";
-            // 
-            // lbEstatusRol
-            // 
-            lbEstatusRol.AutoSize = true;
-            lbEstatusRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbEstatusRol.Location = new Point(214, 423);
-            lbEstatusRol.Name = "lbEstatusRol";
-            lbEstatusRol.Size = new Size(273, 28);
-            lbEstatusRol.TabIndex = 20;
-            lbEstatusRol.Text = "AQUI VA EL ESTATUS DEL ROL";
+            lbPermisoRemover.AutoSize = true;
+            lbPermisoRemover.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbPermisoRemover.Location = new Point(51, 826);
+            lbPermisoRemover.Margin = new Padding(4, 0, 4, 0);
+            lbPermisoRemover.Name = "lbPermisoRemover";
+            lbPermisoRemover.Size = new Size(361, 32);
+            lbPermisoRemover.TabIndex = 23;
+            lbPermisoRemover.Text = "Selecciona el permiso a remover";
             // 
             // cbxRolRemoverPermisos
             // 
             cbxRolRemoverPermisos.FormattingEnabled = true;
-            cbxRolRemoverPermisos.Location = new Point(41, 592);
+            cbxRolRemoverPermisos.Location = new Point(51, 740);
+            cbxRolRemoverPermisos.Margin = new Padding(4, 4, 4, 4);
             cbxRolRemoverPermisos.Name = "cbxRolRemoverPermisos";
-            cbxRolRemoverPermisos.Size = new Size(949, 28);
+            cbxRolRemoverPermisos.Size = new Size(1185, 33);
             cbxRolRemoverPermisos.TabIndex = 22;
             // 
             // lbRemoverPermisos
             // 
             lbRemoverPermisos.AutoSize = true;
             lbRemoverPermisos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbRemoverPermisos.Location = new Point(41, 548);
+            lbRemoverPermisos.Location = new Point(51, 685);
+            lbRemoverPermisos.Margin = new Padding(4, 0, 4, 0);
             lbRemoverPermisos.Name = "lbRemoverPermisos";
-            lbRemoverPermisos.Size = new Size(475, 28);
+            lbRemoverPermisos.Size = new Size(590, 32);
             lbRemoverPermisos.TabIndex = 21;
             lbRemoverPermisos.Text = "Seleciona el rol al cual se le desean remover permisos";
             // 
-            // lbPermisoRemover
+            // lbEstatusRol
             // 
-            lbPermisoRemover.AutoSize = true;
-            lbPermisoRemover.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbPermisoRemover.Location = new Point(41, 661);
-            lbPermisoRemover.Name = "lbPermisoRemover";
-            lbPermisoRemover.Size = new Size(293, 28);
-            lbPermisoRemover.TabIndex = 23;
-            lbPermisoRemover.Text = "Selecciona el permiso a remover";
+            lbEstatusRol.AutoSize = true;
+            lbEstatusRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbEstatusRol.Location = new Point(268, 529);
+            lbEstatusRol.Margin = new Padding(4, 0, 4, 0);
+            lbEstatusRol.Name = "lbEstatusRol";
+            lbEstatusRol.Size = new Size(330, 32);
+            lbEstatusRol.TabIndex = 20;
+            lbEstatusRol.Text = "AQUI VA EL ESTATUS DEL ROL";
             // 
-            // cbxPermisoAremover
+            // lblRemoverPermisos
             // 
-            cbxPermisoAremover.FormattingEnabled = true;
-            cbxPermisoAremover.Location = new Point(343, 661);
-            cbxPermisoAremover.Name = "cbxPermisoAremover";
-            cbxPermisoAremover.Size = new Size(647, 28);
-            cbxPermisoAremover.TabIndex = 24;
+            lblRemoverPermisos.AutoSize = true;
+            lblRemoverPermisos.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRemoverPermisos.Location = new Point(429, 602);
+            lblRemoverPermisos.Margin = new Padding(4, 0, 4, 0);
+            lblRemoverPermisos.Name = "lblRemoverPermisos";
+            lblRemoverPermisos.Size = new Size(332, 45);
+            lblRemoverPermisos.TabIndex = 19;
+            lblRemoverPermisos.Text = "Quitar permisos a rol ";
             // 
-            // btnRemoverPermiso
+            // btnAgregarPermiso
             // 
-            btnRemoverPermiso.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRemoverPermiso.Location = new Point(805, 734);
-            btnRemoverPermiso.Name = "btnRemoverPermiso";
-            btnRemoverPermiso.Size = new Size(185, 44);
-            btnRemoverPermiso.TabIndex = 25;
-            btnRemoverPermiso.Text = "Remover permiso";
-            btnRemoverPermiso.UseVisualStyleBackColor = true;
+            btnAgregarPermiso.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAgregarPermiso.Location = new Point(1106, 529);
+            btnAgregarPermiso.Margin = new Padding(4, 4, 4, 4);
+            btnAgregarPermiso.Name = "btnAgregarPermiso";
+            btnAgregarPermiso.Size = new Size(131, 55);
+            btnAgregarPermiso.TabIndex = 18;
+            btnAgregarPermiso.Text = "Agregar";
+            btnAgregarPermiso.UseVisualStyleBackColor = true;
+            // 
+            // lblContenidoDescripcion
+            // 
+            lblContenidoDescripcion.Location = new Point(268, 405);
+            lblContenidoDescripcion.Margin = new Padding(4, 0, 4, 0);
+            lblContenidoDescripcion.Name = "lblContenidoDescripcion";
+            lblContenidoDescripcion.Size = new Size(971, 110);
+            lblContenidoDescripcion.TabIndex = 16;
+            // 
+            // cbxPermiso
+            // 
+            cbxPermiso.FormattingEnabled = true;
+            cbxPermiso.Location = new Point(268, 349);
+            cbxPermiso.Margin = new Padding(4, 4, 4, 4);
+            cbxPermiso.Name = "cbxPermiso";
+            cbxPermiso.Size = new Size(370, 33);
+            cbxPermiso.TabIndex = 15;
+            // 
+            // lblDescripcion
+            // 
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDescripcion.Location = new Point(68, 439);
+            lblDescripcion.Margin = new Padding(4, 0, 4, 0);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(138, 32);
+            lblDescripcion.TabIndex = 14;
+            lblDescripcion.Text = "Descripcion";
+            // 
+            // lblEstatus
+            // 
+            lblEstatus.AutoSize = true;
+            lblEstatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEstatus.Location = new Point(68, 529);
+            lblEstatus.Margin = new Padding(4, 0, 4, 0);
+            lblEstatus.Name = "lblEstatus";
+            lblEstatus.Size = new Size(88, 32);
+            lblEstatus.TabIndex = 13;
+            lblEstatus.Text = "Estatus";
+            // 
+            // lblPermiso1
+            // 
+            lblPermiso1.AutoSize = true;
+            lblPermiso1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPermiso1.Location = new Point(68, 349);
+            lblPermiso1.Margin = new Padding(4, 0, 4, 0);
+            lblPermiso1.Name = "lblPermiso1";
+            lblPermiso1.Size = new Size(105, 32);
+            lblPermiso1.TabIndex = 12;
+            lblPermiso1.Text = "Permiso ";
+            // 
+            // lblSeleccionaPermisos
+            // 
+            lblSeleccionaPermisos.AutoSize = true;
+            lblSeleccionaPermisos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSeleccionaPermisos.Location = new Point(51, 274);
+            lblSeleccionaPermisos.Margin = new Padding(4, 0, 4, 0);
+            lblSeleccionaPermisos.Name = "lblSeleccionaPermisos";
+            lblSeleccionaPermisos.Size = new Size(353, 32);
+            lblSeleccionaPermisos.TabIndex = 11;
+            lblSeleccionaPermisos.Text = "Selecciona el permiso a agregar";
+            // 
+            // cbxRolAgregarPermisos
+            // 
+            cbxRolAgregarPermisos.FormattingEnabled = true;
+            cbxRolAgregarPermisos.Location = new Point(51, 184);
+            cbxRolAgregarPermisos.Margin = new Padding(4, 4, 4, 4);
+            cbxRolAgregarPermisos.Name = "cbxRolAgregarPermisos";
+            cbxRolAgregarPermisos.Size = new Size(1185, 33);
+            cbxRolAgregarPermisos.TabIndex = 10;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(51, 129);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(582, 32);
+            label4.TabIndex = 9;
+            label4.Text = "Seleciona el rol al cual se le desean agregar permisos";
+            // 
+            // lbAgregarPermisosRol
+            // 
+            lbAgregarPermisosRol.AutoSize = true;
+            lbAgregarPermisosRol.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbAgregarPermisosRol.Location = new Point(429, 29);
+            lbAgregarPermisosRol.Margin = new Padding(4, 0, 4, 0);
+            lbAgregarPermisosRol.Name = "lbAgregarPermisosRol";
+            lbAgregarPermisosRol.Size = new Size(347, 45);
+            lbAgregarPermisosRol.TabIndex = 0;
+            lbAgregarPermisosRol.Text = "Agregar permisos a rol";
             // 
             // frmGestionRoles
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1539, 922);
+            ClientSize = new Size(1924, 1050);
             Controls.Add(splitContainer1);
-            Controls.Add(lbTituloGestionRoles);
+            Controls.Add(lblTitulo);
+            BackColor = ColorTranslator.FromHtml("#E6F2F8");
+
             ForeColor = SystemColors.Desktop;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "frmGestionRoles";
             Text = "frmGestionRoles";
             splitContainer1.Panel1.ResumeLayout(false);
@@ -404,7 +437,7 @@ namespace InvSis.Views
 
         #endregion
 
-        private Label lbTituloGestionRoles;
+        private Label lblTitulo;
         private SplitContainer splitContainer1;
         private Label lbAgregarRol;
         private Label lbAgregarPermisosRol;

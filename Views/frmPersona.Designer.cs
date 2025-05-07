@@ -54,6 +54,9 @@
             lblSelección = new Label();
             cbSelección = new ComboBox();
             lblTitulo = new Label();
+            ForeColor = ColorTranslator.FromHtml("#9F7AEA");
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+
             ((System.ComponentModel.ISupportInitialize)scPersonas).BeginInit();
             scPersonas.Panel1.SuspendLayout();
             scPersonas.Panel2.SuspendLayout();
@@ -133,6 +136,18 @@
             lblDatosObligatorios.Size = new Size(161, 23);
             lblDatosObligatorios.TabIndex = 8;
             lblDatosObligatorios.Text = "* Datos obligatorios";
+            // lblTitulo 
+            lblTitulo.BackColor = ColorTranslator.FromHtml("#9F7AEA");
+            lblTitulo.Dock = DockStyle.Top;
+            lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(0, 0);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(833, 55);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "CONTROL PERSONAS";
+            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+
             // 
             // lblEdad
             // 
@@ -343,24 +358,18 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.BackColor = SystemColors.InactiveCaption;
-            lblTitulo.Dock = DockStyle.Top;
-            lblTitulo.Font = new Font("Segoe UI Symbol", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTitulo.ForeColor = SystemColors.ActiveCaptionText;
-            lblTitulo.Location = new Point(0, 0);
-            lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(842, 49);
-            lblTitulo.TabIndex = 2;
-            lblTitulo.Text = "Administración de personas";
-            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+           
+
             // 
             // frmPersona
             // 
+            BackColor = ColorTranslator.FromHtml("#E6F2F8");
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(842, 604);
             Controls.Add(scPersonas);
             Controls.Add(lblTitulo);
+
             Name = "frmPersona";
             Text = "frmPersona";
             scPersonas.Panel1.ResumeLayout(false);
@@ -378,7 +387,7 @@
         }
 
         #endregion
-
+        private Label lblTitulo;
         private SplitContainer scPersonas;
         private GroupBox gbAlta;
         private Button btAlta;
@@ -409,7 +418,7 @@
         private Label lblCambioNombre;
         private Label lblSelección;
         private ComboBox cbSelección;
-        private Label lblTitulo;
+        
         private NumericUpDown nudEdad;
         private NumericUpDown nudCambioEdad;
     }

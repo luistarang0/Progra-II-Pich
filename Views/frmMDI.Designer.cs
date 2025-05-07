@@ -90,7 +90,7 @@
             // 
             // btnRegMov
             // 
-            btnRegMov.BackColor = Color.PeachPuff;
+            btnRegMov.BackColor = ColorTranslator.FromHtml("#E6F2F8");
             btnRegMov.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegMov.Image = Properties.Resources._9068689_cycle_movement_icon;
             btnRegMov.ImageAlign = ContentAlignment.MiddleLeft;
@@ -120,7 +120,7 @@
             // 
             // btnCambiarUsuario
             // 
-            btnCambiarUsuario.BackColor = Color.PeachPuff;
+            btnCambiarUsuario.BackColor =ColorTranslator.FromHtml("#E6F2F8");
             btnCambiarUsuario.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCambiarUsuario.Image = Properties.Resources._8673648_ic_fluent_people_swap_filled_icon;
             btnCambiarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
@@ -135,7 +135,7 @@
             // 
             // btnAPI
             // 
-            btnAPI.BackColor = Color.PeachPuff;
+            btnAPI.BackColor = ColorTranslator.FromHtml("#E6F2F8");
             btnAPI.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAPI.Image = Properties.Resources._103289_api_icon;
             btnAPI.ImageAlign = ContentAlignment.MiddleLeft;
@@ -150,7 +150,7 @@
             // 
             // btnRepInv
             // 
-            btnRepInv.BackColor = Color.PeachPuff;
+            btnRepInv.BackColor = ColorTranslator.FromHtml("#E6F2F8");
             btnRepInv.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRepInv.Image = Properties.Resources._4295569_bulleted_close_list_catalogue_checklist_icon;
             btnRepInv.ImageAlign = ContentAlignment.MiddleLeft;
@@ -165,7 +165,7 @@
             // 
             // btnRepAud
             // 
-            btnRepAud.BackColor = Color.PeachPuff;
+            btnRepAud.BackColor = ColorTranslator.FromHtml("#E6F2F8");
             btnRepAud.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRepAud.Image = Properties.Resources._9044242_cloud_auditing_icon;
             btnRepAud.ImageAlign = ContentAlignment.MiddleLeft;
@@ -180,7 +180,7 @@
             // 
             // btnGesRoles
             // 
-            btnGesRoles.BackColor = Color.PeachPuff;
+            btnGesRoles.BackColor = ColorTranslator.FromHtml("#E6F2F8");
             btnGesRoles.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGesRoles.Image = Properties.Resources._7352780_theater_masks_roles_artists_icon;
             btnGesRoles.ImageAlign = ContentAlignment.MiddleLeft;
@@ -195,7 +195,7 @@
             // 
             // btnAdmUsr
             // 
-            btnAdmUsr.BackColor = Color.PeachPuff;
+            btnAdmUsr.BackColor = ColorTranslator.FromHtml("#E6F2F8");
             btnAdmUsr.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdmUsr.Image = Properties.Resources._4213440_community_group_leader_people_team_icon;
             btnAdmUsr.ImageAlign = ContentAlignment.MiddleLeft;
@@ -210,7 +210,7 @@
             // 
             // btnAdmProd
             // 
-            btnAdmProd.BackColor = Color.PeachPuff;
+            btnAdmProd.BackColor = ColorTranslator.FromHtml("#E6F2F8");
             btnAdmProd.Font = new Font("MS Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdmProd.ForeColor = SystemColors.ActiveCaptionText;
             btnAdmProd.Image = Properties.Resources._4945342_document_documents_files_folder_format_icon__1_;
@@ -227,7 +227,8 @@
             // lblBienvenida
             // 
             lblBienvenida.AutoSize = true;
-            lblBienvenida.BackColor = Color.FromArgb(255, 192, 128);
+            lblBienvenida.BackColor= ColorTranslator.FromHtml("#E6F2F8");
+            
             lblBienvenida.Font = new Font("MS PGothic", 52F, FontStyle.Bold, GraphicsUnit.World, 0);
             lblBienvenida.ForeColor = SystemColors.ActiveCaptionText;
             lblBienvenida.Location = new Point(455, 339);
@@ -240,6 +241,7 @@
             // frmMDI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
+            BackColor = ColorTranslator.FromHtml("#E6F2F8");
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1904, 1041);
             Controls.Add(splitMDI);

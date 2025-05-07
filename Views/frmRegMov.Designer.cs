@@ -48,6 +48,11 @@
             btnGuardar = new Button();
             btnCancelar = new Button();
             lblTitulo = new Label();
+            ForeColor = ColorTranslator.FromHtml("#9F7AEA");
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+
+
+
             ((System.ComponentModel.ISupportInitialize)dgvSeleccion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
             SuspendLayout();
@@ -56,63 +61,69 @@
             // 
             cmbTipoMov.FormattingEnabled = true;
             cmbTipoMov.Items.AddRange(new object[] { "Alta de Productos", "Baja de Productos" });
-            cmbTipoMov.Location = new Point(104, 189);
-            cmbTipoMov.Margin = new Padding(3, 4, 3, 4);
+            cmbTipoMov.Location = new Point(40, 184);
+            cmbTipoMov.Margin = new Padding(4, 5, 4, 5);
             cmbTipoMov.Name = "cmbTipoMov";
-            cmbTipoMov.Size = new Size(138, 28);
+            cmbTipoMov.Size = new Size(172, 33);
             cmbTipoMov.TabIndex = 0;
             // 
             // lblMovi
             // 
             lblMovi.AutoSize = true;
-            lblMovi.Location = new Point(104, 147);
+            lblMovi.Location = new Point(39, 130);
+            lblMovi.Margin = new Padding(4, 0, 4, 0);
             lblMovi.Name = "lblMovi";
-            lblMovi.Size = new Size(144, 20);
+            lblMovi.Size = new Size(173, 25);
             lblMovi.TabIndex = 1;
             lblMovi.Text = "Tipo de Movimiento";
             // 
             // dtpFecha
             // 
             dtpFecha.Format = DateTimePickerFormat.Short;
-            dtpFecha.Location = new Point(362, 189);
-            dtpFecha.Margin = new Padding(3, 4, 3, 4);
+            dtpFecha.Location = new Point(299, 184);
+            dtpFecha.Margin = new Padding(4, 5, 4, 5);
             dtpFecha.Name = "dtpFecha";
-            dtpFecha.Size = new Size(228, 27);
+            dtpFecha.Size = new Size(284, 31);
             dtpFecha.TabIndex = 2;
             // 
             // lblFecha
             // 
             lblFecha.AutoSize = true;
-            lblFecha.Location = new Point(362, 147);
+            lblFecha.Location = new Point(339, 130);
+            lblFecha.Margin = new Padding(4, 0, 4, 0);
             lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(156, 20);
+            lblFecha.Size = new Size(187, 25);
             lblFecha.TabIndex = 3;
             lblFecha.Text = "Fecha del Movimiento";
             // 
             // lblOp
             // 
             lblOp.AutoSize = true;
-            lblOp.Location = new Point(698, 147);
+            lblOp.Location = new Point(775, 130);
+            lblOp.Margin = new Padding(4, 0, 4, 0);
             lblOp.Name = "lblOp";
-            lblOp.Size = new Size(73, 20);
+            lblOp.Size = new Size(89, 25);
             lblOp.TabIndex = 4;
             lblOp.Text = "Operador";
+           
+
             // 
             // cmbOpe
             // 
             cmbOpe.FormattingEnabled = true;
-            cmbOpe.Location = new Point(698, 189);
-            cmbOpe.Margin = new Padding(3, 4, 3, 4);
+            cmbOpe.Location = new Point(729, 176);
+            cmbOpe.Margin = new Padding(4, 5, 4, 5);
             cmbOpe.Name = "cmbOpe";
-            cmbOpe.Size = new Size(138, 28);
+            cmbOpe.Size = new Size(172, 33);
             cmbOpe.TabIndex = 5;
             // 
             // lblEstatus
             // 
             lblEstatus.AutoSize = true;
-            lblEstatus.Location = new Point(1127, 147);
+            lblEstatus.Location = new Point(1091, 130);
+            lblEstatus.Margin = new Padding(4, 0, 4, 0);
             lblEstatus.Name = "lblEstatus";
-            lblEstatus.Size = new Size(55, 20);
+            lblEstatus.Size = new Size(68, 25);
             lblEstatus.TabIndex = 6;
             lblEstatus.Text = "Estatus";
             // 
@@ -120,10 +131,10 @@
             // 
             cmbEstatus.FormattingEnabled = true;
             cmbEstatus.Items.AddRange(new object[] { "Pendiente", "Aprobado", "Revisado", "Rechazado" });
-            cmbEstatus.Location = new Point(1039, 189);
-            cmbEstatus.Margin = new Padding(3, 4, 3, 4);
+            cmbEstatus.Location = new Point(1042, 186);
+            cmbEstatus.Margin = new Padding(4, 5, 4, 5);
             cmbEstatus.Name = "cmbEstatus";
-            cmbEstatus.Size = new Size(138, 28);
+            cmbEstatus.Size = new Size(172, 33);
             cmbEstatus.TabIndex = 7;
             // 
             // dgvSeleccion
@@ -132,12 +143,12 @@
             dgvSeleccion.AllowUserToDeleteRows = false;
             dgvSeleccion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSeleccion.Columns.AddRange(new DataGridViewColumn[] { producto, cantidad, eliminar });
-            dgvSeleccion.Location = new Point(506, 516);
-            dgvSeleccion.Margin = new Padding(3, 4, 3, 4);
+            dgvSeleccion.Location = new Point(619, 297);
+            dgvSeleccion.Margin = new Padding(4, 5, 4, 5);
             dgvSeleccion.Name = "dgvSeleccion";
             dgvSeleccion.ReadOnly = true;
             dgvSeleccion.RowHeadersWidth = 51;
-            dgvSeleccion.Size = new Size(393, 200);
+            dgvSeleccion.Size = new Size(491, 250);
             dgvSeleccion.TabIndex = 8;
             dgvSeleccion.CellContentClick += dgvSeleccion_CellContentClick;
             // 
@@ -168,35 +179,36 @@
             // cmbProd
             // 
             cmbProd.FormattingEnabled = true;
-            cmbProd.Location = new Point(698, 416);
-            cmbProd.Margin = new Padding(3, 4, 3, 4);
+            cmbProd.Location = new Point(13, 338);
+            cmbProd.Margin = new Padding(4, 5, 4, 5);
             cmbProd.Name = "cmbProd";
-            cmbProd.Size = new Size(187, 28);
+            cmbProd.Size = new Size(233, 33);
             cmbProd.TabIndex = 9;
             // 
             // nudCantidad
             // 
-            nudCantidad.Location = new Point(1121, 416);
-            nudCantidad.Margin = new Padding(3, 4, 3, 4);
+            nudCantidad.Location = new Point(447, 338);
+            nudCantidad.Margin = new Padding(4, 5, 4, 5);
             nudCantidad.Name = "nudCantidad";
-            nudCantidad.Size = new Size(56, 27);
+            nudCantidad.Size = new Size(70, 31);
             nudCantidad.TabIndex = 10;
             // 
             // lblProd
             // 
             lblProd.AutoSize = true;
-            lblProd.Location = new Point(698, 331);
+            lblProd.Location = new Point(30, 297);
+            lblProd.Margin = new Padding(4, 0, 4, 0);
             lblProd.Name = "lblProd";
-            lblProd.Size = new Size(152, 20);
+            lblProd.Size = new Size(182, 25);
             lblProd.TabIndex = 11;
             lblProd.Text = "Seleccionar Producto:";
             // 
             // btnAgregarP
             // 
-            btnAgregarP.Location = new Point(1017, 516);
-            btnAgregarP.Margin = new Padding(3, 4, 3, 4);
+            btnAgregarP.Location = new Point(833, 645);
+            btnAgregarP.Margin = new Padding(4, 5, 4, 5);
             btnAgregarP.Name = "btnAgregarP";
-            btnAgregarP.Size = new Size(160, 31);
+            btnAgregarP.Size = new Size(200, 39);
             btnAgregarP.TabIndex = 12;
             btnAgregarP.Text = "Agregar Producto";
             btnAgregarP.UseVisualStyleBackColor = true;
@@ -205,18 +217,19 @@
             // lblCan
             // 
             lblCan.AutoSize = true;
-            lblCan.Location = new Point(1114, 349);
+            lblCan.Location = new Point(434, 297);
+            lblCan.Margin = new Padding(4, 0, 4, 0);
             lblCan.Name = "lblCan";
-            lblCan.Size = new Size(69, 20);
+            lblCan.Size = new Size(83, 25);
             lblCan.TabIndex = 13;
             lblCan.Text = "Cantidad";
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(481, 780);
-            btnGuardar.Margin = new Padding(3, 4, 3, 4);
+            btnGuardar.Location = new Point(645, 569);
+            btnGuardar.Margin = new Padding(4, 5, 4, 5);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(160, 31);
+            btnGuardar.Size = new Size(200, 39);
             btnGuardar.TabIndex = 14;
             btnGuardar.Text = "Guardar Movimiento";
             btnGuardar.UseVisualStyleBackColor = true;
@@ -224,34 +237,35 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(834, 780);
-            btnCancelar.Margin = new Padding(3, 4, 3, 4);
+            btnCancelar.Location = new Point(941, 569);
+            btnCancelar.Margin = new Padding(4, 5, 4, 5);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(86, 31);
+            btnCancelar.Size = new Size(108, 39);
             btnCancelar.TabIndex = 15;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
-            // 
-            // lblTitulo
-            // 
-            lblTitulo.BackColor = SystemColors.InactiveCaption;
+            // lblTitulo 
+            lblTitulo.BackColor = ColorTranslator.FromHtml("#9F7AEA");
             lblTitulo.Dock = DockStyle.Top;
-            lblTitulo.Font = new Font("Segoe UI Symbol", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTitulo.ForeColor = SystemColors.ActiveCaptionText;
+            lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(0, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(1426, 49);
-            lblTitulo.TabIndex = 16;
-            lblTitulo.Text = "Registrar Movimientos";
+            lblTitulo.Size = new Size(833, 55);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "REGISTRO MOVIMIENTOS";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+
             // 
             // frmRegMov
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            BackColor = ColorTranslator.FromHtml("#E6F2F8");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1426, 873);
+            ClientSize = new Size(1480, 1050);
             Controls.Add(lblTitulo);
+
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardar);
             Controls.Add(lblCan);
@@ -268,7 +282,7 @@
             Controls.Add(dtpFecha);
             Controls.Add(lblMovi);
             Controls.Add(cmbTipoMov);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmRegMov";
             Text = "frmRegMov";
             ((System.ComponentModel.ISupportInitialize)dgvSeleccion).EndInit();
@@ -278,6 +292,7 @@
         }
 
         #endregion
+        private Label lblTitulo;
 
         private ComboBox cmbTipoMov;
         private Label lblMovi;
@@ -298,6 +313,6 @@
         private DataGridViewButtonColumn eliminar;
         private Button btnGuardar;
         private Button btnCancelar;
-        private Label lblTitulo;
+        
     }
 }

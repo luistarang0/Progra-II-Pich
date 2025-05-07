@@ -29,7 +29,7 @@ namespace InvSis.Views
         /// </summary>
         private void InitializeComponent()
         {
-            lbTituloGestionRoles = new Label();
+            
             splitContainer1 = new SplitContainer();
             lbAgregarEditarPermiso = new Label();
             lbEliminarPermiso = new Label();
@@ -40,6 +40,8 @@ namespace InvSis.Views
             lbEstatuS = new Label();
             cbxEstatus = new ComboBox();
             btnAgregar = new Button();
+            lblTitulo = new Label();
+
             LBpERMISOeLIMINAR = new Label();
             cbxPermisoElimicar = new ComboBox();
             LBdESCpERMISO = new Label();
@@ -52,19 +54,18 @@ namespace InvSis.Views
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             SuspendLayout();
-            // 
-            // lbTituloGestionRoles
-            // 
-            lbTituloGestionRoles.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lbTituloGestionRoles.BackColor = SystemColors.ActiveCaption;
-            lbTituloGestionRoles.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloGestionRoles.ForeColor = SystemColors.ControlText;
-            lbTituloGestionRoles.Location = new Point(2, 0);
-            lbTituloGestionRoles.Name = "lbTituloGestionRoles";
-            lbTituloGestionRoles.Size = new Size(1532, 0);
-            lbTituloGestionRoles.TabIndex = 1;
-            lbTituloGestionRoles.Text = "Gestion de permisos";
-            lbTituloGestionRoles.TextAlign = ContentAlignment.MiddleCenter;
+            // lblTitulo 
+            lblTitulo.BackColor = ColorTranslator.FromHtml("#9F7AEA");
+            lblTitulo.Dock = DockStyle.Top;
+            lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(0, 0);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(833, 55);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "GESTION DE ROLES";
+            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+
             // 
             // splitContainer1
             // 
@@ -81,6 +82,8 @@ namespace InvSis.Views
             splitContainer1.Panel1.Controls.Add(txtNombrePermiso);
             splitContainer1.Panel1.Controls.Add(lblNombrePermiso);
             splitContainer1.Panel1.Controls.Add(lbAgregarEditarPermiso);
+            splitContainer1.ForeColor = ColorTranslator.FromHtml("#9F7AEA");
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             // 
             // splitContainer1.Panel2
             // 
@@ -252,7 +255,8 @@ namespace InvSis.Views
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1539, 449);
             Controls.Add(splitContainer1);
-            Controls.Add(lbTituloGestionRoles);
+            Controls.Add(lblTitulo);
+            BackColor = ColorTranslator.FromHtml("#E6F2F8");
             Name = "frmGestrionPermisos";
             Text = "frmGestionPermisos";
             splitContainer1.Panel1.ResumeLayout(false);
@@ -270,8 +274,7 @@ namespace InvSis.Views
         }
 
         #endregion
-
-        private Label lbTituloGestionRoles;
+        private Label lblTitulo;
         private SplitContainer splitContainer1;
         private Label lbAgregarEditarPermiso;
         private Label lbEliminarPermiso;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             lbUsuario = new Label();
             label1 = new Label();
             txtUsuario = new TextBox();
@@ -36,38 +37,40 @@
             pictureBoxAvatar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAvatar).BeginInit();
             SuspendLayout();
-            // 
-            // lbUsuario
-            // 
+            // lbUsuario (solo cambios de color)
             lbUsuario.AutoSize = true;
-            lbUsuario.Font = new Font("Segoe UI", 12F);
+            lbUsuario.Font = new Font("Segoe UI Semibold", 11F); // Más moderno
+            lbUsuario.ForeColor = ColorTranslator.FromHtml("#9F7AEA"); // Morado humo
             lbUsuario.Location = new Point(223, 86);
             lbUsuario.Margin = new Padding(2, 0, 2, 0);
             lbUsuario.Name = "lbUsuario";
-            lbUsuario.Size = new Size(64, 21);
+            lbUsuario.Size = new Size(64, 20); // Ajuste por cambio de fuente
             lbUsuario.TabIndex = 0;
-            lbUsuario.Text = "Usuario";
-            // 
-            // label1
-            // 
+            lbUsuario.Text = "Usuario:";
+
+            // label1 (Contraseña - mismo estilo)
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
+            label1.Font = new Font("Segoe UI Semibold", 11F);
+            label1.ForeColor = ColorTranslator.FromHtml("#9F7AEA");
             label1.Location = new Point(223, 118);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(89, 21);
+            label1.Size = new Size(89, 20);
             label1.TabIndex = 1;
-            label1.Text = "Contraseña";
-            // 
-            // txtUsuario
-            // 
+            label1.Text = "Contraseña:";
+
+            // txtUsuario (estilo mejorado)
+            txtUsuario.BackColor = Color.White;
+            txtUsuario.ForeColor = ColorTranslator.FromHtml("#2A223A"); // Morado oscuro
+            txtUsuario.BorderStyle = BorderStyle.FixedSingle;
+            txtUsuario.Font = new Font("Segoe UI", 10F);
             txtUsuario.Location = new Point(333, 88);
             txtUsuario.Margin = new Padding(2);
             txtUsuario.MaxLength = 25;
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(155, 23);
+            txtUsuario.Size = new Size(155, 26); // Ajuste de altura
             txtUsuario.TabIndex = 2;
-            // 
+// 
             // txtContraseña
             // 
             txtContraseña.Location = new Point(333, 118);
@@ -76,20 +79,22 @@
             txtContraseña.Name = "txtContraseña";
             txtContraseña.Size = new Size(155, 23);
             txtContraseña.TabIndex = 3;
-            // 
             // btnIniciarSesion
-            // 
+            btnIniciarSesion.BackColor = ColorTranslator.FromHtml("#9F7AEA"); // Fondo morado humo
+            btnIniciarSesion.ForeColor = Color.White; // Texto blanco
+            btnIniciarSesion.FlatStyle = FlatStyle.Flat;
+            btnIniciarSesion.FlatAppearance.BorderSize = 0; // Sin borde
             btnIniciarSesion.Location = new Point(400, 148);
             btnIniciarSesion.Margin = new Padding(2);
             btnIniciarSesion.Name = "btnIniciarSesion";
             btnIniciarSesion.Size = new Size(88, 20);
             btnIniciarSesion.TabIndex = 4;
             btnIniciarSesion.Text = "Iniciar sesion";
-            btnIniciarSesion.UseVisualStyleBackColor = true;
+            btnIniciarSesion.UseVisualStyleBackColor = false; // Importante para que funcione el color
             btnIniciarSesion.Click += btnIniciarSesion_Click;
-            // 
             // pictureBoxAvatar
             // 
+           
             pictureBoxAvatar.BackColor = SystemColors.Control;
             pictureBoxAvatar.BackgroundImage = Properties.Resources._6372974_account_avatar_log_in_login_register_icon1;
             pictureBoxAvatar.BackgroundImageLayout = ImageLayout.Stretch;
@@ -105,6 +110,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = ColorTranslator.FromHtml("#E6F2F8");
             ClientSize = new Size(544, 266);
             Controls.Add(pictureBoxAvatar);
             Controls.Add(btnIniciarSesion);
